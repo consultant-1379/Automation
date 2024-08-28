@@ -1,0 +1,21 @@
+{
+    "tenantName": "queens",
+    "name": "p0-opstk-test",
+    "vimObjectId": "rr67e689-54y8-6r5b-993d-61eb61272qt4",
+    "category": "L3",
+    "enabled": true,
+    "vlanTransparent": false,
+    "segments": [
+        {
+            "name": "Provider_Network2_ipv4",
+            "networkType": "None",
+            "physicalNetworkName": "None",
+            "isPrimary": true,
+            "isSRIOV": false,
+            "useEcmSegmentationId": false
+        }
+    ],
+    "isShared": true,
+    "isExternal": true,
+    "vimZoneName": "testHotel_Queens"
+}

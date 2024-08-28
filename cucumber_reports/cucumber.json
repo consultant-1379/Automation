@@ -1,0 +1,163 @@
+[
+    {
+        "elements": [
+            {
+                "keyword": "Scenario",
+                "name": "Create Vendor_Product For Dummy Node ECDE-ECM",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "match": {
+                            "arguments": [],
+                            "location": "ecde_node_deployment/steps/edce_dummy_deployment.py:11"
+                        },
+                        "name": "I start the Scenario to Create Vendor_Product For Dummy Node ECDE-ECM",
+                        "result": {
+                            "duration": 3876378298,
+                            "status": "passed"
+                        },
+                        "line": 5
+                    }
+                ],
+                "tags": [],
+                "type": "scenario",
+                "line": 4,
+                "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+                "description": "",
+                "id": 1
+            },
+            {
+                "keyword": "Scenario",
+                "name": "Upload Image Resource to Vendor_Product ECDE-ECM",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "match": {
+                            "arguments": [],
+                            "location": "ecde_node_deployment/steps/edce_dummy_deployment.py:16"
+                        },
+                        "name": "I start the Scenario to Upload Image Resource to Vendor_Product ECDE-ECM",
+                        "result": {
+                            "duration": 3368491411,
+                            "status": "passed"
+                        },
+                        "line": 9
+                    }
+                ],
+                "tags": [],
+                "type": "scenario",
+                "line": 8,
+                "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+                "description": "",
+                "id": 2
+            },
+            {
+                "keyword": "Scenario",
+                "name": "Upload Template Resource to Vendor_Product ECDE-ECM",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "match": {
+                            "arguments": [],
+                            "location": "ecde_node_deployment/steps/edce_dummy_deployment.py:21"
+                        },
+                        "name": "I start the Scenario to Upload Template Resource to Vendor_Product ECDE-ECM",
+                        "result": {
+                            "duration": 3973793745,
+                            "status": "passed"
+                        },
+                        "line": 13
+                    }
+                ],
+                "tags": [],
+                "type": "scenario",
+                "line": 12,
+                "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+                "description": "",
+                "id": 3
+            },
+            {
+                "keyword": "Scenario",
+                "name": "Get Validation level and Validation stream Id to Validate Product ECDE-ECM",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "match": {
+                            "arguments": [],
+                            "location": "ecde_node_deployment/steps/edce_dummy_deployment.py:27"
+                        },
+                        "name": "I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-ECM",
+                        "result": {
+                            "duration": 2001296043,
+                            "status": "passed"
+                        },
+                        "line": 17
+                    }
+                ],
+                "tags": [],
+                "type": "scenario",
+                "line": 16,
+                "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+                "description": "",
+                "id": 4
+            },
+            {
+                "keyword": "Scenario",
+                "name": "Validate Vendor_Product ECDE-ECM",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "match": {
+                            "arguments": [],
+                            "location": "ecde_node_deployment/steps/edce_dummy_deployment.py:33"
+                        },
+                        "name": "I start the Scenario to Validate Vendor_Product ECDE-ECM",
+                        "result": {
+                            "duration": 4728798866,
+                            "status": "passed"
+                        },
+                        "line": 21
+                    }
+                ],
+                "tags": [],
+                "type": "scenario",
+                "line": 20,
+                "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+                "description": "",
+                "id": 5
+            },
+            {
+                "keyword": "Scenario",
+                "name": "Verification of Validation order ECDE-ECM",
+                "steps": [
+                    {
+                        "keyword": "Given",
+                        "match": {
+                            "arguments": [],
+                            "location": "ecde_node_deployment/steps/edce_dummy_deployment.py:39"
+                        },
+                        "name": "I start the Scenario to Verification of Validation order ECDE-ECM",
+                        "result": {
+                            "duration": 124287611961,
+                            "status": "passed"
+                        },
+                        "line": 25
+                    }
+                ],
+                "tags": [],
+                "type": "scenario",
+                "line": 24,
+                "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+                "description": "",
+                "id": 6
+            }
+        ],
+        "keyword": "Feature",
+        "name": "ECDE ECM DUMMY DEPLOYMENT",
+        "tags": [],
+        "line": 1,
+        "uri": "ecde_node_deployment/features/ecde_ecm_dummy_deployment.feature",
+        "description": "",
+        "id": 0
+    }
+]

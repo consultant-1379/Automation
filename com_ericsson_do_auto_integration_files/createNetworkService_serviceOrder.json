@@ -1,0 +1,54 @@
+{
+  "description": "",
+  "category": "",
+  "@type": "ServiceOrder",
+  "serviceOrderItem": [
+    {
+      "action": "add",
+      "id": "1",
+      "@type": "ServiceOrderItem",
+      "service": {
+        "name": "<< SERVICE_NAME >>",
+        "description": "",
+        "type": "RFS",
+        "serviceSpecification": {
+          "name": "create",
+          "description": "Dummy VNF creation",
+          "serviceModelId": "<< SERVICE_MODEL_ID >>",
+          "id": "<< INVARIANTUUID >>",
+          "version": "1.0"
+        },
+        "serviceCharacteristic": [
+          {
+            "name": "vimZoneName",
+            "value": ""
+          },
+          {
+            "name": "serviceName",
+            "value": "enterprise_service"
+          },
+          {
+            "name": "subsystemName",
+            "value": ""
+          },
+          {
+            "name": "connectionName",
+            "value": ""
+          },
+          {
+            "name": "vnfName_mme",
+            "value": ""
+          },
+          {
+            "name": "vnfdId_mme",
+            "value": ""
+          },
+          {
+            "name": "vnfm_Id",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

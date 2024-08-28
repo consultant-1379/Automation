@@ -1,0 +1,7 @@
+{
+"trapTargets": [ 
+{"address":"fe80::90d0:daff:febe:e38c","community":"public"}, 
+{"address":"10.200.220.20","port":1162,"community":"enmuser"}, 
+{"address":"10.500.550.50","user":"usmuser3","securityLevel":"authPriv","authPassphrase":"myAuthPassword",
+"authProtocol":"SHA1","privPassphrase":"myPrivPassword","privProtocol":"AES128"} 
+]}

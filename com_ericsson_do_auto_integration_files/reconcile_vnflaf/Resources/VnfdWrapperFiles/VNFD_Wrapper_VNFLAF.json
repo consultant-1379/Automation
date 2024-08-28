@@ -1,0 +1,111 @@
+{
+    "dataVNFDSpecific": {
+        "vnfdId": "reconcile_vnflaf",
+        "vnfdVersion": "1.0",
+        "vnfProvider": "Ericsson",
+        "vnfProductName": "VNFLAF",
+        "vnfSoftwareVersion": "18.16",
+        "flavourId": [
+            "cee"
+        ],
+        "vnfLcmOperationsConfiguration": {
+            "scale": {
+                "scalingByMoreThanOneStepSupported": true
+            }
+        },
+        "scalingAspect": [
+            {
+                "id": "services",
+                "name": "services",
+                "description": "Scale level 0-30 maps to 2-32 GPB VNFC instances (1 instance per scale step)",
+                "maxScaleLevel": 4
+            },
+            {
+                "id": "database",
+                "name": "database",
+                "description": "Scale level 0-14 maps to 2-16 vLC VNFC instances (1 instance per scale step)",
+                "maxScaleLevel": 4
+            }
+        ]
+    },
+    "VnfConfigurableProperties": {
+        "isAutoScaleEnabled": "true",
+        "isAutoHealingEnabled": "true"
+    },
+    "instantiateVnfOpConfig": {
+        "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_ORCH_STAGING_C6a",
+        "services_flavor": "CM-Auto_test_flavour",
+        "ip_version": 4,
+        "services_vm_count": 1,
+        "external_net_id": "5273a14e-81d0-44b3-9785-d5b79121db66",
+        "external_subnet_cidr": "131.160.190.48/28",
+        "external_subnet_gateway": "131.160.190.49",
+        "external_ip_for_services_vm": "131.160.190.59",
+        "cloudManagerType": "OPENSTACK",
+        "ossType": "vENM",
+        "ossMasterHostName": "ieatenmc5b13-scp-0",
+        "ossMasterHostIP": "131.160.156.29",
+        "ossNotificationServiceHost": "ieatenmc5b13-visinamingnb-0",
+        "ossNotificationServiceIP": "131.160.156.30",
+        "retry": true,
+        "retryTimes": 5,
+        "ossUserName": "administrator"
+    },
+    "scaleVnfOpConfig": {
+        "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_ORCH_STAGING_C6a",
+        "services_vm_count": 1,
+        "services_flavor": "CM-Auto_test_flavour",
+        "ip_version": 4,
+        "external_net_id": "5273a14e-81d0-44b3-9785-d5b79121db66",
+        "external_subnet_cidr": "131.160.190.48/28",
+        "external_subnet_gateway": "131.160.190.49",
+        "external_ip_for_services_vm": "131.160.190.60",
+        "cloudManagerType": "OPENSTACK",
+        "ossType": "vENM",
+        "ossMasterHostName": "ieatenmc5b13-scp-0",
+        "ossMasterHostIP": "131.160.156.29",
+        "ossNotificationServiceHost": "ieatenmc5b13-visinamingnb-0",
+        "ossNotificationServiceIP": "131.160.156.30",
+        "retry": true,
+        "retryTimes": 5,
+        "ossUserName": "administrator"
+    },
+    "healVnfOpConfig": {
+        "servicesImage": "e9b83d1e-d0fd-4e4f-902e-7d6d1a7c76e4",
+        "services_flavor": "CM-Auto_test_flavour",
+        "ip_version": 4,
+        "services_vm_count": 1,
+        "external_net_id": "05c442b7-a65a-45b0-a6da-6be80354f7e8",
+        "external_subnet_cidr": "131.160.190.48/28",
+        "external_subnet_gateway": "131.160.190.49",
+        "external_ip_for_services_vm": "131.160.190.54",
+        "cloudManagerType": "OPENSTACK",
+        "ossType": "vENM",
+        "ossMasterHostName": "ieatenmc4b09-23",
+        "ossMasterHostIP": "131.160.205.199",
+        "ossNotificationServiceHost": "ieatenmc4b09-26",
+        "ossNotificationServiceIP": "131.160.205.202",
+        "retry": true,
+        "retryTimes": 5,
+        "ossUserName": "administrator"
+    },
+    "terminateVnfOpConfig": {
+        "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_ORCH_STAGING_C6a",
+        "services_flavor": "CM-Auto_test_flavour",
+        "ip_version": 4,
+        "services_vm_count": 1,
+        "external_net_id": "5273a14e-81d0-44b3-9785-d5b79121db66",
+        "external_subnet_cidr": "131.160.190.48/28",
+        "external_subnet_gateway": "131.160.190.49",
+        "external_ip_for_services_vm": "131.160.190.59",
+        "cloudManagerType": "OPENSTACK",
+        "ossType": "vENM",
+        "ossMasterHostName": "ieatenmc5b13-scp-0",
+        "ossMasterHostIP": "131.160.156.29",
+        "ossNotificationServiceHost": "ieatenmc5b13-visinamingnb-0",
+        "ossNotificationServiceIP": "131.160.156.30",
+        "retry": true,
+        "retryTimes": 5,
+        "ossUserName": "administrator"
+    }
+}

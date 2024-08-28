@@ -1,0 +1,6 @@
+{
+    "cismConfiguration": {
+        "url": "https://api.ccd-c16b025.athtem.eei.ericsson.se:443"
+    },
+    "skipUpdateInEvnfm": false
+}

@@ -1,0 +1,8 @@
+{
+    "vimZones": [
+        {
+            "name": "ORCH_VNF_C13A17",
+            "type": "OPENSTACK"
+        }
+    ]
+}

@@ -1,0 +1,155 @@
+description: 'HOT template to deploy VNFLAF Stack in Openstack cloud.
+
+    '
+heat_template_version: 2015-04-30
+outputs:
+    vnflaf_services_external_ip:
+        description: IP address of VNFLAF-Services in external network
+        value:
+            get_param:
+            - external_ip_for_services_vm
+            -   get_param: clusterIndex
+parameter_groups:
+-   description: VM Images and Flavors
+    label: Compute
+    parameters:
+    - servicesImage
+    - services_flavor
+-   description: Network details
+    label: Network
+    parameters:
+    - ip_version
+    - external_net_id
+    - external_subnet_gateway
+    - external_subnet_cidr
+    - external_ip_for_services_vm
+-   description: NFVO/VIM details
+    label: CloudManager
+    parameters:
+    - cloudManagerType
+-   description: ENM/OSS-RC details
+    label: OSS
+    parameters:
+    - ossType
+    - ossMasterHostName
+    - ossMasterHostIP
+    - ossNotificationServiceHost
+    - ossNotificationServiceIP
+    - ossUserName
+parameters:
+    cloudManagerType:
+        default: CEE
+        description: Cloud Manager type. ECM/CEE/Openstack -  This input will be used
+            by VNF-LAF to prepare the environment to execute workflows. Example -
+            CEE
+        type: string
+    clusterIndex:
+        default: 0
+        type: string
+    external_ip_for_services_vm:
+        default: 131.160.159.21
+        description: IPv4/IPv6 address for the vnflcm VM. Example - 131.160.162.10
+            or  2001:1b70:6207:2b:0:309:0:999b
+        type: comma_delimited_list
+    external_net_id:
+        default: null
+        description: Id of Pre created IPv4/Ipv6 external network. ID can be obtained
+            from Atlas CEE/Openstack dashborad. Example - 68559cad-f3bb-4dbe-8483-d15757763f80
+        type: string
+    external_subnet_cidr:
+        default: null
+        description: IP address range of IPv4/Ipv6 subnet of external network. Example
+            - 10.148.14.0/25 or 2001:1b70:6207:2b::/64
+        type: string
+    external_subnet_gateway:
+        default: null
+        description: External network gateway address of IPv4/Ipv6 subnet. Example
+            - 10.148.14.1 or 2001:1b70:6207:2b:0:3522:0:1
+        type: string
+    ip_version:
+        constraints:
+        -   allowed_values:
+            - 4
+            - 6
+        default: 4
+        description: IP version to be configured. IPv4 or IPv6
+        type: string
+    ossMasterHostIP:
+        default: null
+        description: OSSRC Live Admin server host IP for VNF(s) to be connected. Example
+            - 131.160.162.195
+        type: string
+    ossMasterHostName:
+        default: null
+        description: OSSRC Live Admin server hostname for VNF(s) to be connected.
+            Example - osshostname.athtem.eei.ericsson.se
+        type: string
+    ossNotificationServiceHost:
+        default: notificationservice
+        description: Host name of the Host where notification service of OSS is running.
+            Refer parameter table in Installation Guide to find the description. Example
+            - notificationservice
+        type: string
+    ossNotificationServiceIP:
+        description: IP address of the Host where notification service of OSS is running.
+            Refer parameter table in Installation Guide to find the description. Example
+            - 10.140.23.40
+        type: string
+    ossType:
+        default: OSSRC
+        description: Type of OSS. Example - OSSRC,ENM etc.
+        type: string
+    ossUserName:
+        default: nmsadm
+        description: Authorized user of OSSRC Server for VNF handling. Example - nmsadm
+        type: string
+    servicesImage:
+        default: ERICvnflafdevimage_CXP9032638-4.1.2.qcow2
+        description: Name of vnflafdevimage VM image ERICvnflafdevimage_CXP9032638-4.1.2.qcow2
+            uploaded to CEE Atlas.
+        type: comma_delimited_list
+    services_flavor:
+        constraints:
+        -   allowed_values:
+            - CM-test
+            - CM-Auto_test_flavour
+        default: CM-Auto_test_flavour
+        description: Flavor to use for vnflaf-services VM. 2vcpu_6144MBmem_20GBdisk
+        type: string
+    services_vm_count:
+        default: 1
+        description: Number services VMs in VNF-LCM cluster.
+        type: string
+resources:
+    vnflaf-services:
+        properties:
+            config_drive: true
+            flavor:
+                get_param: services_flavor
+            image:
+                get_param:
+                - servicesImage
+                -   get_param: clusterIndex
+            metadata:
+                ha-policy: ha-offline
+            name:
+                list_join:
+                - '-'
+                -   -   get_param: OS::stack_name
+                    - VNFLAF-Services
+                    -   get_param: clusterIndex
+            networks:
+            -   port:
+                    get_resource: vnflaf_services_external_port
+            user_data_format: RAW
+        type: OS::Nova::Server
+    vnflaf_services_external_port:
+        properties:
+            fixed_ips:
+            -   ip_address:
+                    get_param:
+                    - external_ip_for_services_vm
+                    -   get_param: clusterIndex
+            network_id:
+                get_param: external_net_id
+        type: OS::Neutron::Port

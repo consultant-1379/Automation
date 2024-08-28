@@ -1,0 +1,12 @@
+{
+	"DIRECTIVES_TYPES": {
+		"SELECTABLE": "selectable"
+	},
+	"posX": -101,
+	"posY": -13.5,
+	"name": "epg_service_template",
+	"componentVersion": "1.0",
+	"originType": "VF",
+	"icon": "defaulticon",
+	"componentUid": "<CERTIFIED_VF_UNIQUE_ID>"
+}

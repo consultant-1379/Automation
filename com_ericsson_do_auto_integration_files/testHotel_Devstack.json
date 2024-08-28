@@ -1,0 +1,109 @@
+{
+    "adminPrivilege": true,
+    "availabilityZones": [
+        {
+            "name": "nova",
+            "description": "",
+            "totalResources": [
+                {
+                    "name": "vCpu",
+                    "value": "-1"
+                },
+                {
+                    "name": "virtualMemory",
+                    "value": "-1"
+                },
+                {
+                    "name": "diskSize",
+                    "value": "-1"
+                }
+            ]
+        }
+    ],
+    "defaultSecurityConfig": {
+        "securityType": "HTTP",
+        "serverCertificateData": "",
+        "serverPassword": "",
+        "clientCertificateData": "",
+        "clientPassword": ""
+    },
+    "externalNetworkVimObjectId": "",
+    "name": "testHotel_Devstack",
+    "networkType": "VLAN",
+    "locale": "en-gb",
+    "physicalNetwork": "",
+    "siteName": "Athlone Data Center",
+    "timeZone": "0",
+    "type": "OPENSTACK",
+    "totalResources": [
+        {
+            "name": "vCpu",
+            "value": "-1"
+        },
+        {
+            "name": "virtualMemory",
+            "value": "-1"
+        },
+        {
+            "name": "diskSize",
+            "value": "-1"
+        }
+    ],
+    "capacityCalculationMode": "CLASSIC",
+    "version": "",
+    "vendor": "",
+    "description": "",
+    "characteristics": [],
+    "endPoints": [
+        {
+            "name": "keystone",
+            "vimApiVersion": "3.0",
+            "ipAddress": "10.45.204.211",
+            "port": "5000",
+            "testUri": "/"
+        },
+        {
+            "name": "cinder",
+            "vimApiVersion": "2.0",
+            "ipAddress": "10.45.204.211",
+            "port": "8776",
+            "testUri": "/v2"
+        },
+        {
+            "name": "glance",
+            "vimApiVersion": "1.0",
+            "ipAddress": "10.45.204.211",
+            "port": "9292",
+            "testUri": "/"
+        },
+        {
+            "name": "heatstack",
+            "vimApiVersion": "1.0",
+            "ipAddress": "10.45.204.211",
+            "port": "8004",
+            "testUri": "/v1"
+        },
+        {
+            "name": "neutron",
+            "vimApiVersion": "2.0",
+            "ipAddress": "10.45.204.211",
+            "port": "9696",
+            "testUri": "/"
+        },
+        {
+            "name": "nova",
+            "vimApiVersion": "2.1",
+            "ipAddress": "10.45.204.211",
+            "port": "8774",
+            "testUri": "/v2.1"
+        }
+    ],
+    "credentials": {
+        "name": "ericsson",
+        "adminUserName": "admin",
+        "adminPassword": "foobar"
+    },
+    "vimControllerId": "",
+    "vPodId": "",
+    "keystoneDefaultDomain": "Default"
+}

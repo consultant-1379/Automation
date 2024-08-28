@@ -1,0 +1,8 @@
+{
+   "vnfConfigurableProperties":{
+      "keyValuePairs":{
+         "isAutoHealingEnabled":"false",
+         "isAutoScaleEnabled":"false"
+      }
+   }
+}

@@ -1,0 +1,24 @@
+{
+    "masterIdentifier": "ASR9000",
+    "adminState": "ACTIVE",
+    "types": [
+        "TEMPLATE_ASR"
+    ],
+    "category": "CE",
+    "modes": [],
+    "subModes": [],
+    "description": "This is the description of the device",
+    "accessPoints": [
+        {
+            "credentials": {
+                "username": "root",
+                "password": "root"
+            },
+            "parameters": {
+                "BundleID": "111"
+            },
+            "address": "131.160.162.250:22",
+            "protocol": "SSH_CLI"
+        }
+    ]
+}

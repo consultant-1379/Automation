@@ -1,0 +1,21 @@
+{
+    "type": "/v1/services",
+    "href": "/v1/services/1/1",
+    "name": "SERVICE_NAME",
+    "serviceType": "L3VPN",
+    "serviceState": "Draft",
+    "serviceVersion": 1,
+    "targetState": "Active",
+    "serviceDefinitionId": 1,
+    "serviceDefinitionName": "L3VPN_SVC_DEFINITION",
+    "serviceDefinitionHref": "/v1/serviceDefinitions/1",
+    "createdBy": "wano-user",
+    "createdOn": "2019-07-11 11:22:00",
+    "lastModifiedBy": "wano-user",
+    "lastModifiedOn": "2019-07-11 11:22:00",
+    "requestData": "{\"ipvpnService\":{\"serviceName\":\"SERVICE_NAME\",\"serviceDefinition\":\"Full Mesh IPVPN\",\"sites\":{\"site\":[{\"siteNetworkAccesses\":{\"siteNetworkAccess\":[{\"providerEdge\":{\"bearer\":{\"vlanBased\":{\"vlan\":{\"vlanId\":63}}},\"routerName\":\"vmx-PE3\",\"interfaceName\":\"vmx-PE3:ge-0/0/8\"},\"ipConnection\":{\"ipv4\":{\"providerAddress\":\"26.53.1.1\",\"mask\":30}},\"routingConfigurations\":{\"ospf\":{\"addressFamily\":\"ipv4\",\"areaId\":\"0.0.0.10\",\"routingProcessId\":\"2\"}},\"serviceAttachment\":{\"role\":\"any-to-any\"}}]}},{\"siteNetworkAccesses\":{\"siteNetworkAccess\":[{\"providerEdge\":{\"bearer\":{\"vlanBased\":{\"vlan\":{\"vlanId\":64}}},\"routerName\":\"vmx-PE4\",\"interfaceName\":\"vmx-PE4:ge-0/0/8\"},\"ipConnection\":{\"ipv4\":{\"providerAddress\":\"26.54.1.1\",\"mask\":30}},\"routingConfigurations\":{\"ospf\":{\"addressFamily\":\"ipv4\",\"areaId\":\"0.0.0.10\",\"routingProcessId\":\"2\"}},\"serviceAttachment\":{\"role\":\"any-to-any\"}}]}}]}}}",
+    "activities": [],
+    "customerName": "Ericsson Orchestrator",
+    "inventoryId": 1,
+    "eaiServiceData": ""
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Test_Sol005_vBGF_ELLEN",
+  "serviceModelId": "1b03fa91-86ab-4684-82bb-1a8cf48ad7e2",
+  "description": "VNF creation",
+  "inputs": [
+    {
+      "name": "vnfInstanceName",
+      "value": "Test_Sol005_vBGF_ELLEN"
+    },
+    {
+      "name": "networkServiceDescription",
+      "value": "Instantiate_vBGF_sol005"
+    },
+    {
+      "name": "targetVdc",
+      "value": "a3046dd9-b1a6-4a02-a56d-f9cba9d436ef"
+    },
+    {
+      "name": "networkServiceName",
+      "value": "Test_Sol005_vBGF_ELLEN"
+    },
+    {
+      "name": "external_subnet_v4_resource_ref_id",
+      "value": "6f472494-9da7-4fa2-9ce9-5a10929f57e6"
+    },
+    {
+      "name": "mip_port_public_ip_addr",
+      "value": "10.232.122.110"
+    },
+    {
+      "name": "connected_virtual_network_ext",
+      "value": "e6057158-5d0a-41cd-8aad-7ecf2af8cea1"
+    },
+    {
+      "name": "subsystemName",
+      "value": "SOL005_EOCM_353"
+    },
+    {
+      "name": "external_subnet_v4_id",
+      "value": "6f472494-9da7-4fa2-9ce9-5a10929f57e6"
+    },
+    {
+      "name": "networkServiceDescriptorId",
+      "value": "2b5a45b6-937b-4e82-87b4-b3f4bf678d8a"
+    },
+    {
+      "name": "vimZoneName",
+      "value": "EO_Maintrack_C4AF04_VIM"
+    },
+    {
+      "name": "mip_port_ip_addr",
+      "value": "10.232.122.110"
+    },
+    {
+      "name": "connectionName",
+      "value": "ECM_Sol005"
+    },
+    {
+      "name": "pl_active_flavor",
+      "value": "CM-TOSCA_SOL_BGF_FLAVOR"
+    },
+    {
+      "name": "vnfmId",
+      "value": "48b90767-1aa8-424d-b2fc-9b62bcca43c0"
+    }
+  ]
+}

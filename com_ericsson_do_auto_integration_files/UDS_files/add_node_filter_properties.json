@@ -1,0 +1,7 @@
+{
+    "servicePropertyName": "name",
+    "constraintOperator": "equal",
+    "sourceType": "service_input",
+    "sourceName": "SELF",
+    "value": "nssubsystem_name"
+}

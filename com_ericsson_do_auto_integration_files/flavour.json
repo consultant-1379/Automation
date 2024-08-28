@@ -1,0 +1,9 @@
+{
+    "tenantName": "EOS-C13A17",
+    "srt": {
+        "name": "vCSCF-32-250-8",
+        "ram": 32768,
+        "numberOfCpu": 4,
+        "diskSize": 250
+    }
+}

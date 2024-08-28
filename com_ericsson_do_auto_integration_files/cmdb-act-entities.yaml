@@ -1,0 +1,27 @@
+read:
+  activationManagers:
+    - &AM1
+      id: DCGW-ASR9000-AM1 
+create:
+  activationEntities: # Devices
+    - &AE1
+      id: ASR9000
+      name: DCGW-VRF-OM_CN
+      type: DCGW
+      description: Activation Entity ASR9000
+      activationManager: *AM1
+      provisioningStatus: ACTIVE
+  largeObjects:
+    - &AM1CustomStoredParams
+      id: DCGW-ASR9000-AM1-Attachment
+      data: '{"customParams":[{"tag":"cloud1_ieatdoxb040","value":"ASR9000"}]}'
+      objectId: DCGW-ASR9000-AM1
+      objectType: ACTIVATION_MANAGER
+      type: CustomParams
+    - &AE1CustomParams
+      id: AE1CPId
+      data: '{"customParams":[{"tag":"OM_CN","value":"SCM-VRF-OM_CN_DEMO"}]}'
+      objectId: ASR9000
+      objectType: ACTIVATION_ENTITY
+      type: CustomParams
+

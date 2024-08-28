@@ -1,0 +1,107 @@
+{
+    "tenantName": "ECM",
+    "fileName": "vnflaf_cee.yaml",
+    "name": "Test_VNF_Package_Upload_461",
+    "description": "vnf package TEST",
+    "category": "vapp",
+    "vendor": "Ericsson",
+    "version": "1.0.0",
+    "softwareVersion": "18.2.0.0",
+    "isPublic": "false",
+    "deploymentManager": "EXTERNAL_VNFM",
+    "packageFormat": "EXTERNAL_FORMAT",
+    "vnfManagers": [
+        {
+            "id": "4980b7fd-5bc8-44e0-a49d-cae9a4536b41"
+        }
+    ],
+    "userDefinedData": {
+        "dataVNFDSpecific": {
+            "vnfdId": "vnflaf",
+            "vnfdVersion": "1.0",
+            "vnfProvider": "Ericsson",
+            "vnfProductName": "VNFLAF",
+            "vnfSoftwareVersion": "18.16",
+            "flavourId": [
+                "cee"
+            ],
+            "vnfLcmOperationsConfiguration": {
+                "scale": {
+                    "scalingByMoreThanOneStepSupported": true
+                }
+            },
+            "scalingAspect": [
+                {
+                    "id": "services",
+                    "name": "services",
+                    "description": "services VNFC instances",
+                    "maxScaleLevel": 4
+                },
+                {
+                    "id": "database",
+                    "name": "database",
+                    "description": "database VNFC instances",
+                    "maxScaleLevel": 4
+                }
+            ]
+        },
+        "VnfConfigurableProperties": {
+            "isAutoScaleEnabled": "true",
+            "isAutoHealingEnabled": "true"
+        },
+        "instantiateVnfOpConfig": {
+            "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_Static_Project",
+            "services_flavor": "CM-Auto_test_flavour",
+            "ip_version": 4,
+            "services_vm_count": 1,
+            "external_net_id": "0f883056-437a-4343-94c4-8468a4d57615",
+            "external_subnet_cidr": "131.160.190.48/28",
+            "external_subnet_gateway": "131.160.190.49",
+            "external_ip_for_services_vm": "131.160.190.58",
+            "cloudManagerType": "OPENSTACK",
+            "ossType": "vENM",
+            "ossMasterHostName": "ieatenmc4b09-23",
+            "ossMasterHostIP": "131.160.205.199",
+            "ossNotificationServiceHost": "ieatenmc4b09-26",
+            "ossNotificationServiceIP": "131.160.205.202",
+            "ossUserName": "administrator"
+        },
+        "scaleVnfOpConfig": {
+            "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_Static_Project",
+            "services_flavor": "CM-Auto_test_flavour",
+            "ip_version": 4,
+            "services_vm_count": 1,
+            "external_net_id": "0f883056-437a-4343-94c4-8468a4d57615",
+            "external_subnet_cidr": "131.160.190.48/28",
+            "external_subnet_gateway": "131.160.190.49",
+            "external_ip_for_services_vm": "131.160.190.59",
+            "cloudManagerType": "OPENSTACK",
+            "ossType": "vENM",
+            "ossMasterHostName": "ieatenmc4b09-23",
+            "ossMasterHostIP": "131.160.205.199",
+            "ossNotificationServiceHost": "ieatenmc4b09-26",
+            "ossNotificationServiceIP": "131.160.205.202",
+            "ossUserName": "administrator"
+        },
+        "terminateVnfOpConfig": {
+            "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_Static_Project",
+            "services_flavor": "CM-Auto_test_flavour",
+            "ip_version": 4,
+            "services_vm_count": 1,
+            "external_net_id": "0f883056-437a-4343-94c4-8468a4d57615",
+            "external_subnet_cidr": "131.160.190.48/28",
+            "external_subnet_gateway": "131.160.190.49",
+            "external_ip_for_services_vm": "131.160.190.58",
+            "cloudManagerType": "OPENSTACK",
+            "ossType": "vENM",
+            "ossMasterHostName": "ieatenmc4b09-23",
+            "ossMasterHostIP": "131.160.205.199",
+            "ossNotificationServiceHost": "ieatenmc4b09-26",
+            "ossNotificationServiceIP": "131.160.205.202",
+            "ossUserName": "administrator"
+        }
+    },
+    "userDefinedDataSchema": {
+        "key": "value"
+    }
+}

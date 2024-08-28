@@ -1,0 +1,18 @@
+{
+   "clusterName":"admin-ccd1", 	
+   "additionalParams":{
+      "skipJobVerification":"true",
+      "namespace":"ccrc",
+      "applicationTimeOut":"2400",
+      "commandTimeOut":"2400",
+      "manoControlledScaling":"true",
+      "eric-nrf.eric-data-kvdb-ag.persistence.data.persistentVolumeClaim.storageClassName":"network-block",
+      "eric-nssf.eric-data-kvdb-ag.persistence.data.persistentVolumeClaim.storageClassName":"network-block",
+      "eric-nrf.eric-data-kvdb-ag.persistence.gwsender.persistentVolumeClaim.storageClassName":"network-block",
+      "eric-nssf.eric-data-kvdb-ag.persistence.gwsender.persistentVolumeClaim.storageClassName":"network-block",
+      "eric-nrf.eric-data-kvdb-ag.persistence.backup.persistentVolumeClaim.storageClassName":"network-block",
+      "eric-nssf.eric-data-kvdb-ag.persistence.backup.persistentVolumeClaim.storageClassName":"network-block",
+      "global.registry.pullSecret":"regcred",
+      "global.registry.url":"registry.eostaging.ccd2.athtem.eei.ericsson.se"
+   }
+}

@@ -1,0 +1,37 @@
+{
+    "id": null,
+    "vnfProductId": 207,
+    "productResources": [
+        {
+            "id": 209
+        },
+        {
+            "id": 211
+        }
+    ],
+    "waitTime": null,
+    "validationOrder": {
+        "vnfProductId": 207,
+        "id": null,
+        "orderStatus": "SUBMITTED",
+        "pauseAfterInstantiation": "N",
+        "haltOnFailure": "N",
+        "vendor": {
+            "id": 2,
+            "vendorName": "AUTO_VENDOR"
+        },
+        "avopUser": {
+            "username": "AUTO_USER"
+        },
+        "waitTime": null,
+        "validationStream": {
+            "id": 110
+        },
+        "validationLevel": {
+            "id": 12
+        },
+        "vnftype": {
+            "id": 11
+        }
+    }
+}

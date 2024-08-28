@@ -1,0 +1,87 @@
+{
+    "tenantName": "EOS-C13A17",
+    "vdc": {
+        "id": "e5a2f60d-7bf2-4654-9a10-c12c6026f168"
+    },
+    "vimZoneName": "ORCH_VNF_C13A17",
+    "characteristics": [
+        {
+            "id": "id"
+        }
+    ],
+    "vnfm": {
+        "id": "eb1a161d-1ad8-409b-a548-4ac906577f04"
+    },
+    "vapp": {
+        "name": "vSBG-2_6_0-4d7b8013-cee_bsp_139",
+        "type": "vapp",
+        "flavor": "cee",
+        "description": "demonstrate VNF deployment",
+        "productInfo": {
+            "vendor": "Ericsson",
+            "version": 1
+        },
+        "deploymentParameters": {
+            "admin_authorized_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMdeGRJqAGh9iLdnDn4HLwS85crF6f956NY/TBPHTY15AkTTp5B6ua587iEbAMHI/4wpJpGosFh1lwV2QQUO6xHjUvOqPm3ODw/9tkAPOH9gjFx/tRreklW54DDCCGUtDs0hDSWWLt3fJDL/RHvr3ZdjcbiEiD6CCs1HGlmliHe/6ZhAuJ9EJgXOc4PuyNhNMNzOsutxWt4K2wIqfmyAdBxChGYRTXnsOqSAZWY3ptsMjyrnEIC36ACVbMt/tGwZ8gwAhIU/OVC+CyL+K9vWXrViSfAcA9x+XDozRbY9oVjva1B4fwG7Vu3Dhlcjl0QU55ILxU8QbXUjqVJ8OnIl0L jboss_user@ieatdoxb035-vnflaf-services-0",
+            "admin_groups": "com-emergency,systemd-journal,cmw-imm-users",
+            "admin_password_hash": "$6$wySDjV39hdw8$tVXybsmArXxbs5XJDJHnKmIMlby5FmJh1J9pCzycehHNhFqGWcVKOPPJnkN3/nzV47a/cN0n/GWnIw8Fx5QsI1",
+            "admin_username": "vsbg-admin",
+            "affinity_policy": "soft-anti-affinity",
+            "availability_zone": "nova",
+            "conf_net_name": "vSBG-Mobile-PROD-Net-li-sp1",
+            "charging_net_name": "",
+            "DNS_server_1": "",
+            "DNS_server_2": "",
+            "HA_policy_SC": "ha-offline",
+            "HA_policy_PL": "ha-offline",
+            "watchdog_timeout": 30,
+            "watchdog_interval_timeout": 10,
+            "watchdog_shutdown_timeout": 600,
+            "nodeConnectionLossAlarm": 0,
+            "int_net_name": "int_sp",
+            "adc_net_name": "adc_sp",
+            "ntp_server_1": "159.107.173.12",
+            "ntp_server_2": "159.107.173.12",
+            "ntp_vnic_config": "ntp-with-extra-vnic",
+            "OM_ip_address": "10.210.221.101",
+            "OM_net_name": "P9-OpStk-13-Public-Tenant4",
+            "sc_instance_count": 1,
+            "payload_instance_count": 2,
+            "PL_volume_size_GB": 4,
+            "adc_instance_count": 0,
+            "ADC_volume_size_GB": 4,
+            "pmp_count": "0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10",
+            "image": "599468f9-c5f7-45d8-a71a-bebc0042b550",
+            "PL_flavor": "CM-vSBG-4-0-2",
+            "SC_flavor": "CM-vSBG-4-0-2",
+            "ADC_flavor": "CM-vSBG-4-0-2",
+            "SC_volume_size_GB": 12,
+            "sig_net_name": "vSBG-Mobile-PROD-Net-sig-sp0",
+            "sig_vlan_count": 3,
+            "sig_vlan_ids": "713,714,710",
+            "sig_vlan_names": "vSBG-Mobile-PROD-Net-sig-sp1,vSBG-Mobile-PROD-Net-sig-sp2,vSBG-Mobile-PROD-Net-sig-sp3",
+            "subnet_IPv4_name_suffix": "subnet_ipv4",
+            "vnf_name": "vsbg_1",
+            "pmp_anti_affinity_enabled": false,
+            "external_nfs_used": false,
+            "access_vnic_for_charging_used": false,
+            "external_nfs_ip": "192.168.1.29",
+            "external_nfs_exportpoint": "/.storage",
+            "external_nfs_version": "3",
+            "external_nfs_net_name": "",
+            "vm_mtu": "1450",
+            "workflow_lcmScriptTimeout": "1800",
+            "workflow_addVNFToOSS": "true",
+            "workflow_networkElementUsername": "vsbg-admin",
+            "workflow_networkElementPassword": "YWRtaW4=",
+            "workflow_networkElementType": "vSBG",
+            "workflow_networkElementVersion": "2.1",
+            "workflow_nodeIpAddress": "10.210.221.101",
+            "workflow_snmpPort": "161",
+            "workflow_netConfPort": "830",
+            "workflow_managedElementSrcType": "CBA",
+            "workflow_subNetworks": "notsetyet",
+            "workflow_associatedSite": "Ireland"
+        }
+    }
+}

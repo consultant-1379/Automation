@@ -1,0 +1,8 @@
+{
+   "ericssonNfvoData":{
+      "tenantName":"ECM",
+      "isPublic":false,
+      "description":"",
+      "packageName":"NSD-vBGF-Service-Basic-1.0.3"
+   }
+}

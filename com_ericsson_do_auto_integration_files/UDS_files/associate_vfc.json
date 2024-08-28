@@ -1,0 +1,19 @@
+{
+  "fromNode": "04ec7b35-5218-4ecb-ac1d-0a3db919966b.99ac6b2e-7059-4b41-bbbd-c0c378ce5dc4.vimzone_0",
+  "toNode": "04ec7b35-5218-4ecb-ac1d-0a3db919966b.7eac445f-d79e-45cf-ac38-6929d84730d2.geosite",
+  "relationships": [
+    {
+      "relation": {
+        "relationship": {
+          "type": "tosca.capabilities.Node"
+        },
+        "capability": "feature",
+        "capabilityOwnerId": "04ec7b35-5218-4ecb-ac1d-0a3db919966b.7eac445f-d79e-45cf-ac38-6929d84730d2.geosite",
+        "capabilityUid": "capability.710a290b-17f0-4da2-a018-565dbbadbf31.feature",
+        "requirement": "geographicSite",
+        "requirementOwnerId": "04ec7b35-5218-4ecb-ac1d-0a3db919966b.99ac6b2e-7059-4b41-bbbd-c0c378ce5dc4.vimzone_0",
+        "requirementUid": "99ac6b2e-7059-4b41-bbbd-c0c378ce5dc4.geographicSite"
+      }
+    }
+  ]
+}

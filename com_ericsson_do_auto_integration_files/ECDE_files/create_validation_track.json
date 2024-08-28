@@ -1,0 +1,47 @@
+{
+    "id": 123,
+    "vendor": {
+        "id": 2,
+        "vendorName": "AUTO_VENDOR",
+        "address": "address",
+        "email": "vendortest@ericsson.com",
+        "phonenumber": "1234567",
+        "vendorStatus": "ACTIVE",
+        "createdDate": "2021-02-18 12:47:51",
+        "lastModifiedDate": "2021-02-18 12:47:51",
+        "avopUsers": null
+    },
+    "validationStream": {
+        "id": 110,
+        "validationStreamName": "AUTO_ECDE_ECM_VALIDATION_PROFILE",
+        "validationStreamStatus": "ACTIVE",
+        "description": "ValidationProfile_Test",
+        "associatedSteamsVNFTypeSet": null,
+        "documet": null,
+        "associatedValidationStreamAndLevels": null
+    },
+    "validationLevel": {
+        "id": 12,
+        "validationLevelName": "AUTO_INSTANTIATION",
+        "validationLevelStatus": "ACTIVE",
+        "description": "ValidationLevel_Test",
+        "associatedValidationStreamAndLevels": null
+    },
+    "vNFType": {
+        "id": 11,
+        "vnfName": "AUTO_DUMMY",
+        "vnfDescription": "VNFType_Test",
+        "documnetId": null,
+        "documentName": null,
+        "vnfTypeStatus": "ACTIVE",
+        "assignedVNFTypes": null,
+        "vnfProducts": null,
+        "validationTracks": null,
+        "validationOrders": null,
+        "asociatedSteamsVNFTypeSet": null
+    },
+    "paramtext": "AssignTEP",
+    "testEnvironment": {
+        "id": 119
+    }
+}

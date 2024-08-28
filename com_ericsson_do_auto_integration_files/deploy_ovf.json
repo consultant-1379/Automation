@@ -1,0 +1,150 @@
+{
+    "tenantName": "ECM",
+    "vimZoneName": "cloud1_ieatdoxb040",
+    "vdc": {
+        "id": "f60e6e57-2f3d-4955-bade-f49ee1c4c8c5"
+    },
+    "ovfPackage": {
+        "vm": [
+            {
+                "id": "NetworkVM_ASR_ieatdoxb040",
+                "configData": [],
+                "configFiles": [],
+                "availabilityZone": "nova",
+                "configDrive": true
+            }
+        ],
+        "vapp": {
+            "id": "NetworkVNF_vMME_NSD_PA2",
+            "configData": [
+                {
+                    "name": "Dummy_NetworkVMnet_ASR_ieatdoxb040_routerIP_PA2",
+                    "value": "192.168.4.1"
+                },
+                {
+                    "name": "Dummy_NetworkVMnet_ASR_ieatdoxb040_subnet_PA2",
+                    "value": "192.168.4.0/29"
+                },
+                {
+                    "name": "INT-DUMMY1_ieatdoxb040_routerIP",
+                    "value": "10.10.15.17"
+                },
+                {
+                    "name": "INT-DUMMY1_ieatdoxb040_subnet",
+                    "value": "10.10.15.16/28"
+                },
+                {
+                    "name": "INT-DUMMY2_ieatdoxb040_routerIP",
+                    "value": "10.10.15.33"
+                },
+                {
+                    "name": "INT-DUMMY2_ieatdoxb040_subnet",
+                    "value": "10.10.15.32/28"
+                },
+                {
+                    "name": "P3-CEE01-ieatdoxb040-vMME-OM_CN_routerIP",
+                    "value": "10.210.238.129"
+                },
+                {
+                    "name": "P3-CEE1-ieatdoxb040-FSB_MME_routerIP",
+                    "value": "10.210.254.113"
+                },
+                {
+                    "name": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT_routerIP",
+                    "value": "10.32.133.193"
+                },
+                {
+                    "name": "P3-CEE1-ieatdoxb040-vMME-OM_CN_SERVICE_routerIP",
+                    "value": "10.210.238.145"
+                }
+            ]
+        },
+        "ovfPkgObjects": [
+            {
+                "objectName": "Vn.name",
+                "currentValue": "Dummy_NetworkVMnet_ASR_ieatdoxb040",
+                "newValue": "Dummy_NetworkVMnet_ASR_ieatdoxb040"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "P3-CEE01-ieatdoxb040-vMME-OM_CN",
+                "newValue": "P3-CEE01-ieatdoxb040-vMME-OM_CN"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT",
+                "newValue": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "P3-CEE1-ieatdoxb040-FSB_MME",
+                "newValue": "P3-CEE1-ieatdoxb040-FSB_MME"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "P3-CEE1-ieatdoxb040-vMME-OM_CN_SERVICE",
+                "newValue": "P3-CEE1-ieatdoxb040-vMME-OM_CN_SERVICE"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "INT-DUMMY1_ieatdoxb040",
+                "newValue": "INT-DUMMY1_ieatdoxb040"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "INT-DUMMY2_ieatdoxb040",
+                "newValue": "INT-DUMMY2_ieatdoxb040"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "Dummy_NetworkVMnet_ASR_ieatdoxb040_Sub_PA2",
+                "newValue": "Dummy_NetworkVMnet_ASR_ieatdoxb040_Sub_PA2"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "P3-CEE01-ieatdoxb040-vMME-OM_CN_Sub",
+                "newValue": "P3-CEE01-ieatdoxb040-vMME-OM_CN_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT_Sub",
+                "newValue": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "P3-CEE1-ieatdoxb040-FSB_MME_Sub",
+                "newValue": "P3-CEE1-ieatdoxb040-FSB_MME_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "P3-CEE1-ieatdoxb040-vMME-OM_CN_SERVICE_Sub",
+                "newValue": "P3-CEE1-ieatdoxb040-vMME-OM_CN_SERVICE_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "INT-DUMMY1_ieatdoxb040_Sub",
+                "newValue": "INT-DUMMY1_ieatdoxb040_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "INT-DUMMY2_ieatdoxb040_Sub",
+                "newValue": "INT-DUMMY2_ieatdoxb040_Sub"
+            },
+            {
+                "objectName": "Vapp.name",
+                "currentValue": "NetworkVNF_vMME_NSD_PA2",
+                "newValue": "NetworkVNF_vMME_NSD_PA2"
+            },
+            {
+                "objectName": "Vm.name",
+                "currentValue": "NetworkVM_ASR_ieatdoxb040",
+                "newValue": "NetworkVM_ASR_ieatdoxb040"
+            },
+            {
+                "objectName": "VmVnic.name",
+                "currentValue": "Network_adapter_1",
+                "newValue": "Network_adapter_1"
+            }
+        ]
+    }
+}

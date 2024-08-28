@@ -1,0 +1,21 @@
+{
+    "vims": [
+        {
+            "name": "cloud7a_ORCH_Staging_C7a_dynamic",
+            "type": "OPENSTACK",
+            "defaultVim": "True",
+            "hostIpAddress": "131.160.194.215",
+            "hostName": "cloud7a.athtem.eei.ericsson.se",
+            "authUrl": "https://cloud7a.athtem.eei.ericsson.se:13000/v2.0",
+            "tenants": [
+                {
+                    "name": "ORCH_Staging_C7a_dynamic",
+                    "id": "461b122d9a274e819ce013a9c6ecc35f",
+                    "username": "ORCH_Staging_C7a_dynamic_admin",
+                    "password": "Orch_staging_c7a_dynamic.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        }
+    ]
+}

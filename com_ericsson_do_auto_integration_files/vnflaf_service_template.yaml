@@ -1,0 +1,234 @@
+data_types:
+  com.ericsson.datatypes.so.scaleByStepData:
+    derived_from: tosca.datatypes.Root
+    properties:
+      additionalParams:
+        entry_schema: string
+        required: false
+        type: map
+      aspectId:
+        type: string
+      numberOfSteps:
+        type: integer
+  com.ericsson.datatypes.so.scaleVnfData:
+    derived_from: tosca.datatypes.Root
+    properties:
+      scaleByStepData:
+        type: com.ericsson.datatypes.so.scaleByStepData
+      scaleVnfType:
+        type: string
+  com.ericsson.eso.nameValuePair:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name:
+        type: string
+      value:
+        type: string
+  com.ericsson.so.datatypes.CustomTemplate:
+    derived_from: tosca.datatypes.Root
+    properties:
+      catalogRef:
+        required: false
+        type: string
+      name:
+        type: string
+      nodeRefs:
+        entry_schema: com.ericsson.so.datatypes.NodeReference
+        required: false
+        type: list
+  com.ericsson.so.datatypes.NodeReference:
+    derived_from: tosca.datatypes.Root
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+description: "ESO service template \n"
+interface_types:
+  com.ericsson.so.interfaces.node.lifecycle.Scale:
+    Scale:
+      description: scale
+    derived_from: tosca.interfaces.Root
+node_types:
+  com.ericsson.eso.NetworkFunction:
+    derived_from: com.ericsson.eso.resource
+    properties:
+      alias:
+        required: false
+        type: string
+      resourceType:
+        default: NetworkFunction
+        type: string
+      vimZoneName:
+        type: string
+  com.ericsson.eso.NetworkFunction.VNF:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype:
+        default: vnf
+        type: string
+  com.ericsson.eso.NetworkService:
+    derived_from: com.ericsson.eso.resource
+    interfaces:
+      Standard:
+        create:
+          implementation: camunda/nsCreate
+        delete:
+          implementation: camunda/nsDelete
+        type: tosca.interfaces.node.lifecycle.Standard
+    properties:
+      connectionName:
+        type: string
+      enmNodeIp:
+        type: string
+      networkId:
+        type: string
+      nsDescription:
+        type: string
+      nsName:
+        type: string
+      nsdId:
+        type: string
+      resourceType:
+        default: NetworkService
+        type: string
+      subsystemName:
+        type: string
+      vnfmId:
+        type: string
+      targetVdc:
+        type: string
+      external_subnet_cidr:
+        type: string
+      external_subnet_gateway:
+        type: string
+      external_ip_for_services_vm:
+        type: string
+  com.ericsson.eso.resource:
+    derived_from: tosca.nodes.Root
+    interfaces:
+      Scale:
+        postScale: null
+        preScale: null
+        scale: null
+        type: com.ericsson.so.interfaces.node.lifecycle.Scale
+    properties:
+      customOperations:
+        entry_schema:
+          type: com.ericsson.eso.nameValuePair
+        required: false
+        type: list
+      customTemplates:
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+        required: false
+        type: list
+      resourceSubtype:
+        required: false
+        type: string
+      resourceType:
+        type: string
+topology_template:
+  inputs:
+    connectionName:
+      default: ECM
+      type: string
+    enmNodeIp:
+      type: string
+    networkId:
+      default: 789e54c9-9231-4e0a-9d00-8536307942af
+      type: string
+    networkServiceDescription:
+      default: sol005-scale-ns-instance NS
+      type: string
+    networkServiceDescriptorId:
+      default: fa66f55f-74da-40df-8cfe-2a1cb234e631
+      type: string
+    networkServiceName:
+      default: vnflaf_service
+      type: string
+    subsystemName:
+      default: ECM
+      type: string
+    vimZoneName:
+      default: cloud7a_ORCH_Staging_C7a_dynamic
+      type: string
+    vnfInstanceName:
+      default: service_vnflaf
+      type: string
+    targetVdc:
+      type: string
+      default: 'e0c56d69-4057-4217-a212-578a2b42702a'
+    vnfmId:
+      type: string
+      default: '08294887-7107-4fac-b9e1-925a0c376045'      
+    external_subnet_cidr:
+      type: string
+      default: '10.210.221.32/27'  
+    external_subnet_gateway:
+      type: string
+      default: '10.210.221.33'  
+    external_ip_for_services_vm:
+      type: string
+      default: '10.210.221.51'  
+    vnf_scaleVnfData:
+      metadata:
+        workflows: scale
+      required: false
+      type: com.ericsson.datatypes.so.scaleVnfData
+  node_templates:
+    NS:
+      interfaces:
+        Scale:
+          scale:
+            implementation: camunda/nsScale
+      properties:
+        connectionName:
+          get_input: connectionName
+        customOperations: []
+        customTemplates:
+        - catalogRef: dummy_nsAdditionalParams
+          name: additionalParamsForNsTemplate
+        enmNodeIp:
+          get_input: enmNodeIp
+        networkId:
+          get_input: networkId
+        nsDescription:
+          get_input: networkServiceDescription
+        nsName:
+          get_input: networkServiceName
+        nsdId:
+          get_input: networkServiceDescriptorId
+        subsystemName:
+          get_input: subsystemName
+        targetVdc: 
+          get_input: targetVdc
+        vnfmId:
+          get_input: vnfmId
+        external_subnet_cidr:
+          get_input: external_subnet_cidr
+        external_subnet_gateway:
+          get_input: external_subnet_gateway
+        external_ip_for_services_vm:
+          get_input: external_ip_for_services_vm
+      type: com.ericsson.eso.NetworkService
+    vnf:
+      interfaces:
+        Scale:
+          scale:
+            inputs:
+              vnf_scale_vnf_data:
+                get_input: vnf_scaleVnfData
+      properties:
+        alias:
+          get_input: vnfInstanceName
+        customOperations: []
+        customTemplates:
+        - catalogRef: dummy_vnfAdditionalParams
+          name: additionalParamsForVnfTemplate
+        vimZoneName:
+          get_input: vimZoneName
+      requirements:
+      - dependency: NS
+      type: com.ericsson.eso.NetworkFunction.VNF
+tosca_definitions_version: tosca_simple_yaml_1_3

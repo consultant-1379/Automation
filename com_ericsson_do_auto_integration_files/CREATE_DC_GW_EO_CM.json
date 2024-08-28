@@ -1,0 +1,20 @@
+{
+    "name": "DC_GW_623",
+    "type": "DCGW_ASR9000",
+    "managementIpAddress": "10.232.122.126",
+    "credentials": {
+        "username": "root",
+        "password": "root"
+    },
+    "siteName": "Athlone Data Center",
+    "protocol": "SSH_CLI",
+    "port": 22,
+    "ipVersion": "IPv4",
+    "administrativeState": "ACTIVE",
+    "vimzones": [
+        {
+            "id": "2e4da64e-5251-4fc3-b158-52f77604bf88",
+            "dcgwPhysicalInterfaceId": "2"
+        }
+    ]
+}

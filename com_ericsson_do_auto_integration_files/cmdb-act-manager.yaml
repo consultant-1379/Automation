@@ -1,0 +1,34 @@
+read:
+  tenants:
+    - &TENANT
+      name: ECM # Name of tenant
+create:
+  activationManagers:
+    - &AM1
+      id: DCGW-ASR9000-AM1
+      name: DCGW
+      description: Virtual Link Manager
+      provisioningStatus: ACTIVE
+  managedAssets:
+    - &MA1
+      id: DCGW-ASR9000-MA1
+      name: DCGW-ASR9000-MA1
+      objectType: VL
+      activationManager: *AM1
+  customTemplates:
+    - &CT1
+      id: DCGW-ASR9000-CT1
+      name: DCGW-ASR9000-CT1
+      description: Sample Custom Template Description
+      tenant: *TENANT
+      isPublic: true
+      assetType: VL
+#      fileName: DCGW-template.json ???
+  assetSubTypes:
+    - &AST1
+      id: DCGW-ASR9000-AST1
+      name: DCGW
+      managedAsset: *MA1
+      customTemplates:
+        - *CT1
+

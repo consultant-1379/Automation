@@ -1,0 +1,71 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: fd68d596-e8d8-48d5-abd0-a2049906f4cd
+  UUID: 269ea320-5bb6-4ff0-a235-f51478a8706f
+  name: soEPG
+  description: soEPG
+  type: VFC
+  category: Generic
+  subcategory: Network Elements
+  resourceVendor: Ericsson
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  com.ericsson.so.NetworkFunction.EPG:
+    derived_from: com.ericsson.so.NetworkFunction
+    description: soEPG
+    properties:
+      vnfUniqueId:
+        type: string
+        required: false
+      vimZoneName:
+        type: string
+        required: false
+      customOperations:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.nameValuePair
+      vnfdId_epg:
+        type: string
+        required: false
+      customTemplates:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+      alias:
+        type: string
+        required: false
+      resourceSubtype:
+        default: EPG
+        type: string
+        required: false
+      vEPG_service_ip:
+        type: string
+        required: false
+      vnfm_Id:
+        type: string
+        required: false
+      resourceType:
+        default: NetworkFunction
+        type: string
+        required: false
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard
+        configure:
+          implementation: camunda/vnfConfigure

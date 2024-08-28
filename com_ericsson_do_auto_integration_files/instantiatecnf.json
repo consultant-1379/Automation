@@ -1,0 +1,119 @@
+{
+    "nsFlavourId": "default",
+    "additionalParamsForNs": {
+        "nsParams": {
+            "targetVdc": "956dd93d-4f88-4025-82e7-bad7284fb0fa"
+        },
+        "vnfParams": [
+            {
+                "vnfNodeTemplateName": "SpiderApp2",
+                "vnfInstanceName": "cnf-service51020221219-cnfb1",
+                "vnfmId": "c2e3cbb3-e8ec-44d0-8bb7-2a9b0b621707",
+                "vnfInstanceDescription": "VNF Descriptor for Ericsson SGSN-MME",
+                "cismName": "kubernetes"
+            },
+            {
+                "vnfNodeTemplateName": "SpiderApp1",
+                "vnfInstanceName": "cnf-service51020221219-cnfa1",
+                "vnfmId": "c2e3cbb3-e8ec-44d0-8bb7-2a9b0b621707",
+                "vnfInstanceDescription": "VNF Descriptor for Ericsson SGSN-MME",
+                "cismName": "kubernetes"
+            },
+            {
+                "vnfNodeTemplateName": "SpiderApp1",
+                "vnfInstanceName": "cnf-service51020221219-cnfa2",
+                "vnfmId": "c2e3cbb3-e8ec-44d0-8bb7-2a9b0b621707",
+                "vnfInstanceDescription": "VNF Descriptor for Ericsson SGSN-MME",
+                "cismName": "kubernetes"
+            }
+        ]
+    },
+    "additionalParamsForVnf": [
+        {
+            "vnfProfileId": "SpiderApp2",
+            "vnfInstanceName": "cnf-service51020221219-cnfb1",
+            "additionalParams": {
+                "bro.ingress.enabled": false,
+                "pm-testapp.ingress.domain": "rontgen010.seli.gic.ericsson.se",
+                "vnfc4.ingress.host": "default",
+                "backup-controller.enabled": false,
+                "tags.all": false,
+                "eric-adp-gs-testapp.ingress.enabled": false,
+                "global.hosts.bro": "bro.test.hahn061.rnd.gic.ericsson.se",
+                "config.nbi.file.enabled": false,
+                "tags.pm": true,
+                "vnfc1.ingress.host": "default",
+                "influxdb.ext.apiAccessHostname": "influxdb-service2.rontgen010.seli.gic.ericsson.se",
+                "vnfc1.test-cnf.ingress.host": "default",
+                "eric-pm-server.server.ingress.enabled": false,
+                "vnfc3.ingress.host": "default",
+                "eric-adp-gs-testapp.service.replicaCount": 1,
+                "eric-adp-gs-testapp.tls.dced.enabled": false,
+                "eric-pm-server.server.persistentVolume.storageClass": "network-block",
+                "vnfc2.ingress.host": "default"
+            }
+        },
+        {
+            "vnfProfileId": "SpiderApp1",
+            "vnfInstanceName": "cnf-service51020221219-cnfa1",
+            "additionalParams": {
+                "eric-pm-server.server.persistentVolume.storageClass": "network-block",
+                "day0.configuration.param2.value": "external-storage-credentials",
+                "bro.ingress.enabled": false,
+                "pm-testapp.ingress.domain": "rontgen010.seli.gic.ericsson.se",
+                "global.hosts.bro": "bro.test.hahn061.rnd.gic.ericsson.se",
+                "vnfc5.ingress.host": "default",
+                "vnfc4.ingress.host": "default",
+                "backup-controller.enabled": false,
+                "bro_endpoint_url": "http://eric-ctrl-bro.YOUR-NAMESPACE:7001",
+                "tags.all": false,
+                "eric-adp-gs-testapp.ingress.enabled": false,
+                "retrieveUnsealKey": false,
+                "eric-pm-server.server.ingress.enabled": false,
+                "config.nbi.file.enabled": false,
+                "tags.pm": true,
+                "vnfc1.ingress.host": "default",
+                "day0.configuration.secretname": "restore-external-storage-secret",
+                "influxdb.ext.apiAccessHostname": "influxdb-service2.rontgen010.seli.gic.ericsson.se",
+                "vnfc1.test-cnf.ingress.host": "default",
+                "vnfc3.ingress.host": "default",
+                "eric-adp-gs-testapp.tls.dced.enabled": false,
+                "day0.configuration.param1.value": "external-storage-url",
+                "day0.configuration.param2.key": "restore.externalStorageCredentials",
+                "day0.configuration.param1.key": "restore.externalStorageURI",
+                "vnfc2.ingress.host": "default"
+            }
+        },
+        {
+            "vnfProfileId": "SpiderApp1",
+            "vnfInstanceName": "cnf-service51020221219-cnfa2",
+            "additionalParams": {
+                "eric-pm-server.server.persistentVolume.storageClass": "network-block",
+                "day0.configuration.param2.value": "external-storage-credentials",
+                "bro.ingress.enabled": false,
+                "pm-testapp.ingress.domain": "rontgen010.seli.gic.ericsson.se",
+                "global.hosts.bro": "bro.test.hahn061.rnd.gic.ericsson.se",
+                "vnfc5.ingress.host": "default",
+                "vnfc4.ingress.host": "default",
+                "backup-controller.enabled": false,
+                "bro_endpoint_url": "http://eric-ctrl-bro.YOUR-NAMESPACE:7001",
+                "tags.all": false,
+                "eric-adp-gs-testapp.ingress.enabled": false,
+                "retrieveUnsealKey": false,
+                "eric-pm-server.server.ingress.enabled": false,
+                "config.nbi.file.enabled": false,
+                "tags.pm": true,
+                "vnfc1.ingress.host": "default",
+                "day0.configuration.secretname": "restore-external-storage-secret",
+                "influxdb.ext.apiAccessHostname": "influxdb-service2.rontgen010.seli.gic.ericsson.se",
+                "vnfc1.test-cnf.ingress.host": "default",
+                "vnfc3.ingress.host": "default",
+                "eric-adp-gs-testapp.tls.dced.enabled": false,
+                "day0.configuration.param1.value": "external-storage-url",
+                "day0.configuration.param2.key": "restore.externalStorageCredentials",
+                "day0.configuration.param1.key": "restore.externalStorageURI",
+                "vnfc2.ingress.host": "default"
+            }
+        }
+    ]
+}

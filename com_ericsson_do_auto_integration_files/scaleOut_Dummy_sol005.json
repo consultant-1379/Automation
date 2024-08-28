@@ -1,0 +1,19 @@
+{
+    "serviceCharacteristic": [{
+            "name": "action",
+            "valueType": "object",
+            "value": {
+                "action_name": "scale",
+                "action_inputs": {
+                    "vnf_scaleVnfData": {
+                        "scaleVnfType": "SCALE_OUT",
+                        "scaleByStepData": {
+                            "aspectId": "VNFLAF-Services",
+                            "numberOfSteps": "1"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

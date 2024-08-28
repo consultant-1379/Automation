@@ -1,0 +1,41 @@
+{
+    "updateType": "INSTANTIATE_VNF",
+    "instantiateVnfData": [
+        {
+            "vnfProfileId": "SpiderApp2",
+            "vnfInstanceName": "cnf-service-cnfb3",
+            "vnfInstanceDescription": "VNF Descriptor for Ericsson SGSN-MME",
+            "additionalParams": {
+                "bro.ingress.enabled": false,
+                "pm-testapp.ingress.domain": "rontgen010.seli.gic.ericsson.se",
+                "vnfc4.ingress.host": "default",
+                "backup-controller.enabled": false,
+                "tags.all": false,
+                "eric-adp-gs-testapp.ingress.enabled": false,
+                "global.hosts.bro": "bro.test.hahn061.rnd.gic.ericsson.se",
+                "config.nbi.file.enabled": false,
+                "tags.pm": true,
+                "vnfc1.ingress.host": "default",
+                "influxdb.ext.apiAccessHostname": "influxdb-service2.rontgen010.seli.gic.ericsson.se",
+                "vnfc1.test-cnf.ingress.host": "default",
+                "eric-pm-server.server.ingress.enabled": false,
+                "vnfc3.ingress.host": "default",
+                "eric-adp-gs-testapp.service.replicaCount": 1,
+                "eric-adp-gs-testapp.tls.dced.enabled": false,
+                "eric-pm-server.server.persistentVolume.storageClass": "network-block",
+                "vnfc2.ingress.host": "default"
+            }
+        }
+    ],
+    "additionalParamsForNs": {
+        "vnfParams": [
+            {
+                "vnfNodeTemplateName": "SpiderApp2",
+                "vnfInstanceName": "cnf-service-cnfb3",
+                "vnfmId": "c2e3cbb3-e8ec-44d0-8bb7-2a9b0b621707",
+                "vnfInstanceDescription": "VNF Descriptor for Ericsson SGSN-MME",
+                "cismName": "kubernetes"
+            }
+        ]
+    }
+}

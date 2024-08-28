@@ -1,0 +1,7 @@
+{
+    "vnfdId": "98ff3c7c-9294-11ea-b1ae-4bccd507c254",
+    "additionalParams": {
+        "skipJobVerification":"true",
+        "cleanUpResources": "true"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "vimZoneName": "cloud6a_ieatdoxb006_HA",
+    "tenantName": "ECM",
+    "stackInfoList": [
+        {
+            "vdcId": "e7c7dccd-192b-4ae2-b290-7ffc5828ef0a",
+            "vnfmId": "5421a092-7449-4ea6-9c9b-47c2059f6634",
+            "stackId": "9c43f270-0464-4307-81fa-82c89688b1e8",
+            "stackName": "TEST_EPG_2020-02-24_17-29-41",
+            "vnfPackageId": "a1a445dc-fbd1-4d59-a6b7-7f80177d895f",
+            "vnfName": "TEST_EPG_2020-02-24_17-29-41",
+            "flavor": "default"
+        }
+    ]
+}

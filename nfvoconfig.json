@@ -1,0 +1,60 @@
+{
+    "baseUrl": "https://10.210.237.225:443/ecm_service",
+    "hostName": "ieatdo9036-om-2-core.athtem.eei.ericsson.se",
+    "hostIpAddress": "10.210.237.225",
+    "userName": "ecmadmin",
+    "password": "CloudAdmin123",
+    "enmHostName": "ieatenmc5b13-8.athtem.eei.ericsson.se",
+    "authType": "Basic",
+    "subscriptionId": "88e6b2e4-848b-467c-809e-fa8b60efd738",
+    "isGrantSupported": "True",
+    "isNotificationSupported": "true",
+    "nfvoType": "ECM",
+    "nfvoInUse": "Y",
+    "tenancyDetails": [
+        {
+            "tenantId": "ECM",
+            "tenantName": "",
+            "defaultTenant": "true",
+            "vdcDetails": [
+                {
+                    "id": "acbdbc2a-bde5-4beb-80ac-96dde8b93964",
+                    "name": "",
+                    "defaultVdc": "true"
+                }
+            ]
+        }
+    ],
+    "nfvoEndPoints": [
+        {
+            "endPointName": "grantUrl",
+            "endPointUrl": "/grant/v1/grants"
+        },
+        {
+            "endPointName": "authUrl",
+            "endPointUrl": "/tokens"
+        },
+        {
+            "endPointName": "lifecycleNotificationUrl",
+            "endPointUrl": "/VnfLcmOperationOccurrenceNotification"
+        },
+        {
+            "endPointName": "createNotificationUrl",
+            "endPointUrl": "/vnf/v1/vnf_instances/creation"
+        },
+        {
+            "endPointName": "deleteNotificationUrl",
+            "endPointUrl": "/vnf/v1/vnf_instances/deletion"
+        },
+        {
+            "endPointName": "packageManagementUrl",
+            "endPointUrl": "/vnfpkgm/v1/vnf_packages"
+        }
+    ],
+    "nfvoProperties": [
+        {
+            "propKey": "nfvoSupportedNotificationTypes",
+            "propValue": "CREATE, DELETE, START, PROCESSING, ROLLED_BACK, COMPLETED, FAILED"
+        }
+    ]
+}

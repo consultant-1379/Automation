@@ -1,0 +1,17 @@
+{
+    "userType": "0",
+    "username": "AUTO_USER",
+    "password": "User@123",
+    "firstName": "AUTO",
+    "lastName": "USER",
+    "email": "test@admin.com",
+    "avopUserType": {
+        "id": "0"
+    },
+    "vendor": {
+        "id": 2
+    },
+    "role": {
+        "id": "2"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "tenantName": "ECM",
+    "fileName": "spider-app-a-1.0.0_072",
+    "name": "spider-app-a-1.0.0_072.csar",
+    "isPublic": true,
+    "description": "",
+    "deploymentManager": "EXTERNAL_VNFM",
+    "vnfManagers": [
+        {
+            "id": "6c9a9916-8c1d-4faf-86ab-37aa838abf1f"
+        }
+    ],
+    "resourceGroups": [],
+    "packageFormat": "TOSCA CNF"
+}

@@ -1,0 +1,9 @@
+{
+    "tenantName": "ECM",
+    "srt": {
+        "name": "valid9m_flavor",
+        "ram": 1024,
+        "numberOfCpu": 1,
+        "diskSize": 1
+            }
+}

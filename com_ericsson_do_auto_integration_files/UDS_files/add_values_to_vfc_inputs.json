@@ -1,0 +1,36 @@
+[
+    {
+        "constraints": null,
+        "defaultValue": "NS",
+        "definition": false,
+        "description": null,
+        "getInputValues": null,
+        "getPolicyValues": null,
+        "inputPath": null,
+        "inputs": null,
+        "instanceUniqueId": "13a78782-9f11-4968-bc10-060ab7084d43.18d833ee-9a4d-4127-8e5c-16b96688067c.ns",
+        "metadata": null,
+        "name": "ns_name",
+        "ownerId": "cs0008",
+        "parentPropertyType": "string",
+        "parentUniqueId": "cs0008",
+        "password": false,
+        "properties": null,
+        "propertyId": "66613ed3-a727-4428-9ed8-2f6986599843.name",
+        "required": false,
+        "schema": {
+            "property": {
+                "definition": false,
+                "description": null,
+                "password": false,
+                "required": false,
+                "type": null
+            }
+        },
+        "schemaType": null,
+        "subPropertyInputPath": null,
+        "type": "string",
+        "uniqueId": "13a78782-9f11-4968-bc10-060ab7084d43.ns_name",
+        "value": null
+    }
+]

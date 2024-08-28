@@ -1,0 +1,17 @@
+{
+   "name":"ECM_Sol005",
+   "vendor":"Ericsson",
+   "url":"https://ieatdo9027-1.athtem.eei.ericsson.se:443",
+   "adapterLink":"eric-eo-ecmsol005-adapter",
+   "subsystemType":{
+      "type":"NFVO"
+   },
+   "connectionProperties":[
+      {
+         "name":"ECM_Sol005",
+         "tenant":"ECM",
+         "username":"ecmadmin",
+         "password":"CloudAdmin123"
+      }
+   ]
+}

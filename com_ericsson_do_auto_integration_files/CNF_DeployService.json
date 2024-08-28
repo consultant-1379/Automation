@@ -1,0 +1,59 @@
+{
+    "name": "<<<>>>",
+    "serviceModelId": "<<<>>>",
+    "description": "CNF with configmap feature deployment from SO",
+    "inputs": [
+        {
+            "name": "sampleVnf_vnfInstanceDescription",
+            "value": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+        },
+        {
+            "name": "vnf01_vnfInstanceName",
+            "value": "cnf-configmap-vnf01"
+        },
+        {
+            "name": "sampleVnf_vnfInstanceName",
+            "value": "cnf-configmap-sample-vnf"
+        },
+        {
+            "name": "vimZoneName",
+            "value": "kubernetes"
+        },
+        {
+            "name": "vnf01_vnfInstanceDescription",
+            "value": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+        },
+        {
+            "name": "vnf02_vnfInstanceName",
+            "value": "cnf-configmap-vnf-02"
+        },
+        {
+            "name": "subsystemName",
+            "value": "<<<>>>"
+        },
+        {
+            "name": "nsdId",
+            "value": "nsd-id-3317001212"
+        },
+        {
+            "name": "networkServiceName",
+            "value": "CNF_ConfigMap_fromSO"
+        },
+        {
+            "name": "cismName",
+            "value": "kubernetes"
+        },
+        {
+            "name": "connectionName",
+            "value": "ECM"
+        },
+        {
+            "name": "vnf02_vnfInstanceDescription",
+            "value": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+        },
+        {
+            "name": "vnfmId",
+            "value": "<<<>>>"
+        }
+    ]
+}

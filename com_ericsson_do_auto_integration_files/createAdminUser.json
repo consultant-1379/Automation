@@ -1,0 +1,11 @@
+{ 
+   "user":{ 
+      "username":"tenant-admin-user",
+      "privileges":[ 
+         "TenantAdmin"
+      ]
+   },
+   "password":"Testing12345!!",
+   "passwordResetFlag":false,
+   "tenant":"staging-tenant"
+}

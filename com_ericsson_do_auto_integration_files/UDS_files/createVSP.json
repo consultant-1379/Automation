@@ -1,0 +1,11 @@
+{
+    "vendorId": "1c837dae342d467480244227e88e00f8",
+    "name": "ETSITOSCAVSP2021-10-0616-50-00",
+    "category": "resourceNewCategory.generic",
+    "subCategory": "resourceNewCategory.generic.network service",
+    "onboardingMethod": "NetworkPackage",
+    "description": "ETSI TOSCA VSP",
+    "vendorName": "Ericsson20211006164958",
+    "icon": "icon",
+    "licensingData": {}
+}

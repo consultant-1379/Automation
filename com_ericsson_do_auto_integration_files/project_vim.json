@@ -1,0 +1,33 @@
+{
+    "vimZoneConnections": [
+        {
+            "vimZoneId": "38d65dcb-4906-4247-9b90-3ade37a6b7ea",
+            "vimObjectId": "5b56b9c8c6114d9eb38367474fa8b4bb",
+            "userVimObjectId": "17e027ecd34343839a72f333966bff86",
+            "adminUserVimObjectId": "1032eb7e328a44fc94b9649eb03d7975",
+            "localName": "EO_cee_n72",
+            "localDomainName": "Default",
+            "localUserCredentials": {
+                "userName": "EO_cee_n72_user",
+                "userPassword": "2vqdhJmTSmzdCizj1Q8X7pER",
+                "grantedRoles": [
+                    {
+                        "roleName": "_member_"
+                    },
+                    {
+                        "roleName": "heat_stack_owner"
+                    }
+                ]
+            },
+            "localAdminUserCredentials": {
+                "adminUserName": "EO_cee_n72_admin",
+                "adminPassword": "2vqdhJmTSmzdCizj1Q8X7pER",
+                "grantedRoles": [
+                    {
+                        "roleName": "admin"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+        "vimZoneName_{{ mme.vnfUniqueId }}": "{{ mme.vimZoneName }}",
+        "vnfmId_{{ mme.vnfUniqueId }}": "{{ mme.vnfm_Id }}",
+        "vnfdId_{{ mme.vnfUniqueId }}": "{{ mme.vnfdId_mme }}",
+        "name_{{ mme.vnfUniqueId }}": "{{ mme.name }}"
+}

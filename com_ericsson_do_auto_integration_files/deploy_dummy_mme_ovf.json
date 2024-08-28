@@ -1,0 +1,148 @@
+{
+    "tenantName": "ECM",
+    "vimZoneName": "cloud7_ieatdoxb035",
+    "vdc": {
+        "id": "3df9b9b0-7ca3-45b1-a26e-0ef1fdfac0c8"
+    },
+    "ovfPackage": {
+        "vm": [
+            {
+                "id": "NetworkVM_vMME",
+                "configData": [],
+                "configFiles": [],
+                "availabilityZone": "nova",
+                "configDrive": true
+            }
+        ],
+        "vapp": {
+            "id": "NetworkVNF_vMME",
+            "configData": [
+                {
+                    "name": "FSB_vMME_routerIP",
+                    "value": "10.10.11.17"
+                },
+                {
+                    "name": "FSB_vMME_subnet",
+                    "value": "10.10.11.16/29"
+                },
+                {
+                    "name": "Media_CN_vMME_routerIP",
+                    "value": "10.10.11.65"
+                },
+                {
+                    "name": "Media_CN_vMME_subnet",
+                    "value": "10.10.11.64/29"
+                },
+                {
+                    "name": "NetworkVMnet_vMME_routerIP",
+                    "value": "10.10.11.81"
+                },
+                {
+                    "name": "NetworkVMnet_vMME_subnet",
+                    "value": "10.10.11.80/29"
+                },
+                {
+                    "name": "OM_CN_vMME_routerIP",
+                    "value": "10.10.11.1"
+                },
+                {
+                    "name": "OM_CN_vMME_subnet",
+                    "value": "10.10.11.0/29"
+                },
+                {
+                    "name": "RAN_vMME_routerIP",
+                    "value": "10.10.11.33"
+                },
+                {
+                    "name": "RAN_vMME_subnet",
+                    "value": "10.10.11.32/29"
+                },
+                {
+                    "name": "Sig_CN_vMME_routerIP",
+                    "value": "10.10.11.49"
+                },
+                {
+                    "name": "Sig_CN_vMME_subnet",
+                    "value": "10.10.11.48/29"
+                }
+            ]
+        },
+        "ovfPkgObjects": [
+            {
+                "objectName": "Vn.name",
+                "currentValue": "EOST_ECDE_NetworkVMnet_vMME",
+                "newValue": "EOST_ECDE_NetworkVMnet_vMME"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "EOST_ECDE_OM_CN_vMME",
+                "newValue": "EOST_ECDE_OM_CN_vMME"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "EOST_ECDE_FSB_vMME",
+                "newValue": "EOST_ECDE_FSB_vMME"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "EOST_ECDE_RAN_vMME",
+                "newValue": "EOST_ECDE_RAN_vMME"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "EOST_ECDE_Sig_CN_vMME",
+                "newValue": "EOST_ECDE_Sig_CN_vMME"
+            },
+            {
+                "objectName": "Vn.name",
+                "currentValue": "EOST_ECDE_Media_CN_vMME",
+                "newValue": "EOST_ECDE_Media_CN_vMME"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "NetworkVMnet_vMME_Sub",
+                "newValue": "NetworkVMnet_vMME_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "OM_CN_vMME_Sub",
+                "newValue": "OM_CN_vMME_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "FSB_vMME_Sub",
+                "newValue": "FSB_vMME_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "RAN_vMME_Sub",
+                "newValue": "RAN_vMME_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "Sig_CN_vMME_Sub",
+                "newValue": "Sig_CN_vMME_Sub"
+            },
+            {
+                "objectName": "Subnet.name",
+                "currentValue": "Media_CN_vMME_Sub",
+                "newValue": "Media_CN_vMME_Sub"
+            },
+            {
+                "objectName": "Vapp.name",
+                "currentValue": "EOST_ECDE_OVF_NetworkVM_vMME",
+                "newValue": "EOST_ECDE_OVF_NetworkVM_vMME"
+            },
+            {
+                "objectName": "Vm.name",
+                "currentValue": "EOST_ECDE_OVF_NetworkVM_vMME",
+                "newValue": "EOST_ECDE_OVF_NetworkVM_vMME"
+            },
+            {
+                "objectName": "VmVnic.name",
+                "currentValue": "EOST_ECDE_Network_adapter_1",
+                "newValue": "EOST_ECDE_Network_adapter_1"
+            }
+        ]
+    }
+}

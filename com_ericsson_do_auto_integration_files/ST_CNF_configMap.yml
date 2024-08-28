@@ -1,0 +1,322 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+description: >
+  ESO service template 
+
+imports:
+  - aria-1.0
+
+##################################################################################################################################
+# Data types
+##################################################################################################################################  
+ 
+data_types:
+
+  com.ericsson.eso.nameValuePair:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name: 
+        type: string
+      value: 
+        type: string 
+       
+  com.ericsson.so.datatypes.NodeReference:
+    derived_from: tosca.datatypes.Root
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+        
+  com.ericsson.so.datatypes.CustomTemplate:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name:
+        type: string
+      catalogRef:
+        type: string
+        required: false
+      nodeRefs:
+        type: list
+        required: false
+        entry_schema: com.ericsson.so.datatypes.NodeReference
+
+##################################################################################################################################
+# Node Types - NS and VNF
+##################################################################################################################################
+  
+node_types:
+
+# This node represents the ESO basic node type (resource)        
+  com.ericsson.eso.resource:
+    derived_from: tosca.nodes.Root
+    properties:
+      resourceType:
+        type: string
+      resourceSubtype:
+        type: string
+        required: false
+      customTemplates:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate             
+      customOperations:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.eso.nameValuePair
+
+# ESO base definition for a VNF from an NFVO NSD
+  com.ericsson.eso.NetworkFunction:
+    derived_from: com.ericsson.eso.resource
+    properties:
+      resourceType:
+        type: string
+        default: 'NetworkFunction'
+      vimZoneName: 
+        type: string    
+      vnfInstanceName: 
+        type: string
+      vnfInstanceDescription: 
+        type: string
+      vnfProfileId: 
+        type: string
+      cismName: 
+        type: string
+      namespace:
+        type: string
+      pm_testapp_ingress_domain:
+        type: string
+        default: 'rontgen010.seli.gic.ericsson.se'
+      vnfc1_test_cnf_ingress_host:
+        type: string
+        default: 'rontgen010.seli.gic.ericsson.se'
+      eric_pm_server_server_ingress_enabled:
+        type: boolean
+        default: false
+      tags_all:
+        type: boolean
+        default: false
+      vnfc4_ingress_host:
+        type: string
+        default: 'rontgen010.seli.gic.ericsson.se'  
+      config_nbi_file_enabled:
+        type: boolean
+        default: true
+      vnfc1_ingress_host:
+        type: string
+        default: 'rontgen010.seli.gic.ericsson.se'
+      tags_pm:
+        type: boolean
+        default: true
+      influxdb_ext_apiAccessHostname:
+        type: string
+        default: 'influxdb-service2.rontgen010.seli.gic.ericsson.se'
+      global_eric_pccsm_pgw_enabled:
+        type: boolean
+        default: true
+      global_eric_pccsm_sgw_enabled:
+        type: boolean
+        default: false  
+      eric_pm_server_server_persistentVolume_storageClass:
+        type: string
+        default: 'network-block'
+      vnfc3_ingress_host:
+        type: string
+        default: 'rontgen010.seli.gic.ericsson.se'
+      eric_adp_gs_testapp_tls_dced_enabled:
+        type: boolean
+        default: false
+      vnfc2_ingress_host:
+        type: string
+        default: 'rontgen010.seli.gic.ericsson.se'
+      eric_adp_gs_testapp_ingress_enabled:
+        type: boolean
+        default: false
+
+# vnf01 Node Type
+  com.ericsson.eso.NetworkFunction.vnf01:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype: 
+        type: string
+        default: 'vnf01'
+
+# vnf01 Node Type
+  com.ericsson.eso.NetworkFunction.vnf02:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype: 
+        type: string
+        default: 'vnf02'
+
+# vnf01 Node Type
+  com.ericsson.eso.NetworkFunction.sampleVnf:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype: 
+        type: string
+        default: 'sampleVnf'
+
+
+# ESO base definition for an NFVO Network Service
+  com.ericsson.eso.NetworkService:
+    derived_from: com.ericsson.eso.resource
+    properties:
+      resourceType:
+        type: string
+        default: 'NetworkService'
+      nsName: 
+        type: string
+      nsdId: 
+        type: string
+      nsDescription: 
+        type: string
+      subsystemName:
+        type: string
+      connectionName:
+        type: string
+      vnfmId:
+        type: string
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard
+        create:
+          implementation: 'camunda/nsCreate'
+        delete:
+          implementation: 'camunda/nsDelete'
+
+
+
+topology_template:
+    
+  inputs:
+    # We have 1 Network Service and Two Network Functions for the PoC: SMF and UPF
+
+    subsystemName:
+      type: string
+      default: 'SOL005_EOCM_244'
+    vimZoneName:
+      type: string
+      default: 'kubernetes'
+    connectionName:
+      type: string
+      default: 'ECM'
+    cismName:
+      type: string
+      default: 'kubernetes'
+    vnfmId:
+      type: string
+      default: '34951e45-7bcb-4f75-ae2b-64a86ff76690'
+    nsdId:
+      type: string
+      default: 'nsd-id-3317001212'       
+    networkServiceName:
+      type: string
+      default: 'CNF_ConfigMap_fromSO'
+    vnf01_vnfInstanceName:
+      type: string
+      default: "cnf-configmap-vnf01"
+    vnf01_vnfInstanceDescription:
+      type: string
+      default: "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+    vnf02_vnfInstanceName:
+      type: string
+      default: "cnf-configmap-vnf-02"
+    vnf02_vnfInstanceDescription:
+      type: string
+      default: "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+    sampleVnf_vnfInstanceName:
+      type: string
+      default: "cnf-configmap-sample-vnf"
+    sampleVnf_vnfInstanceDescription:
+      type: string
+      default: "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+
+  node_templates:
+
+    vnf01:
+      type: com.ericsson.eso.NetworkFunction.vnf01
+      properties:
+        vimZoneName: { get_input: vimZoneName }
+        vnfInstanceName: { get_input: vnf01_vnfInstanceName }
+        vnfInstanceDescription: { get_input: vnf01_vnfInstanceDescription }
+        vnfProfileId: "vnf-01"
+        namespace: "spiderapp-configmap1"
+        cismName: { get_input: cismName }
+        
+        customOperations: [ ] 
+        #additionalParamsForVnfTemplate will become one item of the array 'addtionalParamsForVnf' when creating the network service
+        #addtionalParamsForVnf array will be captured in the vnfsAdditionalParamsTemplate of the Network Service node
+        customTemplates: [
+          {
+            "name": "additionalParamsForVnfTemplate",
+            "catalogRef": "vnf01AdditionalParams"
+          }
+        ]
+      requirements:
+        - dependency: targetCNF_NS
+
+    vnf02:
+      type: com.ericsson.eso.NetworkFunction.vnf02
+      properties:
+        vimZoneName: { get_input: vimZoneName }
+        vnfInstanceName: { get_input: vnf02_vnfInstanceName }
+        vnfInstanceDescription: { get_input: vnf02_vnfInstanceDescription }
+        vnfProfileId: "vnf-02"
+        namespace: "spiderapp-configmap2"
+        cismName: { get_input: cismName }
+        
+        
+        customOperations: [ ] 
+        #additionalParamsForVnfTemplate will become one item of the array 'addtionalParamsForVnf' when creating the network service
+        #addtionalParamsForVnf array will be captured in the vnfsAdditionalParamsTemplate of the Network Service node
+        customTemplates: [
+          {
+            "name": "additionalParamsForVnfTemplate",
+            "catalogRef": "vnf02AdditionalParams"
+          }
+        ]
+      requirements:
+        - dependency: targetCNF_NS
+
+    sampleVnf:
+      type: com.ericsson.eso.NetworkFunction.sampleVnf
+      properties:
+        vimZoneName: { get_input: vimZoneName }
+        vnfInstanceName: { get_input: sampleVnf_vnfInstanceName }
+        vnfInstanceDescription: { get_input: sampleVnf_vnfInstanceDescription }
+        vnfProfileId: "sample-vnf"
+        namespace: "spiderapp-configmap3"                                                                
+        cismName: { get_input: cismName }
+        
+        customOperations: [ ] 
+        customTemplates: [
+          {
+            "name": "additionalParamsForVnfTemplate",
+            "catalogRef": "sampleVnfAdditionalParams"
+          }
+        ]
+      requirements:
+        - dependency: targetCNF_NS
+        
+    targetCNF_NS:
+      type: com.ericsson.eso.NetworkService
+      properties:
+        # Network Service properties needed by the SO platform
+        nsName: { get_input: networkServiceName }
+        nsdId: { get_input: nsdId }
+        subsystemName: { get_input: subsystemName }
+        connectionName: { get_input: connectionName }
+        vnfmId: { get_input: vnfmId }        
+        
+        nsDescription: "Service that creates CNF by passing configMaps from EO-SO"
+        customOperations: [ ]
+        # For Oct Demo, the ecmRequestTemplate is kept just in case it is mandatory for SO.
+        # But the nsrequest.txt is empty for Oct demo. Full functionality will be added in Nov.
+        customTemplates: [
+          {
+            "name": "additionalParamsForNsTemplate",
+            "catalogRef": "cnfnsAdditionalParams"
+          }
+        ]

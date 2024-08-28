@@ -1,0 +1,97 @@
+{
+    "tenantName": "ECM",
+    "fileName": "mme1.20_asr_so.zip",
+    "name": "TEST_MME_PACKAGE_UPLOAD_564",
+    "description": "Automation EPG package onboard",
+    "category": "vapp",
+    "vendor": "Ericsson",
+    "version": "1.0.0",
+    "softwareVersion": "18.2.0.0",
+    "isPublic": "false",
+    "deploymentManager": "EXTERNAL_VNFM",
+    "packageFormat": "EXTERNAL_FORMAT",
+    "vnfManagers": [
+        {
+            "id": "cc85e003-d622-43b2-a27c-5017ce5cac21"
+        }
+    ],
+    "userDefinedData": {
+        "dataVNFDSpecific": {
+            "vnfdId": "mme1.20_asr_so",
+            "vnfdVersion": "cxp9025898_4r81e10",
+            "vnfProvider": "Ericsson",
+            "vnfProductName": "SGSN-MME",
+            "vnfSoftwareVersion": "1.17 (CXS101289_R78A68)",
+            "flavourId": [
+                "default"
+            ],
+            "vnfLcmOperationsConfiguration": {
+                "scale": {
+                    "scalingByMoreThanOneStepSupported": true
+                }
+            },
+            "scalingAspect": [
+                {
+                    "id": "GPB",
+                    "name": "GPB",
+                    "description": "Scale level 0-62 maps to 2-64 GPB VNFC instances (1 instance per scale step)",
+                    "maxScaleLevel": 30
+                },
+                {
+                    "id": "vLC",
+                    "name": "vLC",
+                    "description": "Scale level 0-14 maps to 2-16 vLC VNFC instances (1 instance per scale step)",
+                    "maxScaleLevel": 14
+                }
+            ]
+        },
+        "instantiateVnfOpConfig": {
+            "node_type": "sgsnl",
+            "tmo": 0,
+            "ss7": "Not_Applicable",
+            "time_zone": "UTC",
+            "key_name": "",
+            "ssh_public_key": "",
+            "extra_console": "ttyS1",
+            "internal_mtu": 1500,
+            "storage_drbd_sync_rate": 0,
+            "gpbs": 2,
+            "fsb_flavor": "CM-fsb_flavor_ieatdoxb040",
+            "ncb_flavor": "CM-ncb_flavor_ieatdoxb040",
+            "gpb_flavor": "CM-gpb_flavor_ieatdoxb040",
+            "fsb1_image": "835bec58-7673-443c-978d-59458bfb17c5",
+            "fsb2_image": "1cbd625b-7fc6-4b52-b421-7607454807c4",
+            "pxeboot_image": "bced0246-3525-43b4-abf1-78aaf33078f6",
+            "availability_zone_1": "nova",
+            "fsb1_admin_net_id": "P3-CEE1-ieatdoxb040-FSB_MME",
+            "fsb2_admin_net_id": "P3-CEE1-ieatdoxb040-FSB_MME",
+            "fsb_admin_ip_1": "10.210.254.116",
+            "fsb_admin_ip_2": "10.210.254.117",
+            "fsb_admin_prefix_length": 29,
+            "fsb_admin_gateway_ip_1": "10.210.254.113",
+            "fsb_admin_gateway_ip_2": "",
+            "fsb_admin_dns_server_ip_1": "",
+            "fsb_admin_dns_server_ip_2": "",
+            "OM_CN_net_id": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT",
+            "OM_CN_service_ip_1": "10.210.238.146",
+            "OM_CN_ips": "10.32.133.194",
+            "OM_CN_prefix_length": 28,
+            "OM_CN_gateway_ip_1": "10.32.133.193",
+            "updateOss": true,
+            "vnfIpAddress": "10.210.238.146",
+            "vnfUsername": "mmeuser",
+            "vnfPassword": "cm9vdCEyMzQ=",
+            "associatedSite": "",
+            "subNetworks": "",
+            "networkElementVersion": "1.15",
+            "communityString": "",
+            "snmpPort": 25161,
+            "enableRollback": true
+        },
+        "terminateVnfOpConfig": {},
+        "scaleVnfOpConfig": {}
+    },
+    "userDefinedDataSchema": {
+        "key": "value"
+    }
+}

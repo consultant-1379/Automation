@@ -1,0 +1,108 @@
+{
+   "nsFlavourId":"default-ns-flavour",
+   "vlinkParams":[
+      {
+         "description":"",
+         "name":"TestDeploy-mateNsVlink",
+         "vlinkId":"mateNsVlink",
+         "vlinkSegmentParams":[
+            {
+               "virtualisedResources":{
+                  "subnets":[
+                     {
+                        "gatewayIpAddress":"127.4.0.1",
+                        "ipAddressRange":"127.4.0.0/16",
+                        "ipVersion":"IPv4",
+                        "name":"mateSubnet",
+                        "resourceId":"mateNsVlink-Virtual Link Segment 0-0"
+                     }
+                  ],
+                  "vn":{
+                     "category":"L3",
+                     "enabled":true,
+                     "name":"TestDeploy-mateNsVlink-Virtual Link Segment 0-Network_001",
+                     "resourceId":"ECM12",
+                     "segments":[
+                        {
+                           "isPrimary":true,
+                           "name":"TestDeploy-mateNsVlink-Virtual Link Segment 0-Network_001-Primary Segment"
+                        }
+                     ]
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "name":"TestDeploy-vfabNsVlink",
+         "vlinkId":"vfabNsVlink",
+         "vlinkSegmentParams":[
+            {
+               "virtualisedResources":{
+                  "subnets":[
+                     {
+                        "gatewayIpAddress":"127.6.0.1",
+                        "ipAddressRange":"127.6.0.0/16",
+                        "ipVersion":"IPv4",
+                        "name":"vfabSubnet",
+                        "resourceId":"vfabNsVlink-Virtual Link Segment 0-0"
+                     }
+                  ],
+                  "vn":{
+                     "category":"L3",
+                     "enabled":true,
+                     "name":"TestDeploy-vfabNsVlink-Virtual Link Segment 0-Network_001",
+                     "resourceId":"ECM13",
+                     "segments":[
+                        {
+                           "isPrimary":true,
+                           "name":"TestDeploy-vfabNsVlink-Virtual Link Segment 0-Network_001-Primary Segment"
+                        }
+                     ]
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "name":"TestDeploy-bpNsVlink",
+         "vlinkId":"bpNsVlink",
+         "vlinkSegmentParams":[
+            {
+               "virtualisedResources":{
+                  "subnets":[
+                     {
+                        "gatewayIpAddress":"127.3.0.1",
+                        "ipAddressRange":"127.3.0.0/16",
+                        "ipVersion":"IPv4",
+                        "name":"bpSubnet",
+                        "resourceId":"bpNsVlink-Virtual Link Segment 0-0"
+                     }
+                  ],
+                  "vn":{
+                     "category":"L3",
+                     "enabled":true,
+                     "name":"TestDeploy-bpNsVlink-Virtual Link Segment 0-Network_001",
+                     "resourceId":"ECM14",
+                     "segments":[
+                        {
+                           "isPrimary":true,
+                           "name":"TestDeploy-bpNsVlink-Virtual Link Segment 0-Network_001-Primary Segment"
+                        }
+                     ]
+                  }
+               }
+            }
+         ]
+      }
+   ],
+   "vnfParams":[
+      {
+         "vimZoneName":"{{ EPG.vimZoneName }}",
+         "vnfInstanceDescription":"ETSI NFV SOL 001 vnfd types definitions version 2.5.1",
+         "vnfInstanceName":"{{ EPG.alias }}",
+         "vnfmId":"{{ NS.vnfmId }}",
+         "vnfNodeTemplateName":"epg-vnf"
+      }
+   ]
+}

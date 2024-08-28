@@ -1,0 +1,16 @@
+{
+"name": "MULTI_ENM_701",
+"vendor": "Ericsson",
+"url": "https://ieatenmc4b09-9.athtem.eei.ericsson.se",
+"adapterLink": "eric-eo-enm-adapter",
+"subsystemType": {
+"type": "DomainManager"
+},
+"connectionProperties": [
+{
+"name": "ENM",
+"username": "administrator",
+"password": "TestPassw0rd"
+}
+]
+}

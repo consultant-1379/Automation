@@ -1,0 +1,11 @@
+{
+   "user":{
+      "username":"so_logviewer",
+      "privileges":[
+         "LogViewer"
+      ]
+   },
+   "password":"Testing123!!",
+   "passwordResetFlag":false,
+   "tenant":"master"
+}

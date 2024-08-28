@@ -1,0 +1,147 @@
+{
+	"componentInstanceInputsMap": {},
+	"componentInstanceProperties": {
+		"<UNIQUE_ID_FROM_ADDING_NETWORK_SERVICE_TO_COMPOSITION>": [
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "connectionName",
+				"origName": "connectionName",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<NETWORK_SERVICE_VFC>.connectionName",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "nsDescription",
+				"origName": "nsDescription",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<NETWORK_SERVICE_VFC>.nsDescription",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "nsName",
+				"origName": "nsName",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<NETWORK_SERVICE_VFC>.nsName",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "nsdId",
+				"origName": "nsdId",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<NETWORK_SERVICE_VFC>.nsdId",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "subsystemName",
+				"origName": "subsystemName",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<NETWORK_SERVICE_VFC>.subsystemName",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "tenant",
+				"origName": "tenant",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<NETWORK_SERVICE_VFC>.tenant",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			}
+		]
+	},
+	"groupProperties": {},
+	"policyProperties": {}
+}

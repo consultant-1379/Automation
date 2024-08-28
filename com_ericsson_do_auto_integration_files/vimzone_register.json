@@ -1,0 +1,114 @@
+{
+    "name": "cloud1_ieatdoxb040",
+    "version": "",
+    "type": "CEE",
+    "description": "Cloud1 Project",
+    "siteName": "Athlone Data Center",
+    "defaultSecurityConfig": {
+        "securityType": "HTTPS"
+    },
+    "endPoints": [
+        {
+            "name": "keystone",
+            "up": true,
+            "vimApiVersion": "3.0",
+            "ipAddress": "ieatcee01cic.athtem.eei.ericsson.se",
+            "port": 5000,
+            "testUri": "/v3.0"
+        },
+        {
+            "name": "nova",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "131.160.163.12",
+            "port": 8774,
+            "testUri": "/v2"
+        },
+        {
+            "name": "ceilometer",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "131.160.163.12",
+            "port": 8777,
+            "testUri": "/"
+        },
+        {
+            "name": "cinder",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "131.160.163.12",
+            "port": 8776,
+            "testUri": "/v2"
+        },
+        {
+            "name": "glance",
+            "up": true,
+            "vimApiVersion": "1.0",
+            "ipAddress": "131.160.163.12",
+            "port": 9292,
+            "testUri": "/v2"
+        },
+        {
+            "name": "heatstack",
+            "up": true,
+            "vimApiVersion": "1.0",
+            "ipAddress": "131.160.163.20",
+            "port": 8004,
+            "testUri": "/v1"
+        },
+        {
+            "name": "neutron",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "131.160.163.12",
+            "port": 9696,
+            "testUri": "/v2.0"
+        }
+    ],
+    "keystoneDefaultDomain": "Default",
+    "credentials": {
+        "name": "Automation_Dummy_Project",
+        "adminUserName": "Automation_Project_Admin",
+        "adminPassword": "Automation_Project_Admin"
+    },
+    "externalNetworkVimObjectId": "12e3db68-94f4-4112-bc0c-01ad84b08b58",
+    "vendor": "Ericsson",
+    "locale": "en-gb",
+    "timeZone": "0",
+    "networkType": "vlan",
+    "adminPrivilege": true,
+    "totalResources": [
+        {
+            "name": "vCpu",
+            "value": -1
+        },
+        {
+            "name": "virtualMemory",
+            "value": -1
+        },
+        {
+            "name": "diskSize",
+            "value": -1
+        }
+    ],
+    "availabilityZones": [
+        {
+            "name": "nova",
+            "description": "Cloud 1 nova",
+            "totalResources": [
+                {
+                    "name": "vCpu",
+                    "value": -1
+                },
+                {
+                    "name": "virtualMemory",
+                    "value": -1
+                },
+                {
+                    "name": "diskSize",
+                    "value": -1
+                }
+            ]
+        }
+    ]
+}

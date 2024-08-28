@@ -1,0 +1,46 @@
+{
+   "tenantName":"ECM",
+   "vimZoneName":"cloud6a_ieatdoxb006_HA",
+   "vdc":{
+      "id":"f830e6ad-3b1b-4355-a8dc-23c04cec8c03"
+   },
+   "hotPackage":{
+      "vapp":{
+         "name":"ns-vbgf-env-setup-direct",
+         "productInfo":{
+            "version":"",
+            "vendor":""
+         },
+         "type":"",
+         "flavor":"",
+         "description":"",
+         "configData":[
+            {
+               "name":"external_ipv4_subnet_id",
+               "value":"688825ae-478b-4d6b-b4d4-ff3c7532d4b2"
+            },
+            {
+               "name":"external_net_id",
+               "value":"6f7e5f7b-2f2e-4bd8-b81c-3b7ef156de31"
+            },
+            {
+               "name":"vbgf_oam_mip_count",
+               "value":"1"
+            },
+            {
+               "name":"vbgf_oam_fixed_ips",
+               "value":"131.160.190.60"
+            }
+         ],
+         "configFiles":[
+            {
+               "fileId":"Resources/HotFiles/mip_group.yaml",
+               "fileContent":"aGVhdF90ZW1wbGF0ZV92ZXJzaW9uOiBuZXd0b24NCg0KZGVzY3JpcHRpb246IHwtDQogIEhPVCB0ZW1wbGF0ZSB0byBjcmVhdGUgYSBNSVAgcG9ydCBkaXJlY3RseSBvbiBhbiBleHRlcm5hbCBuZXR3b3JrLg0KDQpwYXJhbWV0ZXJzOg0KICANCiAgc3RhY2tfbmFtZToNCiAgICB0eXBlOiBzdHJpbmcNCiAgICBkZXNjcmlwdGlvbjogVGhlIG5hbWUgb2YgdGhlIEhlYXQgc3RhY2suDQoNCiAgcmVzb3VyY2VfaW5kZXg6DQogICAgdHlwZTogbnVtYmVyDQogICAgZGVzY3JpcHRpb246IFRoZSBjdXJyZW50IHJlc291cmNlIGluc3RhbmNlIGluZGV4IHdpdGhpbiB0aGUgcmVzb3VyY2UgZ3JvdXAuDQogIA0KICBzZWN1cml0eV9ncm91cDoNCiAgICB0eXBlOiBzdHJpbmcNCiAgICBkZXNjcmlwdGlvbjogU2VjdXJpdHkgZ3JvdXAgZm9yIHRoZSBNSVAgcG9ydC4NCg0KICBleHRlcm5hbF9uZXRfaWQ6DQogICAgdHlwZTogc3RyaW5nDQogICAgZGVzY3JpcHRpb246IFZJTSBVVUlEIG9mIGFuIGV4aXN0aW5nIGV4dGVybmFsIG5ldHdvcmsuDQoNCiAgZXh0ZXJuYWxfaXB2NF9zdWJuZXRfaWQ6DQogICAgdHlwZTogc3RyaW5nDQogICAgZGVzY3JpcHRpb246IFZJTSBVVUlEIG9mIGFuIElQdjQgc3VibmV0IG9mIHRoZSBleHRlcm5hbCBuZXR3b3JrLg0KDQogIGZpeGVkX2lwczoNCiAgICB0eXBlOiBjb21tYV9kZWxpbWl0ZWRfbGlzdA0KICAgIGRlc2NyaXB0aW9uOiB8LQ0KICAgICAgRml4ZWQgSVAgYWRkcmVzc2VzIGZvciB0aGUgTUlQIHBvcnRzLiBJZiBwcm92aWRlZCwgdGhlIG51bWJlciBvZiBJUHMgbXVzdA0KICAgICAgYmUgZXF1YWwgdG8gdmJnZl9vYW1fbWlwX2NvdW50Lg0KDQpjb25kaXRpb25zOg0KDQogIGhhdmVfZml4ZWRfaXBzOg0KICAgIG5vdDoNCiAgICAgIGVxdWFsczoNCiAgICAgICAgLSBnZXRfcGFyYW06IGZpeGVkX2lwcw0KICAgICAgICAtIFtdDQoNCnJlc291cmNlczoNCg0KICB2YmdmX29hbV9taXBfcG9ydDoNCiAgICB0eXBlOiBPUzo6TmV1dHJvbjo6UG9ydA0KICAgIHByb3BlcnRpZXM6DQogICAgICBuYW1lOg0KICAgICAgICBzdHJfcmVwbGFjZToNCiAgICAgICAgICBwYXJhbXM6DQogICAgICAgICAgICA8c3RhY2tfbmFtZT46IHsgZ2V0X3BhcmFtOiBzdGFja19uYW1lIH0NCiAgICAgICAgICAgIDxpbmRleD46IHsgZ2V0X3BhcmFtOiByZXNvdXJjZV9pbmRleCB9DQogICAgICAgICAgdGVtcGxhdGU6IDxzdGFja19uYW1lPl9vYW0tbWlwLXBvcnQtPGluZGV4Pg0KICAgICAgbmV0d29yazogeyBnZXRfcGFyYW06IGV4dGVybmFsX25ldF9pZCB9DQogICAgICBmaXhlZF9pcHM6DQogICAgICAgIC0gaWY6DQogICAgICAgICAgLSBoYXZlX2ZpeGVkX2lwcw0KICAgICAgICAgIC0gc3VibmV0OiB7IGdldF9wYXJhbTogZXh0ZXJuYWxfaXB2NF9zdWJuZXRfaWQgfQ0KICAgICAgICAgICAgaXBfYWRkcmVzczogeyBnZXRfcGFyYW06IFsgZml4ZWRfaXBzLCB7IGdldF9wYXJhbTogcmVzb3VyY2VfaW5kZXggfSBdIH0NCiAgICAgICAgICAtIHN1Ym5ldDogeyBnZXRfcGFyYW06IGV4dGVybmFsX2lwdjRfc3VibmV0X2lkIH0NCiAgICAgIHNlY3VyaXR5X2dyb3VwczoNCiAgICAgICAgLSBnZXRfcGFyYW06IHNlY3VyaXR5X2dyb3VwDQoNCm91dHB1dHM6DQoNCiAgbWlwX3BvcnQ6DQogICAgZGVzY3JpcHRpb246IE1vdmFibGUgSVAgcG9ydCBkYXRhLg0KICAgIHZhbHVlOg0KICAgICAgaW5kZXg6IHsgZ2V0X3BhcmFtOiByZXNvdXJjZV9pbmRleCB9DQogICAgICB1dWlkOiB7IGdldF9hdHRyOiBbIHZiZ2Zfb2FtX21pcF9wb3J0LCBzaG93LCBpZCBdIH0NCiAgICAgIG5hbWU6IHsgZ2V0X2F0dHI6IFsgdmJnZl9vYW1fbWlwX3BvcnQsIG5hbWUgXSB9DQogICAgICBtb3ZpbmdfaXBfYWRkcjogeyBnZXRfYXR0cjogWyB2YmdmX29hbV9taXBfcG9ydCwgZml4ZWRfaXBzLCAwLCBpcF9hZGRyZXNzIF0gfQ0K"
+            }
+         ],
+         "configDataEnvFile":[
+
+         ]
+      }
+   }
+}

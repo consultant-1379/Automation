@@ -1,0 +1,26 @@
+read:
+  activationManagers:
+    - &AM1
+      id: DCGW-ASR9000-AM1	#DCGW Activation Manager Id
+create:
+  activationEntities: # Devices
+    - &AE1
+      id: ASR9000 # Device id, needs to be same as in SCM
+      name: DCGW-VRF-OM_CN
+      type: DCGW
+      description: Activation Entity ASR9000
+      activationManager: *AM1
+      provisioningStatus: ACTIVE
+  largeObjects:
+    - &AM1CustomStoredParams
+      id: DCGW-ASR9000-AM1-Attachment
+      data: '{"customParams":[{"tag":"cloud6a_ieatdoxb006_HA","value":"ASR9000"}]}' # Mapping of vim zone to deviceId (Cisco DCGW), same deviceId must be defined i SCM
+      objectId: DCGW-ASR9000-AM1
+      objectType: ACTIVATION_MANAGER
+      type: CustomParams
+    - &AE1CustomParams
+      id: AE1CPId
+      data: '{"customParams":[{"tag":"OM_CN","value":"SCM-VRF-OM_CN_DEMO"}]}' # Vrf name mapping in first device
+      objectId: ASR9000 # Id of device, needs to be same as in SCM
+      objectType: ACTIVATION_ENTITY
+      type: CustomParams

@@ -1,0 +1,24 @@
+{
+    "service": {
+        "name": "network_service_214",
+        "serviceModelId": "59598ba9-203c-4580-9358-51c9f8317b0d",
+        "description": " mme VNF creation"
+    },
+    "action": {
+        "name": "deploy",
+        "inputs": [
+            {
+                "name": "vimZoneName",
+                "value": "cloud1_ieatdoxb040"
+            },
+            {
+                "name": "serviceName",
+                "value": "demo_so"
+            },
+            {
+                "name": "tenant",
+                "value": "ECM"
+            }
+        ]
+    }
+}

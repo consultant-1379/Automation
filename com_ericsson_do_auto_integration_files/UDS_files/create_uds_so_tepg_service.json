@@ -1,0 +1,82 @@
+{
+    "@type": "ServiceOrder",
+    "category": "",
+    "description": "",
+    "serviceOrderItem": [
+        {
+            "@type": "ServiceOrderItem",
+            "action": "add",
+            "id": "1",
+            "service": {
+                "description": "instantiate tepg",
+                "name": "Tosca_EPG_VNFD_2022-10-19_15-44-49",
+                "serviceCharacteristic": [
+                    {
+                        "name": "subnetId",
+                        "value": "3f89117f-ec03-40c5-a60b-d5850d3cab61"
+                    },
+                    {
+                        "name": "vnfmId",
+                        "value": "7da37b14-2e0e-48b5-9d44-4d1134cc8132"
+                    },
+                    {
+                        "name": "targetVdc",
+                        "value": "a93bbe8f-0298-472a-8f2f-730ea58faf69"
+                    },
+                    {
+                        "name": "connectedVn",
+                        "value": "23c67603-fa06-418c-a24e-09013c7466cc"
+                    },
+                    {
+                        "name": "geosite_name",
+                        "value": "Athlone Data Center Test"
+                    },
+                    {
+                        "name": "epg_name",
+                        "value": "Tosca_EPG_VNFDkx"
+                    },
+                    {
+                        "name": "subsystem_accessId",
+                        "value": "ECM_Sol005"
+                    },
+                    {
+                        "name": "nsdId",
+                        "value": "40c5edb5-54a6-41e5-8155-cebce4ee0b96"
+                    },
+                    {
+                        "name": "subsystem_name",
+                        "value": "SOL005_EOCM_975"
+                    },
+                    {
+                        "name": "vimzone0_name",
+                        "value": "cloud14a_ORCH_Staging_C14A_dynamic"
+                    },
+                    {
+                        "name": "vdcName",
+                        "value": "vdc_899"
+                    },
+                    {
+                        "name": "connectionName",
+                        "value": "ECM"
+                    },
+                    {
+                        "name": "ns_name",
+                        "value": "tepg_sol005kx"
+                    },
+                    {
+                        "name": "resourceType",
+                        "value": "Resource"
+                    }
+                ],
+                "serviceSpecification": {
+                    "description": "instantiate tepg",
+                    "id": "eee61337-fc59-48b8-bff5-16abcdf16855",
+                    "name": "Tosca_EPG_VNFD_2022-10-19_15-44-49",
+                    "serviceModelId": "d383b6fd-5a43-4b17-9c78-75d19961cb66",
+                    "version": "1.0"
+                },
+                "type": "RFS"
+            }
+        }
+    ]
+}

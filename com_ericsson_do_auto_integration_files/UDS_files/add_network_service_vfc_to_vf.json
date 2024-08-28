@@ -1,0 +1,9 @@
+{
+	"posX": 180,
+	"posY": 2.25,
+	"name": "so_networkservice",
+	"componentVersion": "1.0",
+	"originType": "VFC",
+	"icon": "defaulticon",
+	"componentUid": "<NETWORK_SERVICE_CERTIFED_VFC_UNIQUE_ID>"
+}

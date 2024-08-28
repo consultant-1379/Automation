@@ -1,0 +1,29 @@
+{
+   "vims":[
+      {
+         "name":"Openstack_VIM",
+         "type":"OPENSTACK",
+         "defaultVim":"True",
+         "hostIpAddress":"131.160.172.220",
+         "hostName":"cloud6a.athtem.eei.ericsson.se",
+         "authUrl":"https://cloud6a.athtem.eei.ericsson.se:13000/v3",
+         "domain":[
+            {
+               "userDomain":"Default",
+               "name":"Default",
+               "id":"default",
+               "defaultDomain":"True",
+               "project":[
+                  {
+                     "name":"EO_Maintrack_C6AF051",
+                     "id":"0ae6617ae4c14f75a3616a598a99f782",
+                     "username":"EO_Maintrack_C6AF051_admin",
+                     "password":"Eo_maintrack_c6af051.laf",
+                     "defaultProject":"true"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

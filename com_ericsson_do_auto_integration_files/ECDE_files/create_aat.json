@@ -1,0 +1,24 @@
+{
+    "attributes": {
+        "Domain": "EPC function test"
+    },
+    "testHeadCatalog": {
+        "avopSupportedTestHeadType": {
+            "id": null,
+            "fullyQualifiedClasspath": null,
+            "orderConcurrencyCheck": null,
+            "testHeadTypeName": "AAT"
+        },
+        "enablehttps": "true",
+        "id": 2,
+        "ipAddress": "131.160.198.38",
+        "fqdn": null,
+        "password": "ecdeaat110",
+        "port": "33331",
+        "initializationVector": "AKH3KzdAn8ZS8lD9CqXU7Q==",
+        "templateName": "Create",
+        "testHeadName": "AAT",
+        "testHeadType": null,
+        "username": "admin"
+    }
+}

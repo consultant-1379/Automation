@@ -1,0 +1,22 @@
+{
+    "networkElements": [
+        {
+            "blockingTimeoutMs": 10000,
+            "certificate": {
+                "keyFile": null,
+                "keyPassword": null,
+                "trustFile": null,
+                "trustPassword": null
+            },
+            "connectionTestUri": "/",
+            "contentEncoding": "none",
+            "host": "10.210.237.225",
+            "idleTimeoutMinutes": 1,
+            "name": "DCGW_NE",
+            "poolSize": 10,
+            "port": "8080",
+            "secure": null,
+            "securityType": "HTTP"
+        }
+    ]
+}

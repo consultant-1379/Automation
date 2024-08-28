@@ -1,0 +1,20 @@
+{
+   "vnfProfileId": "{{ vnf02.vnfProfileId }}",
+   "pm-testapp.ingress.domain": "{{ vnf02.pm_testapp_ingress_domain }}",
+   "vnfc1.test-cnf.ingress.host": "{{ vnf02.vnfc1_test_cnf_ingress_host }}",
+   "eric-pm-server.server.ingress.enabled": {{ vnf02.eric_pm_server_server_ingress_enabled }},
+   "tags.all": {{ vnf02.tags_all }},
+   "vnfc4.ingress.host": "{{ vnf02.vnfc4_ingress_host }}",
+   "config.nbi.file.enabled": {{ vnf02.config_nbi_file_enabled }},
+   "vnfc1.ingress.host": "{{ vnf02.vnfc1_ingress_host }}",
+   "tags.pm": {{ vnf02.tags_pm }},
+   "influxdb.ext.apiAccessHostname": "{{ vnf02.influxdb_ext_apiAccessHostname }}",
+   "eric-pm-server.server.persistentVolume.storageClass": "{{ vnf02.eric_pm_server_server_persistentVolume_storageClass }}",
+   "vnfc3.ingress.host": "{{ vnf02.vnfc3_ingress_host }}",
+   "namespace": "{{ vnf02.namespace }}",
+   "config.nbi.file.xml.configMap": "{{ vnf02.substitutedDay0Template | escapejs }}",
+   "eric-adp-gs-testapp.tls.dced.enabled": {{ vnf02.eric_adp_gs_testapp_tls_dced_enabled }},
+   "vnfc2.ingress.host": "{{ vnf02.vnfc2_ingress_host }}",
+   "eric-adp-gs-testapp.ingress.enabled": {{ vnf02.eric_adp_gs_testapp_ingress_enabled }},
+   "retrieveUnsealKey": {{ vnf02.retrieveUnsealKey }}
+}

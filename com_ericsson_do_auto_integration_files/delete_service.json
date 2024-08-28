@@ -1,0 +1,14 @@
+{
+    "description": "",
+    "category": "",
+    "serviceOrderItem": [
+        {
+            "action": "delete",
+            "id": "1",
+            "service": {
+                "id": "<ID_OF_SERVICE>",
+                "name": "<NAME_OF_SERVICE>"
+            }
+        }
+    ]
+}

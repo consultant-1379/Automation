@@ -1,0 +1,235 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+description: >
+  ESO service template 
+
+
+interface_types:
+
+  com.ericsson.so.interfaces.node.lifecycle.Scale:
+    derived_from: tosca.interfaces.Root
+    Scale:
+      description: scale 
+      
+##################################################################################################################################
+# Data types
+##################################################################################################################################  
+ 
+data_types:
+
+  com.ericsson.eso.nameValuePair:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name: 
+        type: string
+      value: 
+        type: string 
+       
+  com.ericsson.so.datatypes.NodeReference:
+    derived_from: tosca.datatypes.Root
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+        
+  com.ericsson.so.datatypes.CustomTemplate:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name:
+        type: string
+      catalogRef:
+        type: string
+        required: false
+      nodeRefs:
+        type: list
+        required: false
+        entry_schema: com.ericsson.so.datatypes.NodeReference
+
+##################################################################################################################################
+# Node Types - NS and VNF
+##################################################################################################################################
+  
+node_types:
+
+# This node represents the ESO basic node type (resource)        
+  com.ericsson.eso.resource:
+    derived_from: tosca.nodes.Root
+    properties:
+      resourceType:
+        type: string
+      resourceSubtype:
+        type: string
+        required: false
+      customTemplates:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate             
+      customOperations:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.eso.nameValuePair
+
+# ESO base definition for a VNF from an NFVO NSD
+  com.ericsson.eso.NetworkFunction:
+    derived_from: com.ericsson.eso.resource
+    properties:
+      resourceType:
+        type: string
+        default: 'NetworkFunction'
+      alias:
+        type: string
+        required: false
+      vimZoneName: 
+        type: string
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard
+        configure:
+          implementation: 'camunda/vnfConfigure'
+
+  com.ericsson.eso.NetworkFunction.vBGF:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype: 
+        type: string
+        default: 'vBGF'
+   
+  com.ericsson.eso.NetworkService:
+    derived_from: com.ericsson.eso.resource
+    properties:
+      resourceType:
+        type: string
+        default: 'NetworkService'
+      nsName: 
+        type: string
+      nsdId: 
+        type: string
+      nsDescription: 
+        type: string
+      subsystemName:
+        type: string
+      connectionName:
+        type: string
+      connected_virtual_network_ext:
+        type: string
+      external_subnet_v4_resource_ref_id:
+        type: string
+      external_subnet_v4_id:
+        type: string
+      mip_port_public_ip_addr:
+        type: string
+      mip_port_ip_addr:
+        type: string
+      pl_active_flavor:
+        type: string  
+      vnfmId:
+        type: string
+      targetVdc:
+        type: string
+        
+        
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard
+        create:
+          implementation: 'camunda/nsCreate'
+        delete:
+          implementation: 'camunda/nsDelete'
+
+
+
+topology_template:
+    
+  inputs:
+    subsystemName:
+      type: string
+      default: 'ECM_Sol005'
+    connectionName:
+      type: string
+      default: 'ECM_Sol005'
+    networkServiceDescriptorId:
+      type: string
+      default: '2b5a45b6-937b-4e82-87b4-b3f4bf678d8a'
+    networkServiceName:
+      type: string
+      default: 'vBGF_sol005'
+    networkServiceDescription:
+      type: string
+      default: 'Instantiate_vBGF_sol005'
+    vimZoneName:
+      type: string
+      default: 'cloud6a_ieatdoxb006_HA'
+    vnfInstanceName:
+      type: string
+      default: 'vBGF_sol005'
+    vnfmId:
+      type: string
+      default: 'f1a22bd5-e0e3-4850-887d-89397a012f7e'
+    targetVdc:
+      type: string
+      default: 'f22f35fb-d399-4cc6-9d04-e0b9ddaaca61'
+    connected_virtual_network_ext:
+      type: string
+      default: 'ee38153c-be6c-4291-9094-9b8c9b70798d'
+    external_subnet_v4_resource_ref_id:
+      type: string
+      default: '2f058d83-2526-4f83-b2a4-25a970daa037'
+    external_subnet_v4_id:
+      type: string
+      default: '2f058d83-2526-4f83-b2a4-25a970daa037'
+    mip_port_ip_addr:
+      type: string
+      default: '131.160.190.60'
+    mip_port_public_ip_addr:
+      type: string
+      default: '131.160.190.60'
+    pl_active_flavor:
+      type: string
+      default: 'CM-tosca_sol005'      
+        
+  node_templates:
+
+    vBGF:
+      type: com.ericsson.eso.NetworkFunction.vBGF
+      properties:
+        alias: { get_input: vnfInstanceName }
+        vimZoneName: { get_input: vimZoneName }
+        customOperations: [ ] 
+        customTemplates: [
+          {
+            "name": "additionalParamsForVnfTemplate",
+            "catalogRef": "vbgfAdditionalParams"
+          }
+        ]
+      requirements:
+        - dependency: NS
+    
+    # This node represents an ECM NS with one vBGF    
+    NS:
+      type: com.ericsson.eso.NetworkService
+      properties:
+        nsName: { get_input: networkServiceName }
+        nsdId: { get_input: networkServiceDescriptorId }
+        nsDescription: { get_input: networkServiceDescription }
+        subsystemName: { get_input: subsystemName }
+        connectionName: { get_input: connectionName }
+        
+        connected_virtual_network_ext: { get_input: connected_virtual_network_ext }
+        external_subnet_v4_resource_ref_id: { get_input: external_subnet_v4_resource_ref_id }
+        external_subnet_v4_id: { get_input: external_subnet_v4_id }
+        mip_port_public_ip_addr: { get_input: mip_port_public_ip_addr }
+        mip_port_ip_addr: { get_input: mip_port_ip_addr }
+        pl_active_flavor: { get_input: pl_active_flavor }
+        
+        vnfmId: { get_input: vnfmId }
+        targetVdc: { get_input: targetVdc }
+        
+        customOperations: [ ]
+        customTemplates: [
+          {
+            "name": "additionalParamsForNsTemplate",
+            "catalogRef": "nsAdditionalParams"
+          }
+        ]

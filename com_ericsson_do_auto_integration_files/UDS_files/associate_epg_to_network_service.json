@@ -1,0 +1,19 @@
+{
+	"fromNode": "<UNIQUE_ID_FROM_ADDING_EPG_TO_COMPOSITION>",
+	"toNode": "<UNIQUE_ID_FROM_ADDING_NETWORK_SERVICE_TO_COMPOSITION>",
+	"relationships": [
+		{
+			"relation": {
+				"relationship": {
+					"type": "tosca.capabilities.Node"
+				},
+				"capability": "feature",
+				"capabilityOwnerId": "<UNIQUE_ID_FROM_ADDING_NETWORK_SERVICE_TO_COMPOSITION>",
+				"capabilityUid": "<CAPABILITIES_UNIQUE_ID>",
+				"requirement": "dependency",
+				"requirementOwnerId": "<UNIQUE_ID_FROM_ADDING_EPG_TO_COMPOSITION>",
+				"requirementUid": "<REQUIREMENTS_UNIQUE_ID>"
+			}
+		}
+	]
+}

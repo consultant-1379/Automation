@@ -1,0 +1,9 @@
+{
+    "id": 16,
+    "onBoardingSystemType": "EVNFM",
+    "onBoardingSystemName": "AUTO_EVNFM_ONBOARD_SYSTEM",
+    "onBoardingSysUsername": "vnfm",
+    "onBoardingSysPassword": "Ericsson123!",
+    "fqdn": "evnfm.eostaging.ccd2.athtem.eei.ericsson.se",
+    "enableHttps": true
+}

@@ -1,0 +1,17 @@
+{
+   "fileName":"csar_ericsson_vbgf_openstack.zip",
+   "name":"csar_ericsson_vbgf_openstack_test",
+   "isPublic":false,
+   "description":"",
+   "deploymentManager":"EXTERNAL_VNFM",
+   "vnfManagers":[
+      {
+         "id":"632fca4e-28ff-4040-9f28-02e2726dd2a3"
+      }
+   ],
+   "resourceGroups":[
+
+   ],
+   "packageFormat":"ETSI TOSCA VNF",
+   "tenantName":"ECM"
+}

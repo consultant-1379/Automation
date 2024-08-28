@@ -1,0 +1,35 @@
+{
+  "name": "Test_VNF_Package_Upload_ELLEN",
+  "serviceModelId": "0c863e63-0763-42e6-a556-007e97255a01",
+  "description": "VNF creation",
+  "inputs": [
+    {
+      "name": "vimZoneName",
+      "value": "EO_Maintrack_C4AF04_VIM"
+    },
+    {
+      "name": "serviceName",
+      "value": "enterprise_service"
+    },
+    {
+      "name": "subsystemName",
+      "value": "ECM_53"
+    },
+    {
+      "name": "connectionName",
+      "value": "ECM"
+    },
+    {
+      "name": "vnfName_mme",
+      "value": "Test_VNF_Package_Upload_ELLEN"
+    },
+    {
+      "name": "vnfdId_mme",
+      "value": "b68ef25a-9bbd-441a-8cab-283728bee7dc"
+    },
+    {
+      "name": "vnfm_Id",
+      "value": "48b90767-1aa8-424d-b2fc-9b62bcca43c0"
+    }
+  ]
+}

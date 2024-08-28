@@ -1,0 +1,23 @@
+<?xml version="1.0" ?><bulkCmConfigDataFile xmlns="configData.xsd" xmlns:es="EricssonSpecificAttributes.xsd" xmlns:gn="geranNrm.xsd" xmlns:un="utranNrm.xsd" xmlns:xn="genericNrm.xsd">
+  <fileHeader fileFormatVersion="32.615 V4.5" vendorName="Ericsson"/>
+  <configData dnPrefix="Undefined">
+    <xn:MeContext id="TEST_MME_PACKAGE_UPLOAD_564">
+      <xn:VsDataContainer id="TEST_MME_PACKAGE_UPLOAD_564">
+        <xn:attributes>
+          <xn:vsDataType>vsDataManagedElement</xn:vsDataType>
+          <xn:vsDataFormatVersion>EricssonSpecificAttributes</xn:vsDataFormatVersion>
+        </xn:attributes>
+        <xn:VsDataContainer id="1" modifier="update">
+          <xn:attributes>
+            <xn:vsDataType>vsDataMmeFunction</xn:vsDataType>
+            <xn:vsDataFormatVersion>EricssonSpecificAttributes</xn:vsDataFormatVersion>
+            <es:vsDataMmeFunction>
+              <es:userLabel>SOChangedMME</es:userLabel>
+            </es:vsDataMmeFunction>
+          </xn:attributes>
+        </xn:VsDataContainer>
+      </xn:VsDataContainer>
+    </xn:MeContext>
+  </configData>
+  <fileFooter dateTime="2018-06-16T15:27:07Z"/>
+</bulkCmConfigDataFile>

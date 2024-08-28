@@ -1,0 +1,51 @@
+{
+  "name": "<DUMMY_NODE_NAME>",
+  "serviceModelId": "<SERVICE_MODEL_ID_FROM_PREVIOUS_COMMAND>",
+  "description": "Scalable dummy node",
+  "inputs": [
+    {
+      "name": "networkId",
+      "value": "<ID_OF_NETWORK>"
+    },
+    {
+      "name": "vnfInstanceName",
+      "value": "service_vnflaf"
+    },
+    {
+      "name": "networkServiceDescription",
+      "value": "sol005-scale-ns-instance NS"
+    },
+    {
+      "name": "targetVdc",
+      "value": "<TARGET_VDC_ID>"
+    },
+    {
+      "name": "networkServiceName",
+      "value": "vnflaf_service"
+    },
+    {
+      "name": "networkServiceDescriptorId",
+      "value": "<NSD_ID>"
+    },
+    {
+      "name": "subsystemName",
+      "value": "<SOL005_SUBSYSTEM_NAME>"
+    },
+    {
+      "name": "vimZoneName",
+      "value": "<VIMZONE_NAME>"
+    },
+    {
+      "name": "enmNodeIp",
+      "value": "11.11.11.11"
+    },
+    {
+      "name": "connectionName",
+      "value": "ECM_Sol005"
+    },
+    {
+      "name": "vnfmId",
+      "value": "<VNFM_ID>"
+    }
+  ]
+}

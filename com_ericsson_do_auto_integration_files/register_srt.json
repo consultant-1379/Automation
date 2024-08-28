@@ -1,0 +1,15 @@
+{
+   "tenantName":"ECM",
+   "name":"Reconcile_SRT_UC3",
+   "isPublic":"false",
+   "ram":"6144",
+   "numberOfCpu":"2",
+   "diskSize":"20",
+   "vimSrts":[
+      {
+         "vimZoneName":"cloud13a",
+         "vimObjectId":"6bf91ca9-538b-46bc-af30-ee925b1bcc2a",
+         "name":"Reconcile_SRT_UC3"
+      }
+   ]
+}

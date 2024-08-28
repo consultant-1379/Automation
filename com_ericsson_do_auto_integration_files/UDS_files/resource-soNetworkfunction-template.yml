@@ -1,0 +1,53 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 7c16605c-9f0d-4943-bb05-a8a013222984
+  UUID: 840cc36e-b346-422e-a43a-0bb137b335c0
+  name: soNetworkFunction
+  description: soNetworkFunction
+  type: VFC
+  category: Generic
+  subcategory: Network Elements
+  resourceVendor: Ericsson
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  com.ericsson.so.NetworkFunction:
+    derived_from: com.ericsson.so.resource
+    description: soNetworkFunction
+    properties:
+      vimZoneName:
+        type: string
+        required: false
+      resourceSubtype:
+        type: string
+        required: false
+      customOperations:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.nameValuePair
+      customTemplates:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+      resourceType:
+        default: NetworkFunction
+        type: string
+        required: false
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard

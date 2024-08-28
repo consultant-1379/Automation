@@ -1,0 +1,10 @@
+{
+   "vimObjectId":"9a095062-8ad2-4879-ab99-390fe95c735c",
+   "diskSize":"4",
+   "name":"Reconcile_bsv_UC3",
+   "vdc":{
+      "id":"b42ac549-935f-4e0b-b8aa-9a668049d2e4"
+   },
+   "vimZoneName":"cloud13a",
+   "availabilityZone":"nova"
+}

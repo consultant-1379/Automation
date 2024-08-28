@@ -1,0 +1,26 @@
+[
+    {
+        "id": 7,
+        "testCaseName": "ping_self",
+        "testCaseDescription": "test",
+        "testSuite": null,
+        "testHeadCatalog": {
+            "id": 5,
+            "enablehttps": true,
+            "fqdn": null,
+            "ipAddress": "131.160.198.38",
+            "testHeadName": "AAT",
+            "initializationVector": "mEE/CgOQFZO/xEkaEzPXfw==",
+            "port": "33331",
+            "username": "admin",
+            "avopSupportedTestHeadType": {
+                "id": 2,
+                "testHeadTypeName": "AAT",
+                "fullyQualifiedClasspath": "java:global/aat-test-head-implementation/aat-test-head-implementation-ejb/AATTestHeadImpl^!com.ericsson.vnf.factory.testhead.sdk.main.TestHead",
+                "orderConcurrencyCheck": "Test_Head"
+            },
+            "password": "ecdeaat110"
+        },
+        "checked": false
+    }
+]

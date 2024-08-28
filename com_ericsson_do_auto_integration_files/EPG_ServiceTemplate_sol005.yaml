@@ -1,0 +1,168 @@
+data_types:
+  com.ericsson.eso.nameValuePair:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name:
+        type: string
+      value:
+        type: string
+  com.ericsson.so.datatypes.CustomTemplate:
+    derived_from: tosca.datatypes.Root
+    properties:
+      catalogRef:
+        required: false
+        type: string
+      name:
+        type: string
+      nodeRefs:
+        entry_schema: com.ericsson.so.datatypes.NodeReference
+        required: false
+        type: list
+  com.ericsson.so.datatypes.NodeReference:
+    derived_from: tosca.datatypes.Root
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+description: "ESO service template \n"
+interface_types:
+  com.ericsson.so.interfaces.node.lifecycle.Scale:
+    Scale:
+      description: scale
+    derived_from: tosca.interfaces.Root
+node_types:
+  com.ericsson.eso.NetworkFunction:
+    derived_from: com.ericsson.eso.resource
+    interfaces:
+      Standard:
+        configure:
+          implementation: camunda/vnfConfigure
+        type: tosca.interfaces.node.lifecycle.Standard
+    properties:
+      alias:
+        required: false
+        type: string
+      resourceType:
+        default: NetworkFunction
+        type: string
+      vimZoneName:
+        type: string
+  com.ericsson.eso.NetworkFunction.EPG:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype:
+        default: EPG
+        type: string
+  com.ericsson.eso.NetworkService:
+    derived_from: com.ericsson.eso.resource
+    interfaces:
+      Standard:
+        create:
+          implementation: camunda/nsCreate
+        delete:
+          implementation: camunda/nsDelete
+        type: tosca.interfaces.node.lifecycle.Standard
+    properties:
+      connectionName:
+        type: string
+      nsDescription:
+        type: string
+      nsName:
+        type: string
+      nsdId:
+        type: string
+      resourceType:
+        default: NetworkService
+        type: string
+      subsystemName:
+        type: string
+      targetVdc:
+        type: string
+      vnfmId:
+        type: string
+  com.ericsson.eso.resource:
+    derived_from: tosca.nodes.Root
+    properties:
+      customOperations:
+        entry_schema:
+          type: com.ericsson.eso.nameValuePair
+        required: false
+        type: list
+      customTemplates:
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+        required: false
+        type: list
+      resourceSubtype:
+        required: false
+        type: string
+      resourceType:
+        type: string
+topology_template:
+  inputs:
+    connectionName:
+      default: ECM
+      type: string
+    networkServiceDescription:
+      default: Instantiate_EPG_sol005
+      type: string
+    networkServiceDescriptorId:
+      default: cc8bed36-f3b1-5c61-0392-1bd2f0c8cc27
+      type: string
+    networkServiceName:
+      default: epg_sol005
+      type: string
+    subsystemName:
+      default: ECMSol005
+      type: string
+    targetVdc:
+      default: a3046dd9-b1a6-4a02-a56d-f9cba9d436ef
+      type: string
+    vimZoneName:
+      default: EO_Maintrack_C4AF04_VIM
+      type: string
+    vnfInstanceName:
+      default: epg_sol005
+      type: string
+    vnfmId:
+      default: 48b90767-1aa8-424d-b2fc-9b62bcca43c0
+      type: string
+  node_templates:
+    EPG:
+      properties:
+        alias:
+          get_input: vnfInstanceName
+        customOperations: []
+        customTemplates:
+        - catalogRef: epgAdditionalParams_2021-03-15_15-41-57
+          name: additionalParamsForVnfTemplate
+        - catalogRef: Sol005_EPG_day1_template_2021-03-15_15-41-57
+          name: day1ConfigTemplate
+        vimZoneName:
+          get_input: vimZoneName
+      requirements:
+      - dependency: NS
+      type: com.ericsson.eso.NetworkFunction.EPG
+    NS:
+      properties:
+        connectionName:
+          get_input: connectionName
+        customOperations: []
+        customTemplates:
+        - catalogRef: epgnsAdditionalParams_2021-03-15_15-41-57
+          name: additionalParamsForNsTemplate
+        nsDescription:
+          get_input: networkServiceDescription
+        nsName:
+          get_input: networkServiceName
+        nsdId:
+          get_input: networkServiceDescriptorId
+        subsystemName:
+          get_input: subsystemName
+        targetVdc:
+          get_input: targetVdc
+        vnfmId:
+          get_input: vnfmId
+      type: com.ericsson.eso.NetworkService
+tosca_definitions_version: tosca_simple_yaml_1_3

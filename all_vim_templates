@@ -1,0 +1,55 @@
+{
+    "vims": [
+        {
+            "name": "cee_cloud1_ecm07",
+            "type": "CEE",
+            "defaultVim": "True",
+            "hostIpAddress": "131.160.163.12",
+            "hostName": "ieatcee01cic.athtem.eei.ericsson.se",
+            "authUrl": "https://ieatcee01cic.athtem.eei.ericsson.se:5000/v2.0",
+            "tenants": [
+                {
+                    "name": "ieatecm07_project1",
+                    "id": "5e62456634ba42bdbb7e1f81bbb43482",
+                    "username": "ieatecm07_project1_admin",
+                    "password": "Ieatecm07.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        },
+        {
+            "name": "atlas_vim",
+            "type": "CEE",
+            "defaultVim": "False",
+            "hostIpAddress": "131.160.163.20",
+            "hostName": "ieatatlas01.athtem.eei.ericsson.se",
+            "authUrl": "https://ieatatlas01.athtem.eei.ericsson.se:443",
+            "tenants": [
+                {
+                    "name": "ieatecm07_project1",
+                    "id": "5e62456634ba42bdbb7e1f81bbb43482",
+                    "username": "ieatecm07_project1_admin",
+                    "password": "Ieatecm07.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        },
+        {
+            "name": "ecm_vim",
+            "type": "ECM",
+            "defaultVim": "False",
+            "hostIpAddress": "131.160.159.236",
+            "hostName": "ieatecm07.athtem.eei.ericsson.se",
+            "authUrl": "https://ieatecm07.athtem.eei.ericsson.se/ecm_service/",
+            "tenants": [
+                {
+                    "name": "ECM",
+                    "id": "ECM_id",
+                    "username": "ecmadmin",
+                    "password": "CloudAdmin123",
+                    "defaultTenant": "True"
+                }
+            ]
+        }
+    ]
+}

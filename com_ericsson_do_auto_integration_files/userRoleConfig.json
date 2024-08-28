@@ -1,0 +1,9 @@
+{"configdata": [{
+ "scopeType": "system",
+ "scopeName": "OPENSTACK",
+ "paramName": "userRoleNames",
+ "paramDataType": "string",
+ "paramValue": "heat_stack_owner,_member_,member",
+ "isImmutable": false,
+ "isDeletable": false
+}]}

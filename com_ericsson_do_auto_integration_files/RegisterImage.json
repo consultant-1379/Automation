@@ -1,0 +1,16 @@
+{
+    "image": {
+        "name": "vIMS_PXE",
+        "isPublic": true,
+        "description": "Example Image Registration",
+        "uniqueName": false,
+        "imageFormat": "qcow2",
+        "vimImages": [
+            {
+                "vimZoneName": "ORCH_VNF_C13A17",
+                "vimZoneType": "OPENSTACK",
+                "vimImageObjectId": "65a3952b-c689-4973-85f4-c7f2dbd2ba2c"
+            }
+        ]
+    }
+}

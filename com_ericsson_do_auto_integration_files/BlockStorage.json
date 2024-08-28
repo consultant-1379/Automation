@@ -1,0 +1,11 @@
+{
+    "tenantName": "ECM",
+    "bsv": {
+        "name": "Reconcile_bsv__2020-02-14_15-39-55",
+        "diskSize": 1,
+        "vdc": {
+            "id": "b42ac549-935f-4e0b-b8aa-9a668049d2e4"
+        },
+        "vimZoneName": "cloud13a"
+    }
+}

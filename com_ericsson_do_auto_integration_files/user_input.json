@@ -1,0 +1,26 @@
+{
+    "ECM_Host_Blade_IP": "131.160.159.235",
+    "ECM_Host_Blade_username": "root",
+    "ECM_Host_Blade_Password": "ECM123.laf",
+    "ENM_GUI_Hostname": "ieaten5334-7.athtem.eei.ericsson.se",
+    "ENM_GUI_Username": "administrator",
+    "ENM_GUI_Password": "TestPassw0rd",
+    "ECM_GUI_Username": "ecmadmin",
+    "ECM_GUI_Password": "CloudAdmin123",
+    "CORE_VM_IP": "131.160.159.236",
+    "CORE_VM_Hostname": "ieatecm07core.athtem.eei.ericsson.se",
+    "VIM_Zone_name_for_CEE": "cee_cloud1_ecm07",
+    "CEE_Host_IP_address": "131.160.163.12",
+    "CEE_Hostname": "ieatcee01cic.athtem.eei.ericsson.se",
+    "CEE_Tenant_ID": "5e62456634ba42bdbb7e1f81bbb43482",
+    "CEE_Tenant_name": "ieatecm07_project1",
+    "CEE_Tenant_username": "ieatecm07_project1_admin",
+    "CEE_Tenant_password": "Ieatecm07.laf",
+    "ATLAS_IP": "131.160.163.20",
+    "ATLAS_Hostname": "ieatatlas01.athtem.eei.ericsson.se",
+    "VNF_LCM_Servicedb_IP": "10.36.255.207",
+    "VNF_LCM_Servicedb_Username": "cloud-user",
+    "VNF_LCM_Servicedb_Password": "12shroot",
+    "VDCID": "ECM_Project"
+}
+

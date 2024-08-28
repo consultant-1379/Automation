@@ -1,0 +1,54 @@
+{
+  "description": "",
+  "category": "",
+  "@type": "ServiceOrder",
+  "serviceOrderItem": [
+    {
+      "action": "add",
+      "id": "1",
+      "@type": "ServiceOrderItem",
+      "service": {
+        "name": "<< SERVICE_NAME >>",
+        "description": "",
+        "type": "RFS",
+        "serviceSpecification": {
+          "name": "create",
+          "description": "Tosca EPG creation",
+          "serviceModelId": "<< SERVICE_MODEL_ID >>",
+          "id": "<< INVARIANTUUID >>",
+          "version": "1.0"
+        },
+        "serviceCharacteristic": [
+          {
+            "name": "vnfInstanceName",
+            "value": ""
+          },
+          {
+            "name": "targetVdc",
+            "value": ""
+          },
+          {
+            "name": "connectedVn",
+            "value": ""
+          },
+          {
+            "name": "subsystemName",
+            "value": ""
+          },
+          {
+            "name": "connectionName",
+            "value": ""
+          },
+          {
+            "name": "vnfmId",
+            "value": ""
+          },
+          {
+            "name": "subnetId",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

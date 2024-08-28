@@ -1,0 +1,48 @@
+{
+    "artifacts": {},
+    "toscaArtifacts": {},
+    "contactId": "cs0008",
+    "categories": [
+        {
+            "name": "Generic",
+            "normalizedName": "generic",
+            "uniqueId": "resourceNewCategory.generic",
+            "icons": null,
+            "subcategories": [
+                {
+                    "name": "Abstract",
+                    "normalizedName": "abstract",
+                    "uniqueId": "resourceNewCategory.generic.abstract",
+                    "icons": [
+                        "objectStorage",
+                        "compute"
+                    ],
+                    "groupings": null,
+                    "ownerId": null,
+                    "empty": false
+                }
+            ],
+            "ownerId": null,
+            "empty": false
+        }
+    ],
+    "description": "VF",
+    "icon": "defaulticon",
+    "componentInstancesProperties": {},
+    "componentInstancesAttributes": {},
+    "name": "ETSITOSCAVSP2021-10-0616-50-00",
+    "tags": "ETSITOSCAVSP2021-10-0616-50-00",
+    "capabilities": {},
+    "requirements": {},
+    "deploymentArtifacts": {},
+    "componentType": "RESOURCE",
+    "vendorName": "Ericsson20211006164958",
+    "vendorRelease": "1.0",
+    "componentInstances": [],
+    "properties": [],
+    "attributes": [],
+    "groups": [],
+    "resourceType": "VF",
+    "csarUUID": "b11079a221b941f796bd76c7c3a3a170",
+    "csarVersion": "1.0"
+}

@@ -1,0 +1,18 @@
+parameters:
+           
+         services_vm_count: 1
+         cloudManagerType: ECM
+         ossType: OSSRC
+         ossMasterHostName: masterservice
+         ossMasterHostIP: 10.32.135.64
+         ossNotificationServiceHost: notificationservice
+         ossNotificationServiceIP: 10.32.135.65
+         ossUserName: nmsadm
+         servicesImage: ECM_TOSCA_Image_EO_Staging_9mb,ECM_TOSCA_Image_EO_Staging_9mb
+         services_flavor: CM-sol005_flavor_dummy
+         ip_version: IPV4
+         external_net_id: c39d407e-cabd-4ed3-a84c-3cbf58062e10
+         external_subnet_cidr: 10.210.221.32/27
+         external_subnet_gateway: 10.210.221.33
+         external_ip_for_services_vm: 10.210.221.51,10.210.221.52
+         isToscaVnfd: true

@@ -1,0 +1,9 @@
+{
+	"posX": 19,
+	"posY": 2.5,
+	"name": "so_epg",
+	"componentVersion": "1.0",
+	"originType": "VFC",
+	"icon": "defaulticon",
+	"componentUid": "EPG_CERTIFIED_VFC_UNIQUE_ID"
+}

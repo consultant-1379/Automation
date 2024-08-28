@@ -1,0 +1,28 @@
+description: version 2017-09-01 created by HOT Generator at Mon, 18 Nov 2019 09:31:19 GMT.
+heat_template_version: 2015-10-15
+resources:
+    Net_2:
+        properties:
+            admin_state_up: true
+            name: EO_STAGING_stack_internal
+        type: OS::Neutron::Net
+    Server_2:
+        properties:
+            networks: [{network: {get_resource: Net_2}}]
+            availability_zone: nova
+            flavor: Reconcile_SRT_UC3
+            image: 530be3e2-1c69-4c92-a27c-305d7b9bf34c
+        type: OS::Nova::Server
+    Subnet_2:
+        properties:
+            cidr: 192.168.70.0/24
+            enable_dhcp: true
+            ip_version: 4
+            network: {get_resource: Net_2}
+        type: OS::Neutron::Subnet
+    volume_attachment_2:
+        properties:
+            instance_uuid: {get_resource: Server_2}
+            mountpoint: /dev/vdc
+            volume_id: 9a095062-8ad2-4879-ab99-390fe95c735c
+        type: OS::Cinder::VolumeAttachment

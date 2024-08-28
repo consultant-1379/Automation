@@ -1,0 +1,13 @@
+{
+    "enableHttps": true,
+    "id": 118,
+    "fqdn": "ieatdo9027-1.athtem.eei.ericsson.se",
+    "onBoardingSysPassword": "CloudAdmin123",
+    "onBoardingSysTenantName": "ECM",
+    "onBoardingSysUsername": "ecmadmin",
+    "onBoardingSystemName": "AUTO_ECM_ONBOARD_SYSTEM",
+    "onBoardingSystemType": "ECM",
+    "vdcId": "f0751229-1742-413b-a3e8-839331219d65",
+    "vdcName": "vdc_646",
+    "vimZoneName": "cloud6a_ieatdoxb006_HA"
+}

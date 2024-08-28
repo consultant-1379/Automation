@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope vmw:buildId="build-947673" xmlns="http://schemas.dmtf.org/ovf/envelope/2" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/2" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecs="http://schemas.ericsson.com/ovf/2">
+	<References>
+		<File ovf:href="valid-9m" ovf:id="file1" ecs:existing="true"/> 
+	</References>
+	<DiskSection>
+	 <Info>Virtual disk information</Info>
+		<Disk ovf:capacity="1" ovf:capacityAllocationUnits="byte * 2^30" ovf:diskId="vmdisk1" ovf:fileRef="file1"/>
+	</DiskSection>
+<!--
+Dummy network VNF/VM needs to be defined in this template to load networks needed for vMME.  
+Dummy network VNF/VM must have at least one network connection itself, a separate network is created for this purpose. 
+
+- This config will setup single-segment ovs/virtio networks.
+
+OM_CN_vMME
+FSB_CN_vMME  
+RAN_vMME    
+Sig_CN_vMME 
+Media_CN_vMME  
+-->
+
+
+	<NetworkSection>
+	<Info>The list of logical networks</Info>
+	
+<!--
+Dummy VM network
+-->
+	<Network ovf:name="EOST_ECDE_NetworkVMnet_vMME"
+		ecs:existing="false"
+		ecs:networkType="vlan"
+		ecs:category="layer3">
+		<Description>Dummy network VM network</Description>	  
+	</Network>  
+<!--
+OM_CN Network
+-->
+	<Network 
+		ovf:name="EOST_ECDE_OM_CN_vMME"
+		ecs:existing="false"
+		ecs:networkType="vlan"
+		ecs:category="layer3">
+		<Description>OM_CN network</Description>
+	</Network>
+<!--
+FSB Network
+-->
+	<Network 
+		ovf:name="EOST_ECDE_FSB_vMME"
+		ecs:existing="false"
+		ecs:networkType="vlan"
+		ecs:category="layer3">
+		<Description>FSB network</Description>
+	</Network>
+<!--
+RAN Network
+-->
+	<Network 
+		ovf:name="EOST_ECDE_RAN_vMME"
+		ecs:existing="false"
+		ecs:networkType="vlan"
+		ecs:category="layer3">
+		<Description>RAN network</Description>
+	</Network>
+<!--
+Sig_CN Network
+-->
+	<Network 
+		ovf:name="EOST_ECDE_Sig_CN_vMME"
+		ecs:existing="false"
+		ecs:networkType="vlan"
+		ecs:category="layer3">
+		<Description>Signalling network</Description>
+	</Network>
+<!--
+Media_CN Network
+-->
+	<Network 
+		ovf:name="EOST_ECDE_Media_CN_vMME"
+		ecs:existing="false"
+		ecs:networkType="vlan"
+		ecs:category="layer3">
+		<Description>Media_CN network</Description>
+	</Network>
+<!--
+Define Subnets to use for each network
+-->
+	<ecs:Subnets>
+<!--
+NetworkVM Network Subnet
+-->
+
+		<ecs:SubnetList ecs:vnName="EOST_ECDE_NetworkVMnet_vMME">
+			<ecs:Subnet 
+			ecs:name="NetworkVMnet_vMME_Sub" 
+			ecs:ipVersion="4" 
+			ecs:dhcpEnabled="true" 
+			ecs:staticIPAddressRange="${NetworkVMnet_vMME_subnet}" 
+			ecs:ipGateway="${NetworkVMnet_vMME_routerIP}"/>
+		</ecs:SubnetList>
+
+<!--
+OM_CN Netork Subnet
+-->
+		<ecs:SubnetList ecs:vnName="EOST_ECDE_OM_CN_vMME">
+			<ecs:Subnet 
+			ecs:name="OM_CN_vMME_Sub" 
+			ecs:ipVersion="4" 
+			ecs:dhcpEnabled="true" 
+			ecs:staticIPAddressRange="${OM_CN_vMME_subnet}" 
+			ecs:ipGateway="${OM_CN_vMME_routerIP}"/>
+		</ecs:SubnetList>
+<!--
+FSB Netork Subnet
+-->
+		<ecs:SubnetList ecs:vnName="EOST_ECDE_FSB_vMME">
+			<ecs:Subnet 
+			ecs:name="FSB_vMME_Sub" 
+			ecs:ipVersion="4" 
+			ecs:dhcpEnabled="true" 
+			ecs:staticIPAddressRange="${FSB_vMME_subnet}" 
+			ecs:ipGateway="${FSB_vMME_routerIP}"/>
+		</ecs:SubnetList>
+<!--
+RAN Netork Subnet
+-->
+		<ecs:SubnetList ecs:vnName="EOST_ECDE_RAN_vMME">
+			<ecs:Subnet 
+			ecs:name="RAN_vMME_Sub" 
+			ecs:ipVersion="4" 
+			ecs:dhcpEnabled="true" 
+			ecs:staticIPAddressRange="${RAN_vMME_subnet}" 
+			ecs:ipGateway="${RAN_vMME_routerIP}"/>
+		</ecs:SubnetList>
+<!--
+Sig_CN Netork Subnet
+-->
+		<ecs:SubnetList ecs:vnName="EOST_ECDE_Sig_CN_vMME">
+			<ecs:Subnet 
+			ecs:name="Sig_CN_vMME_Sub" 
+			ecs:ipVersion="4" 
+			ecs:dhcpEnabled="true" 
+			ecs:staticIPAddressRange="${Sig_CN_vMME_subnet}" 
+			ecs:ipGateway="${Sig_CN_vMME_routerIP}"/>
+		</ecs:SubnetList>
+<!--
+Media_CN Netork Subnet
+-->
+		<ecs:SubnetList ecs:vnName="EOST_ECDE_Media_CN_vMME">
+			<ecs:Subnet 
+			ecs:name="Media_CN_vMME_Sub" 
+			ecs:ipVersion="4" 
+			ecs:dhcpEnabled="true" 
+			ecs:staticIPAddressRange="${Media_CN_vMME_subnet}" 
+			ecs:ipGateway="${Media_CN_vMME_routerIP}"/>
+		</ecs:SubnetList>
+<!--
+End Subnets
+-->
+	</ecs:Subnets>
+<!--
+End Network Section
+-->
+	</NetworkSection>
+	<VirtualSystemCollection ovf:id="NetworkVNF_vMME">
+		<Info>NetworkVNF_vMME</Info>
+		<Name>EOST_ECDE_OVF_NetworkVM_vMME</Name>
+		<ProductSection>			
+			<Info>User input data</Info>
+			<Category>IP subnets addresses</Category>
+			<Property ovf:key="OM_CN_vMME_subnet" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.0/29">
+				<Label>OM_CN_vMME_subnet</Label>
+				<Description>OM_CN_vMME subnet</Description>
+			</Property>
+			<Property ovf:key="OM_CN_vMME_routerIP" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.1">
+				<Label>OM_CN_vMME_routerIP</Label>
+				<Description>OM_CN_vMME router interface IP</Description>
+			</Property>
+			<Property ovf:key="FSB_vMME_subnet" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.16/29">
+				<Label>FSB_vMME_subnet</Label>
+				<Description>FSB_vMME subnet</Description>
+			</Property>
+			<Property ovf:key="FSB_vMME_routerIP" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.17">
+				<Label>FSB_vMME_routerIP</Label>
+				<Description>FSB_vMME router interface IP</Description>
+			</Property>
+			<Property ovf:key="RAN_vMME_subnet" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.32/29">
+				<Label>RAN_vMME_subnet</Label>
+				<Description>RAN_vMME subnet</Description>
+			</Property>
+			<Property ovf:key="RAN_vMME_routerIP" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.33">
+				<Label>RAN_vMME_routerIP</Label>
+				<Description>RAN_vMME router interface IP</Description>
+			</Property>
+			<Property ovf:key="Sig_CN_vMME_subnet" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.48/29">
+				<Label>Sig_CN_vMME_subnet</Label>
+				<Description>Sig_CN_vMME subnet</Description>
+			</Property>
+			<Property ovf:key="Sig_CN_vMME_routerIP" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.49">
+				<Label>Sig_CN_vMME_routerIP</Label>
+				<Description>Sig_CN_vMME router interface IP</Description>
+			</Property>
+			<Property ovf:key="Media_CN_vMME_subnet" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.64/29">
+				<Label>Media_CN_vMME_subnet</Label>
+				<Description>Media_CN_vMME subnet</Description>
+			</Property>
+			<Property ovf:key="Media_CN_vMME_routerIP" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.65">
+				<Label>Media_CN_vMME_routerIP</Label>
+				<Description>Media_CN_vMME router interface IP</Description>
+			</Property>
+			<Property ovf:key="NetworkVMnet_vMME_subnet" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.80/29">
+				<Label>NetworkVMnet_vMME_subnet</Label>
+				<Description>NetworkVMnet_vMME subnet</Description>
+			</Property>
+			<Property ovf:key="NetworkVMnet_vMME_routerIP" ecs:template="true" ovf:type="string" ovf:userConfigurable="true" ovf:value="10.10.11.81">
+				<Label>NetworkVMnet_vMME_routerIP</Label>
+				<Description>NetworkVMnet_vMME router interface IP</Description>
+			</Property>			
+		</ProductSection>
+	<VirtualSystem ovf:id="NetworkVM_vMME">
+		<Info>Network VNF dummy VM</Info>
+		<Name>EOST_ECDE_OVF_NetworkVM_vMME</Name>     
+		<VirtualHardwareSection>
+			<Info>Virtual hardware requirements</Info>        
+			<Item>
+				<rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+				<rasd:Description>Number of Virtual CPUs</rasd:Description>
+				<rasd:ElementName>1 virtual CPU(s)</rasd:ElementName>
+				<rasd:InstanceID>1</rasd:InstanceID>
+				<rasd:ResourceType>3</rasd:ResourceType>
+				<rasd:VirtualQuantity>1</rasd:VirtualQuantity>
+			</Item>
+			<Item>
+				<rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+				<rasd:Description>Memory Size</rasd:Description>
+				<rasd:ElementName>1024MB of memory</rasd:ElementName>
+				<rasd:InstanceID>2</rasd:InstanceID>
+				<rasd:ResourceType>4</rasd:ResourceType>
+				<rasd:VirtualQuantity>1024</rasd:VirtualQuantity>
+			</Item>      
+			<Item>
+				<rasd:AddressOnParent>0</rasd:AddressOnParent>
+				<rasd:ElementName>Hard disk 1</rasd:ElementName>
+				<rasd:HostResource>ovf:/disk/vmdisk1</rasd:HostResource>
+				<rasd:InstanceID>8</rasd:InstanceID>
+				<rasd:Parent>3</rasd:Parent>
+				<rasd:ResourceType>17</rasd:ResourceType>
+			</Item>     
+			<Item>
+				<rasd:AddressOnParent>7</rasd:AddressOnParent>
+				<rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+				<rasd:Connection>EOST_ECDE_NetworkVMnet_vMME</rasd:Connection>
+				<rasd:Description>Network VM network connection.</rasd:Description>
+				<rasd:ElementName>EOST_ECDE_Network_adapter_1</rasd:ElementName>
+				<rasd:InstanceID>10</rasd:InstanceID>
+				<rasd:ResourceSubType>E1000</rasd:ResourceSubType>
+				<rasd:ResourceType>10</rasd:ResourceType>
+			</Item>      
+      </VirtualHardwareSection>
+    </VirtualSystem>  
+	</VirtualSystemCollection>
+</Envelope>

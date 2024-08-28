@@ -1,0 +1,15 @@
+{
+    "tenantName": "Sync_test",
+    "customOrderParams": [
+        {
+            "tag": "sampleTag"
+        }
+    ],
+    "vdc": {
+        "name": "sync_vdc_734",
+        "vimZones": [
+            "ORCH_STAGING_N53"
+        ],
+        "description": "Datacenter for demo"
+    }
+}

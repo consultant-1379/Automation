@@ -1,0 +1,15 @@
+{
+    "fileName": "Tosca_EPG_VNFD.csar",
+    "name": "Tosca_EPG_VNFD_2021-06-14_15-21-04",
+    "isPublic": false,
+    "description": "",
+    "deploymentManager": "EXTERNAL_VNFM",
+    "vnfManagers": [
+        {
+            "id": "2c0fb90c-42a2-4830-b438-d2fdecb237f3"
+        }
+    ],
+    "resourceGroups": [],
+    "packageFormat": "ETSI TOSCA VNF",
+    "tenantName": "ECM"
+}

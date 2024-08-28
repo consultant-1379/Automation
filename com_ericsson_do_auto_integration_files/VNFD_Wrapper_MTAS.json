@@ -1,0 +1,89 @@
+{
+    "dataVNFDSpecific": {
+        "flavourId": "openstack", 
+        "scaleVnfOpConfig": {
+            "listOfUUIDsToBeDeleted": "", 
+            "scaleInType": ""
+        }, 
+        "scalingAspect": [
+            {
+                "description": "Default scaling domain", 
+                "id": "default", 
+                "maxScaleLevel": 100, 
+                "name": "default"
+            }
+        ], 
+        "vnfLcmOperationsConfiguration": {
+            "scale": {
+                "scalingByMoreThanOneStepSupported": true
+            }
+        }, 
+        "vnfProductName": "vMTAS", 
+        "vnfProvider": "Ericsson", 
+        "vnfSoftwareVersion": "1.16-R17A35", 
+        "vnfdId": "vMTAS-1.16-R17A35-openstack", 
+        "vnfdVersion": "1.16-R17A35-openstack"
+    }, 
+    "instantiateVnfOpConfig": {
+        "DNS_server_1_address": "none", 
+        "DNS_server_2_address": "none", 
+        "DNS_server_3_address": "none", 
+        "DNS_server_4_address": "none", 
+        "NTP_server_1_address": "10.42.137.126", 
+        "NTP_server_2_address": "none", 
+        "NTP_server_3_address": "none", 
+        "NTP_server_4_address": "none", 
+        "OM_IPv4_address": "10.210.221.76", 
+        "SC-1_IPv4_address": "10.210.221.77", 
+        "SC-1_SC-2_cinder_volume_size": 50, 
+        "SC-2_IPv4_address": "10.210.221.78", 
+        "VM_HA_policy_PL": "ha-offline", 
+        "VM_HA_policy_SC": "managed-on-host", 
+        "VM_flavor": "CM-vMTAS", 
+        "VM_image_PL": "66e7bfc6-b94b-441a-8ffd-0efee6b5ac7d", 
+        "VM_image_SC": "4844f51d-22aa-44f3-8e0c-a3f4a77a30a8", 
+        "availability_zone": {
+            "*": "nova"
+        }, 
+        "bar_sp_net_mtu": 1500, 
+        "bar_sp_net_name": "vMTAS-Mobile-PROD-Net-li-sp1", 
+        "cai3g-vip4": "172.23.180.200", 
+        "emergency_password_hash": "$6$wySDjV39hdw8$tVXybsmArXxbs5XJDJHnKmIMlby5FmJh1J9pCzycehHNhFqGWcVKOPPJnkN3/nzV47a/cN0n/GWnIw8Fx5QsI1", 
+        "interval_timeout": 10, 
+        "number_of_scaled_out_VMs": 0, 
+        "nw_internal_mtu": 1500, 
+        "om_sp1_net_mtu": 1500, 
+        "om_sp1_net_name": "P9-OpStk-13-Public-Tenant4", 
+        "om_sp1_subnet_IPv4_address": "10.210.221.64/26", 
+        "om_sp1_subnet_IPv4_gateway_address": "10.210.221.65", 
+        "om_sp1_subnet_IPv4_name": "P9-OpStk-13-Public-Tenant4_ipv4", 
+        "om_sp2_net_mtu": 1500, 
+        "om_sp2_net_name": "vMTAS-Mobile-PROD-Net-om-sp2", 
+        "oss_pm_password_hash": "$6$wySDjV39hdw8$tVXybsmArXxbs5XJDJHnKmIMlby5FmJh1J9pCzycehHNhFqGWcVKOPPJnkN3/nzV47a/cN0n/GWnIw8Fx5QsI1", 
+        "platform-vip": "none", 
+        "root_password_hash": "$6$wySDjV39hdw8$tVXybsmArXxbs5XJDJHnKmIMlby5FmJh1J9pCzycehHNhFqGWcVKOPPJnkN3/nzV47a/cN0n/GWnIw8Fx5QsI1", 
+        "secla_password_hash": "$6$wySDjV39hdw8$tVXybsmArXxbs5XJDJHnKmIMlby5FmJh1J9pCzycehHNhFqGWcVKOPPJnkN3/nzV47a/cN0n/GWnIw8Fx5QsI1", 
+        "shutdown_timeout": 600, 
+        "sig_sp_net_mtu": 1500, 
+        "sig_sp_net_name": "vMTAS-Mobile-PROD-Net-sig-sp1", 
+        "sigtran1-vip4": "192.168.100.244", 
+        "sigtran2-vip4": "192.168.100.245", 
+        "tasvip4": "192.168.100.246", 
+        "time_zone": "Europe/Dublin", 
+        "ut-vip4": "192.168.100.247", 
+        "watchdog_timeout": 30, 
+        "workflow_addVNFToOSS": "true", 
+        "workflow_associatedSite": "Ireland", 
+        "workflow_config_dir": "file:///vnflcm-ext/current/vnf_package_repo/vMTAS-1.16-R17A35-openstack/configurations/irrelevantName", 
+        "workflow_managedElementSrcType": "CBA", 
+        "workflow_netConfPort": "830", 
+        "workflow_networkElementPassword": "YWRtaW4=", 
+        "workflow_networkElementType": "vMTAS", 
+        "workflow_networkElementUsername": "oss_pm", 
+        "workflow_networkElementVersion": "1.12", 
+        "workflow_nodeIpAddress": "10.210.221.76", 
+        "workflow_snmpPort": "161", 
+        "workflow_subNetworks": ""
+    }, 
+    "terminateVnfOpConfig": {}
+}

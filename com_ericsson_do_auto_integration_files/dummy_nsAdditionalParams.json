@@ -1,0 +1,17 @@
+{
+    "accessPointParams": {
+        "exposedVnfCpParams": []
+    },
+    "nsParams": {
+        "targetVdc": "{{ NS.targetVdc }}"
+    },
+    "vnfParams": [
+        {
+            "vnfNodeTemplateName": "vnflaf-vnf",
+            "vnfInstanceName": "{{ vnf.name }}",
+            "vnfmId": "{{ NS.vnfmId }}",
+            "vnfInstanceDescription": "Scalable NS test #1 VNF",
+            "vimZoneName": "{{ vimZone.name }}"
+        }
+    ]
+}

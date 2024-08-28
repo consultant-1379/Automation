@@ -1,0 +1,14 @@
+{
+    "CEE_TENANT_ID": "29f25b1e31f240c09a4fcde3cf8f572a",
+    "VDC_ID": "b42ac549-935f-4e0b-b8aa-9a668049d2e4",
+    "VDC_NAME": "vdc_354",
+    "IMAGE_AUTH_URL": "https://cloud13a.athtem.eei.ericsson.se:13292/v2",
+    "EXTERNAL_NET_ID": "952b9049-a5df-423b-aec7-9898686bbe91",
+    "VNF_MANAGER_ID": "48a8c0e6-067e-4589-bef0-903a490a072b",
+    "VNF_MANAGER_NAME": "VNFM_LCM_Info_Authentication_605",
+    "DYNAMIC_VNF_MANAGER_ID": "9876idvnP",
+    "DYNAMIC_VNF_MANAGER_NAME": "VNFM_LCM_Info_Authentication_40",
+    "ONBOARD_PACKAGE": "Test_VNF_Package_Upload_2020-02-12_10-45-25",
+    "ONBOARD_EPG_PACKAGE": "epg_package",
+    "VIMZONE_ID": "cd3d657e-0ac3-471a-b37a-48ff6d7902a4"
+}

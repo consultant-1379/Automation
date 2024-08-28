@@ -1,0 +1,11 @@
+import enmscripting
+
+session = enmscripting.open()
+command = 'cmedit get TEST_MME_PACKAGE_UPLOAD_391 cmfunction.syncstatus'
+cmd = session.command()
+response = cmd.execute(command)
+for line in response.get_output():
+
+	print(str(line.attributes()['value']))
+
+enmscripting.close(session)

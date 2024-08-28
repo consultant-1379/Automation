@@ -1,0 +1,124 @@
+{
+	"componentInstanceInputsMap": {},
+	"componentInstanceProperties": {
+		"<UNIQUE_ID_FROM_ADDING_EPG_TO_COMPOSITION>": [
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "alias",
+				"origName": "alias",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<EPG_VFC_UNIQUE_ID>.alias",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "vEPG_service_ip",
+				"origName": "vEPG_service_ip",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<EPG_VFC_UNIQUE_ID>.vEPG_service_ip",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "vimZoneName",
+				"origName": "vimZoneName",
+				"parentUniqueId": "<NETWORK_FUNCTION_VFC_UNIQUE_ID>",
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<EPG_VFC_UNIQUE_ID>.vimZoneName",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "vnfdId_epg",
+				"origName": "vnfdId_epg",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<EPG_VFC_UNIQUE_ID>.vnfdId_epg",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			},
+			{
+				"constraints": null,
+				"defaultValue": null,
+				"description": null,
+				"name": "vnfm_Id",
+				"origName": "vnfm_Id",
+				"parentUniqueId": null,
+				"password": false,
+				"required": false,
+				"schema": {
+					"property": {}
+				},
+				"schemaType": null,
+				"type": "string",
+				"uniqueId": "<EPG_VFC_UNIQUE_ID>.vnfm_Id",
+				"value": null,
+				"definition": false,
+				"getInputValues": null,
+				"parentPropertyType": null,
+				"subPropertyInputPath": null,
+				"getPolicyValues": null,
+				"inputPath": null
+			}
+		]
+	},
+	"groupProperties": {},
+	"policyProperties": {}
+}

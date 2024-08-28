@@ -1,0 +1,111 @@
+heat_template_version: '2014-10-16'
+parameters:
+  availability_zone:
+    default: nova
+    label: AZ
+    type: string
+  bootable_image:
+    default: Image_3PP
+    description: Pre-existing pafw image
+    label: pafw image
+    type: string
+  flavor1:
+    default: CM-3pp_ecde_flavor
+    label: flavor to use for the instance
+    type: string
+  oam_net:
+    default: 034ea2e9-8ca2-4442-88be-cf1aac5af855
+    description: this is the network in Cloud 6
+    label: P3_OPENSTACK01_EO_Maintrack_C6AF051_PROV
+    type: string
+  oam_net_IP:
+    default: 131.160.190.59
+    label: IP of PA in the oam network
+    type: string
+  public_net:
+    default: P3_OPENSTACK01_EO_Maintrack_C6AF051_PROV
+    description: public network ID. needed for floating ip assignment
+    label: public NW ID
+    type: string
+  test_net_1:
+    default: 034ea2e9-8ca2-4442-88be-cf1aac5af855
+    description: this is the network in Cloud 6
+    label: P3_OPENSTACK01_EO_Maintrack_C6AF051_PROV
+    type: string
+  test_net_1_IP:
+    default: 131.160.190.60
+    label: IP of PA in the external network. this is the default gateway for untrusted
+      net in ixia net. neighborhood
+    type: string
+  test_net_2:
+    default: 034ea2e9-8ca2-4442-88be-cf1aac5af855
+    description: this is the network in Cloud 6
+    label: P3_OPENSTACK01_EO_Maintrack_C6AF051_PROV
+    type: string
+  test_net_2_IP:
+    default: 131.160.190.61
+    label: IP of PA in the private network. this is the default gateway for trusted
+      net in ixia net. neighborhood
+    type: string
+resources:
+  PAFW-eth0:
+    properties:
+      fixed_ips:
+      - ip_address:
+          get_param: oam_net_IP
+      name: PAFW-eth0
+      network:
+        get_param: oam_net
+    type: OS::Neutron::Port
+  PAFW-eth1:
+    properties:
+      allowed_address_pairs:
+      - ip_address: 0.0.0.0/0
+      fixed_ips:
+      - ip_address:
+          get_param: test_net_1_IP
+      name: PAFW-eth1
+      network:
+        get_param: test_net_1
+    type: OS::Neutron::Port
+  PAFW-eth2:
+    properties:
+      allowed_address_pairs:
+      - ip_address: 0.0.0.0/0
+      fixed_ips:
+      - ip_address:
+          get_param: test_net_2_IP
+      name: PAFW-eth2
+      network:
+        get_param: test_net_2
+    type: OS::Neutron::Port
+  PAFW_8.0:
+    depends_on:
+    - PAFW-eth0
+    - PAFW-eth1
+    - PAFW-eth2
+    properties:
+      availability_zone:
+        get_param: availability_zone
+      config_drive: true
+      flavor:
+        get_param: flavor1
+      image:
+        get_param: bootable_image
+      name: PAFW_8.0
+      networks:
+      - port:
+          get_resource: PAFW-eth0
+      - port:
+          get_resource: PAFW-eth1
+      - port:
+          get_resource: PAFW-eth2
+      personality:
+        /config/bootstrap.xml:
+          get_file: bootstrap.xml
+        /config/init-cfg.txt:
+          get_file: init-cfg.txt
+        /license/authcodes:
+          get_file: authcodes
+      user_data_format: RAW
+    type: OS::Nova::Server

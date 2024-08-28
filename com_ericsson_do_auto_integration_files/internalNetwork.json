@@ -1,0 +1,39 @@
+{
+    "tenantName": "ECM",
+    "vn": {
+        "name": "Dualstack_Internal_Network_ieatdoxb040",
+        "description": "example VN description",
+        "category": "L3",
+        "enabled": true,
+        "isShared": false,
+        "vlanTransparent": false,
+        "segments": [
+            {
+                "name": "exampleSegment1",
+                "networkType": "vlan",
+                "physicalNetworkName": "default",
+                "isPrimary": true
+            }
+        ],
+        "vdc": {
+            "id": "41009360-f2aa-4fea-9a98-a1ca052422f0"
+        },
+        "vimZoneName": "cloud1_ieatdoxb040",
+        "subnets": [
+            {
+                "name": "Internal_Subnet_IPv4",
+                "ipVersion": "IPv4",
+                "ipAddressRange": "192.168.0.0/24",
+                "dhcpEnabled": false,
+                "gatewayIpAddress": "192.168.0.1"
+            },
+            {
+                "name": "Internal_Subnet_IPv6",
+                "ipVersion": "IPv6",
+                "ipAddressRange": "fd31:55ed:95ac:45db::/64",
+                "dhcpEnabled": false,
+                "gatewayIpAddress": "fd31:55ed:95ac:45db::1"
+            }
+        ]
+    }
+}

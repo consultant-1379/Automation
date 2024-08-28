@@ -1,0 +1,7 @@
+127.0.0.1 localhost
+10.10.0.86 ieatenmc4b09-httpd-1
+10.10.0.99 httpd-instance-1
+10.10.0.86 httpd-instance-2
+10.10.0.95 sso.ieatenmc4b09-9.athtem.eei.ericsson.se iorfile.ieatenmc4b09-9.athtem.eei.ericsson.se
+131.160.205.185 ieatenmc4b09-9.athtem.eei.ericsson.se
+159.107.236.117 svc-vnflcm

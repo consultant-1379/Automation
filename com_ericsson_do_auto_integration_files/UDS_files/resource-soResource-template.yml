@@ -1,0 +1,49 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 755c604d-b460-4f13-8557-ee396daaaa91
+  UUID: e1a262c4-7b94-44b1-9d1b-8740da27f260
+  name: soResource
+  description: soResource
+  type: VFC
+  category: Generic
+  subcategory: Network Elements
+  resourceVendor: Ericsson
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  com.ericsson.so.resource:
+    derived_from: tosca.nodes.Root
+    description: soResource
+    properties:
+      customTemplates:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+      resourceSubtype:
+        type: string
+        required: false
+      customOperations:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.nameValuePair
+      resourceType:
+        type: string
+        required: false
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard

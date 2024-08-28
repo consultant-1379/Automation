@@ -1,0 +1,46 @@
+{  
+   "tenantName":"ECM",
+   "vn":{  
+      "name":"P3_CEE01_ieatdoxb040_PROV",
+      "description":"example VN description",
+      "category":"L3",
+      "enabled":true,
+      "isShared":true,
+      "vlanTransparent":false,
+      "segments":[  
+         {  
+            "name":"exampleSegment1",
+            "networkType":"vlan",
+            "physicalNetworkName":"default",
+            "segmentationId":"2108",
+            "isPrimary":true
+         }
+      ],
+      "vimZoneName":"cloud1_ieatdoxb040",
+      "shareInfo":{  
+
+      },
+      "subnets":[  
+         {  
+            "name":"P3_ieatdoxb040_IPv4",
+            "ipVersion":"IPv4",
+            "ipAddressRange":"131.160.162.224/27",
+            "allocationPools":[  
+               {  
+                  "start":"191.168.10.12",
+                  "end":"191.168.10.25"
+               }
+            ],
+            "dhcpEnabled":true,
+            "gatewayIpAddress":"131.160.162.225"
+         },
+         {  
+            "name":"P3_ieatdoxb040_IPv6",
+            "ipVersion":"IPv6",
+            "ipAddressRange":"2001:1b70:6207:79::/64",
+            "dhcpEnabled":false,
+            "gatewayIpAddress":"2001:1b70:6207:79::1"
+         }
+      ]
+   }
+}

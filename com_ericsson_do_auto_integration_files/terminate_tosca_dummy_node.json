@@ -1,0 +1,7 @@
+{
+   "terminationType":"FORCEFUL",
+   "additionalParams":{
+      "min_graceful_termination_timeout":"5",
+      "max_recommended_graceful_termination_timeout":""
+   }
+}

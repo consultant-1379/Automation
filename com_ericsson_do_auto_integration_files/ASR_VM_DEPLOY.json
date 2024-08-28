@@ -1,0 +1,94 @@
+{
+    "tenantName": "ECM",
+    "orderItems": [
+        {
+            "orderItemId": "vm101",
+            "createVm": {
+                "name": "ASR9000",
+                "bootSource": {
+                    "imageName": "EO_Staging_ASR"
+                },
+                "vmhdName": "vCisco_flavor",
+                "vdc": {
+                    "id": "f60e6e57-2f3d-4955-bade-f49ee1c4c8c5"
+                },
+                "vimZoneName": "cloud1_ieatdoxb040"
+            }
+        },
+        {
+            "orderItemId": "vmvnic101",
+            "createVmVnic": {
+                "name": "P3_CEE01_ieatdoxb040_PROV_NIC",
+                "vn": {
+                    "name": "P3_CEE01_ieatdoxb040_PROV"
+                },
+                "internalIpAddress": [
+                    "131.160.162.250"
+                ],
+                "vm": {
+                    "orderItemRef": "vm101"
+                }
+            }
+        },
+        {
+            "orderItemId": "vmvnic104",
+            "createVmVnic": {
+                "name": "INT-DUMMY2_ieatdoxb040_NIC",
+                "vn": {
+                    "name": "INT-DUMMY2_ieatdoxb040"
+                },
+                "internalIpAddress": [
+                    "10.10.15.34"
+                ],
+                "vm": {
+                    "orderItemRef": "vm101"
+                }
+            }
+        },
+        {
+            "orderItemId": "vmvnic102",
+            "createVmVnic": {
+                "name": "INT-DUMMY1_ieatdoxb040_NIC",
+                "vn": {
+                    "name": "INT-DUMMY1_ieatdoxb040"
+                },
+                "internalIpAddress": [
+                    "10.10.15.18"
+                ],
+                "vm": {
+                    "orderItemRef": "vm101"
+                }
+            }
+        },
+        {
+            "orderItemId": "vmvnic103",
+            "createVmVnic": {
+                "name": "P3-CEE01-ieatdoxb040-vMME-OM_CN_NIC",
+                "vn": {
+                    "name": "P3-CEE01-ieatdoxb040-vMME-OM_CN"
+                },
+                "internalIpAddress": [
+                    "10.210.238.132"
+                ],
+                "vm": {
+                    "orderItemRef": "vm101"
+                }
+            }
+        },
+        {
+            "orderItemId": "vmvnic105",
+            "createVmVnic": {
+                "name": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT_NIC",
+                "vn": {
+                    "name": "P3-CEE1-ieatdoxb040-OM_CN_MME-INT"
+                },
+                "internalIpAddress": [
+                    "10.32.133.193"
+                ],
+                "vm": {
+                    "orderItemRef": "vm101"
+                }
+            }
+        }
+    ]
+}

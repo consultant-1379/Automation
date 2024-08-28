@@ -1,0 +1,58 @@
+{
+  "description": "",
+  "category": "",
+  "@type": "ServiceOrder",
+  "serviceOrderItem": [
+    {
+      "action": "add",
+      "id": "1",
+      "@type": "ServiceOrderItem",
+      "service": {
+        "name": "<< SERVICE_NAME >>",
+        "description": "",
+        "type": "RFS",
+        "serviceSpecification": {
+          "name": "create",
+          "description": "VNF creation",
+          "serviceModelId": "<< SERVICE_MODEL_ID >>",
+          "id": "<< INVARIANTUUID >>",
+          "version": "1.0"
+        },
+        "serviceCharacteristic": [
+          {
+            "name": "vEPG_service_ip",
+            "value": ""
+          },
+          {
+            "name": "VimZone",
+            "value": ""
+          },
+          {
+            "name": "serviceName",
+            "value": "EPG_service"
+          },
+          {
+            "name": "subsystemName",
+            "value": ""
+          },
+          {
+            "name": "connectionName",
+            "value": ""
+          },
+          {
+            "name": "vnfName_epg",
+            "value": ""
+          },
+          {
+            "name": "vnfdId_epg",
+            "value": ""
+          },
+          {
+            "name": "vnfm_Id",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

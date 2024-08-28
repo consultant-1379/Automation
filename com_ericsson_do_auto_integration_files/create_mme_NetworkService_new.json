@@ -1,0 +1,39 @@
+{
+  "name": "TEST_MME_ELLEN",
+  "serviceModelId": "19927ce1-d2f1-4c14-ae07-9bff38add082",
+  "description": " mme VNF creation",
+  "inputs": [
+    {
+      "name": "vimZoneName",
+      "value": "EO_Maintrack_C4AF04_VIM"
+    },
+    {
+      "name": "serviceName",
+      "value": "demo_so"
+    },
+    {
+      "name": "subsystemName",
+      "value": "ECM_53"
+    },
+    {
+      "name": "connectionName",
+      "value": "ECM"
+    },
+    {
+      "name": "networkVNF_vnfdId",
+      "value": "8368004e-afa6-427d-b3c1-f3c42ba894d1"
+    },
+    {
+      "name": "vnfName_mme",
+      "value": "TEST_MME_ELLEN"
+    },
+    {
+      "name": "vnfdId_mme",
+      "value": "6d860b4d-b6ac-4c23-b85f-9302ec337a83"
+    },
+    {
+      "name": "vnfm_Id",
+      "value": "48b90767-1aa8-424d-b2fc-9b62bcca43c0"
+    }
+  ]
+}

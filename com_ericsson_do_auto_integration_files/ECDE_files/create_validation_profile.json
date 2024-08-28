@@ -1,0 +1,7 @@
+{
+    "validationStreamName": "AUTO_ECDE_ECM_VALIDATION_PROFILE",
+    "description": "ValidationProfile_Test",
+    "documentId": null,
+    "associatedValidationStreamAndLevels": null,
+    "validationStreamStatus": "ACTIVE"
+}

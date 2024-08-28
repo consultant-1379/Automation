@@ -1,0 +1,74 @@
+{
+    "tenantName": "ECM",
+    "vdc": {
+        "id": "0f097b12-f094-44f6-b6c3-a2009204ab1e"
+    },
+    "vimZoneName": "ECM10-CEE",
+    "characteristics": [
+        {
+            "id": "id"
+        }
+    ],
+    "vnfm": {
+        "id": "388efe2c-6ae8-4ed8-820f-dd8e1509b482"
+    },
+    "vapp": {
+        "name": "MME1.28_203",
+        "type": "vapp",
+        "flavor": "default",
+        "description": "demonstrate VNF deployment",
+        "productInfo": {
+            "vendor": "Ericsson",
+            "version": 1
+        },
+        "deploymentParameters": {
+            "node_type": "sgsnl",
+            "tmo": 0,
+            "ss7": "Not_Applicable",
+            "time_zone": "UTC",
+            "key_name": "",
+            "ssh_public_key": "",
+            "extra_console": "ttyS1",
+            "internal_mtu": 1500,
+            "storage_drbd_sync_rate": 0,
+            "mme_group_id": "10",
+            "mme_code": "200",
+            "gpbs": 2,
+            "fsb_flavor": "CM-MME_FSB_flavor_ECM10",
+            "ncb_flavor": "CM-MME_NCB_flavor_ECM10",
+            "gpb_flavor": "CM-MME_GPB_flavor_ECM10",
+            "fsb1_image": "e18f3cdb-fb8f-4b81-9470-cf32ac5e95fb",
+            "fsb2_image": "832271a6-9070-4dde-995a-9e9e84c65572",
+            "pxeboot_image": "7c034663-4088-4792-90e3-1075ab0a2fd6",
+            "availability_zone_1": "nova",
+            "fsb1_admin_net_id": "P3_CEE01_ECM10_FSB_vMME",
+            "fsb2_admin_net_id": "P3_CEE01_ECM10_FSB_vMME",
+            "fsb_admin_ip_1": "131.160.163.169",
+            "fsb_admin_ip_2": "131.160.163.170",
+            "fsb_admin_prefix_length": 24,
+            "fsb_admin_gateway_ip_1": "131.160.163.161",
+            "fsb_admin_gateway_ip_2": "",
+            "fsb_admin_dns_server_ip_1": "",
+            "fsb_admin_dns_server_ip_2": "",
+            "OM_CN_net_id": "P3_CEE01_ECM10_OM_CN_MME_INT",
+            "OM_CN_service_ip_1": "10.224.27.132",
+            "OM_CN_ips": "131.160.163.180,131.160.163.181",
+            "OM_CN_prefix_length": 28,
+            "OM_CN_gateway_ip_1": "131.160.163.177",
+            "updateOss": true,
+            "vnfIpAddress": "10.224.27.132",
+            "vnfUsername": "mmeuser",
+            "vnfPassword": "cm9vdCEyMzQ=",
+            "associatedSite": "",
+            "subNetworks": "",
+            "networkElementVersion": "1.20",
+            "communityString": "",
+            "snmpPort": 25161,
+            "enableRollback": false,
+            "vnfConfigContent": "",
+            "vnfConfigUri": "",
+            "vnfLicenseKeyFileContent": "",
+            "vnfLicenseKeyFileUri": ""
+        }
+    }
+}

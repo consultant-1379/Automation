@@ -1,0 +1,13 @@
+{
+    "name": "ENM_481",
+    "managementDomain": "RAN",
+    "mgtype": "DomainManager",
+    "connectionProperties": [
+        {
+            "name": "ENM",
+            "username": "administrator",
+            "password": "TestPassw0rd",
+            "location": "https://ieatenmc5b13-8.athtem.eei.ericsson.se"
+        }
+    ]
+}

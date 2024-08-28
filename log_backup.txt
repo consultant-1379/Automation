@@ -1,0 +1,286 @@
+08-05-21 16:40:57  INFO     emaidns start_script.py   It is for non productize version of automation , Reading the user input file from DIT
+08-05-21 16:40:57  INFO     emaidns start_script.py   Start fetching out data from DIT for document EO_STAGING_TE3_ECDE
+08-05-21 16:40:57  DEBUG    emaidns urllib3.connectionpool   Starting new HTTPS connection (1): atvdit.athtem.eei.ericsson.se:443
+08-05-21 16:40:58  DEBUG    emaidns urllib3.connectionpool   https://atvdit.athtem.eei.ericsson.se:443 "GET /api/documents?q=name=EO_STAGING_TE3_ECDE HTTP/1.1" 200 None
+08-05-21 16:40:58  INFO     emaidns Json_file_handler   File updated successfully .. 
+08-05-21 16:40:58  INFO     emaidns start_script.py   DIT inputs 
+ : {'EGAD_CERT_REGISTERY_NAME': 'REGISTERY_NAME', 'CNF_CONFIGMAP_SOFTWARE_PATH': '/var/tmp/deployCNFwithConfigmap/', 'EPG_TOSCA_IMAGE_NAMES': 'epg_vrp_cxp9026845_27r5b56,epg_vsfo_cxp9026845_27r5b56', 'EPG_TOSCA_IMAGE_IDS': 'ff0ceed6-7021-4d18-b1d3-34e837a2148b,b6d4a6c2-ff8e-45b7-8c1a-0da0edd1580d', 'EPG_TOSCA_FLAVORS': 'CM-EO_epg_doecm05_2vcpu_6144MBmem_40GBdisk,CM-EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk', 'EPG_TOSCA_SOFTWARE_PATH': '/var/tmp/deployTOSCAEPG3.14', 'CLUSTER_CONFIG_NAME': 'admin-ccd1.config', 'ECDE_FQDN': 'ecde.ccd-c13a022.athtem.eei.ericsson.se', 'ECDE_SPINNAKER_HOSTNAME': 'spinnaker-api.ccd-c13a022.athtem.eei.ericsson.se', 'ECDE_KEYCLOAK_FQDN': 'iam.ccd-c13a022.athtem.eei.ericsson.se', 'SYNC_TENANT_TYPE': 'SHARED', 'EXTERNAL_NETWORK_NAME': 'Network name', 'UDS_HOSTNAME': 'uds-eo-staging.athtem.eei.ericsson.se', 'HELM_DEPLOYMENT_NAME': 'eric-eo-codeploy', 'SYNC_VIM_AVAILABILITY_ZONE': 'DO_SRIOV_AZ_CP', 'METRICS_VALUE_PACK': 'eo', 'METRICS_HOST_URL': 'http://prometheus.p6-opstk-4a-de-cni-ecfe-8.athtem.eei.ericsson.se', 'WANO_PASSWORD': 'Ericsson123!', 'WANO_USERNAME': 'wano-user', 'WANO_HOSTNAME': 'wano.p6-opstk-4a-de-cni-ecfe-8.athtem.eei.ericsson.se', 'ENVIRONMENT_USER_PLATFORM': 'kvm', 'SO_ENTITY_CHECK_USER': 'so-user', 'CCD1_VM_VNFM_DIRECTOR_IP': '10.210.220.168', 'vMME_WRAPPER_DIT_DOC_NAME': 'EO_STAGING_vMME', 'vEPG_WRAPPER_DIT_DOC_NAME': 'EO_STAGING_vEPG', 'CORE_VM_2_IP': '10.210.236.230', 'STATIC_VNF_LCM_Service_IP_1': '159.107.236.115', 'STATIC_VNF_LCM_Service_VIP': '159.107.236.117', 'DYNAMIC_VNF_LCM_Service_IP_1': '131.160.190.55', 'DYNAMIC_VNF_LCM_Service_VIP': '131.160.190.57', 'DB_Internal_VRRP_ID': '119', 'Service_Internal_VRRP_ID': '118', 'RDB_VM_PASSWORD': 'ecm123', 'RDB_VM_USERNAME': 'root', 'RDB_VM_IP': '10.210.236.237', 'OSS_USER_NAME': 'administrator', 'OSS_GATEWAY_HOST2': '10.210.253.0/24', 'OSS_GATEWAY_HOST1': '10.210.253.0/24', 'VIM_URL': 'https://cloud6a.athtem.eei.ericsson.se:13000/v2.0', 'TIME_ZONE': 'Europe/Dublin', 'NTP_SERVER_IPs': '159.107.173.12,159.107.173.223', 'DNS_SERVER_IPs': '159.107.173.3', 'KEY_STONE': 'https://cloud6a.athtem.eei.ericsson.se:13000/v3', 'DCGW_NE_NAME': 'DCGW', 'DCGW_SOFTWARE_PATH': '/var/tmp/deployMME1.28/DC-GW_Automation', 'ASR_DEVICE_NAME': 'ASR9000', 'ACTIVATION_VM_PASSWORD': 'ecm123', 'ACTIVATION_VM_USERNAME': 'root', 'ACTIVATION_VM_IP': '10.210.236.234', 'DUMMY_MME_SOFTWARE_PATH': '/var/tmp/deployDummyMME', 'CLOUD_STATIC_PROJECT_PASSWORD': 'admin123', 'CLOUD_STATIC_PROJECT_USERNAME': 'EO_Maintrack_admin', 'CLOUD_STATIC_PROJECT_NAME': 'EO_Maintrack_Static_C6AF051', 'DIRECTORY_SERVER_USERNAME': 'eccd', 'DIRECTORY_SERVER_IP': '10.210.249.164', 'MME_FLAVORS': 'CM-fsb_flavor_EO_Maintrack_C6AF051,CM-ncb_flavor_EO_Maintrack_C6AF051,CM-gpb_flavor_EO_Maintrack_C6AF051', 'MME_IMAGE_IDS': '00c0e7b3-bb3f-4ff1-8e6b-1d6b6f82ef40,b4341423-3335-42fe-819b-300ec6c81d4b,fa1e39ef-4cef-4a84-976e-8dd50e1551f5', 'MME_IMAGE_NAMES': 'sgsn-mme_fsb1_cxp9025898_4r89c15_ORCH_STAGING_C6a,sgsn-mme_fsb2_cxp9025898_4r89c15_ORCH_STAGING_C6a,sgsn-mme_pxeboot_cxp9025898_4r89c15_ORCH_STAGING_C6a', 'MME_VERSION': 'mme1.28_asr_so', 'MME_SOFTWARE_PATH': '/var/tmp/deployMME1.28', 'EPG_VERSION': 'EPG2.11', 'EPG_SOFTWARE_PATH': '/var/tmp/deployEPG2.11', 'EPG_FLAVORS': 'CM-EO_epg_doecm05_2vcpu_6144MBmem_40GBdisk,CM-EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk', 'EPG_IMAGE_IDS': '8a2bff68-fbe5-4134-9e0f-0a2e07cd2333,12460002-01ab-4bc3-ae4c-4ba2a5b316d9', 'EPG_IMAGE_NAMES': 'epg_vrp_cxp9026845_27r12b40_ORCH_STAGING_C6a,epg_vrp_cxp9026845_27r12b40_ORCH_STAGING_C6a', 'NETWORK_IPV6_RANGE': '2001:1b70:6207:66::/64', 'NETWORK_IPV4_RANGE': '131.160.190.48/28', 'NETWORK_SEGMENTATION_ID': '890', 'OPENRC_FILENAME': 'openrcdoxb006HA_main', 'OPENSTACK_PASSWORD': 'shroot', 'OPENSTACK_USERNAME': 'root', 'OPENSTACK_IP': '141.137.173.173', 'ENVIRONMENT': 'EO_Maintrack_C6AF051', 'ECM_Host_Blade_IP': '10.210.229.186', 'ECM_Host_Blade_username': 'root', 'ECM_Host_Blade_Password': 'ecm123', 'ECM_GUI_Username': 'ecmadmin', 'ECM_GUI_Password': 'CloudAdmin123', 'ENM_GUI_Hostname': 'ieatenmc4b09-9.athtem.eei.ericsson.se', 'ENM_GUI_Username': 'administrator', 'ENM_GUI_Password': 'TestPassw0rd', 'ENM_IP_ADDRESS': '131.160.205.199', 'DEPLOYMENT_TYPE': 'HA', 'CORE_VM_APPLICATION_SERVICE_IP': '10.210.229.181', 'CORE_VM_IP': '10.210.236.229', 'CORE_VM_Hostname': 'ieatdo9027-1.athtem.eei.ericsson.se', 'CORE_VM_Username': 'root', 'CORE_VM_Password': 'ecm123', 'VIM_NAME_FOR_CLOUD': 'cloud6a_ieatdoxb006_HA', 'CLOUD_Host_IP_Address': '131.160.172.220', 'CLOUD_Hostname': 'cloud6a.athtem.eei.ericsson.se', 'ATLAS_IP': '131.160.172.220', 'ATLAS_Hostname': 'cloud6a.athtem.eei.ericsson.se', 'VNF_LCM_Service_Username': 'cloud-user', 'VNF_LCM_Service_Password': '12shroot', 'TENANT_NAME': 'ECM', 'SOFTWARE_VERSION': '18.2.0.0', 'IS_PUBLIC': 'false', 'VNF_SOFTWARE_VESRION': '18.16', 'SERVICES_FLAVOR': 'CM-Auto_test_flavour', 'EXTERNAL_SUBNET_CIDR': '131.160.190.48/28', 'EXTERNAL_SUBNET_GATEWAY': '131.160.190.49', 'EXTERNAL_IP_FOR_SERVICES_VM': '131.160.190.54', 'CLOUD_TYPE': 'OPENSTACK', 'OSS_TYPE': 'vENM', 'OSS_MASTER_HOSTNAME': 'ieatenmc4b09-scp-0', 'OSS_MASTER_HOST_IP': '131.160.205.199', 'OSS_NOTIFICATION_SERVICE_HOST': 'ieatenmc4b09-visinamingnb-0', 'OSS_NOTIFICATION_SERVICE_IP': '131.160.205.196', 'LCM_SERVICE_IP': '131.160.205.183', 'LCM_USERNAME': 'cloud-user', 'LCM_PASSWORD': 'N3wP@55w0rd', 'SERVICES_IMAGE_NAME': 'ERICrhelvnflafimage_CXP9032490-4.8.13_ORCH_STAGING_C6a', 'SERVICES_IMAGE_ID': 'e9b83d1e-d0fd-4e4f-902e-7d6d1a7c76e4', 'PROJECT_NAME': 'EO_Maintrack_C6AF051', 'SITE_NAME': 'Athlone Data Center', 'RPM_BUNDLE_LINK': 'https://arm101-eiffel004.lmera.ericsson.se:8443/nexus/content/groups/public/com/ericsson/vnflcm/examples/workflows/ERICvnflaf_CXP123456/2.6.33/ERICvnflaf_CXP123456-2.6.33.rpm', 'SO_HOSTNAME': 'so-eo-staging.athtem.eei.ericsson.se', 'EXTERNAL_IP_FOR_SERVICES_VM_SCALE_OUT': '131.160.190.58', 'VCISCO_FLAVOUR_NAME': 'CM-vCisco_flavor', 'VALID9m_FLAVOUR_NAME': 'CM-valid9m_flavor', 'VCISCO_IMAGE_NAME': 'ASR9000_EO_STAGING', 'VALID9m_IMAGE_NAME': 'valid-9m', 'VCISCO_IMAGE_ID': 'ed078d7f-53fe-42fc-9a64-296080d8d5fb', 'VALID9m_IMAGE_ID': 'aa7fe8c1-a443-4b4d-ad65-721cdd752600', 'VCISCO_GATEWAY_IP': '10.210.238.129', 'VCISCO_MANAGEMENT_IP': '131.160.190.62', 'VCISCO_MANAGEMENT_USERNAME': 'root', 'VCISCO_MANAGEMENT_PASSWORD': 'root', 'ACTIVATION_GUI_USERNAME': 'eoadmin@admin.local', 'ACTIVATION_GUI_PASSWORD': 'Activation!234', 'STATIC_VNF_LCM_Service_IP': '159.107.236.116', 'DYNAMIC_VNF_LCM_Service_IP': '131.160.190.53', 'STATIC_EXTERNAL_NETWORK_NAME': 'P7-OpStk-6A-Orch-Stag-F051-LCM', 'EXTERNAL_IP_FOR_SERVICES_VM_DYNAMIC': '131.160.190.61', 'LCM_DEPLOYMENT_TYPE': 'HA', 'Service_External_VRRP_ID': '118', 'OS_AVAILABILITY_ZONE': 'nova', 'OM_PROVIDER_NET_NAME_ID': 'P9-OpStk-13-Public-Tenant4', 'OM_PROVIDER_NET_GATEWAY': '10.210.221.65', 'OM_PROVIDER_NET_CIDR': '10.210.221.64/26', 'OPENRC_AUTH_URL': 'https://cloud13a.athtem.eei.ericsson.se:13000/v3', 'OPENRC_PROJECT_NAME': 'ORCH_VNF_C13A17', 'OPENRC_PROJECT_ID': 'bbac64c42eca40758a6e9928199e4bfb', 'OPENRC_USERNAME': 'ORCH_VNF_C13A17_admin', 'OPENRC_PASSWORD': 'putpasswordhere', 'OPENRC_REGION_NAME': 'regionOne', 'ARM_CSCF_API_KEY': 'putapikeyhere', 'ARM_CSCF_API_USERNAME': 'eacvnfci', 'ARM_SBG_API_KEY': 'putapikeyhere', 'ARM_SBG_API_USERNAME': 'eacvnfci', 'ARM_BGF_API_KEY': 'putapikeyhere', 'ARM_BGF_API_USERNAME': 'eacvnfci', 'ARM_MTAS_API_KEY': 'putapikeyhere', 'ARM_MTAS_API_USERNAME': 'eacvnfci', 'ALLOCATION_POOLS_IP': '131.160.190.50-131.160.190.62', 'JBOSS_PUBLIC_KEY': '<paste public key here>', 'OPENRC_DOMAIN_NAME': 'Default', 'EXISTING_PROJECT_ADMIN_USERNAME': 'ORCH_STAGING_N53_admin', 'EXISTING_PROJECT_ADMIN_PASSWORD': 'Orch_staging_n53.laf', 'EXISTING_PROJECT_USER_USERNAME': 'ORCH_STAGING_N53_user', 'EXISTING_PROJECT_USER_PASSWORD': 'Orch_staging_n53.laf', 'EXISTING_PROJECT_NAME': 'ORCH_STAGING_N53', 'ECDE_ADMIN_PASSWORD': 'Admin@123', 'ECDE_ADMIN_USERNAME': 'admin', 'ECDE_ENM_PASSWORD': 'TestPassw0rd', 'ECDE_ENM_USERNAME': 'Administrator', 'ECDE_ENM_IP': '131.160.188.70', 'ECDE_VNFLCM_DUMMY_VNF_IP': '131.160.190.59', 'ECDE_ECM_DUMMY_VNF_IP': '131.160.190.56', 'ARM_IMS_API_KEY': 'putapikeyhere', 'ARM_IMS_API_USERNAME': 'eacvnfci', 'ECDE_ECM_3PP_VNF_IPs': '131.160.190.59,131.160.190.60,131.160.190.61', 'SOL_VERSION': 'SOL241', 'RECONCILE_IP_FOR_DUMMY_VM': '131.160.190.54', 'DISCOVERY_BUNDLE_LINK': 'https://arm101-eiffel004.lmera.ericsson.se:8443/nexus/service/local/repositories/releases/content/com/ericsson/vnflcm/vnf/workflows/ERICvnfadmin_CXP9037969/2.6.13/ERICvnfadmin_CXP9037969-2.6.13.rpm', 'TOSCA_BGF_IP': '131.160.190.60', 'DEPLOYMENT_NAME': 'ieatenmc4b09', 'ENM_SOFTWARE_PATH': '/var/tmp/enm_post_install', 'ABCD_VM_IP': '10.210.236.228', 'ABCD_VM_USERNAME': 'root', 'ABCD_VM_PASSWORD': 'ecm123', 'ENM_DEPLOYMENT_TYPE': 'Feature_Test_Single', 'SO_DEPLOYMENT_TYPE': 'IPV4', 'EVNFM_HOSTNAME': 'evnfm.ccd-c11a016.athtem.eei.ericsson.se', 'EVNFM_AUTH_USERNAME': 'vnfm', 'EVNFM_AUTH_PASSWORD': 'Ericsson123!', 'VM_VNFM_DIRECTOR_USERNAME': 'eccd', 'VM_VNFM_DIRECTOR_IP': '10.210.218.193', 'CISM_REGISTER_URL': 'https://k8s-api.ccd2.athtem.eei.ericsson.se:443', 'vBGF_WRAPPER_DIT_DOC_NAME': 'EO_STAGING_vBGF', 'vSBG_WRAPPER_DIT_DOC_NAME': 'EO_STAGING_vSBG', 'vMTAS_WRAPPER_DIT_DOC_NAME': 'EO_STAGING_vMTAS', 'vCSCF_WRAPPER_DIT_DOC_NAME': 'EO_STAGING_vCSCF', 'IS_VM_VNFM': 'False', 'VM_VNFM_NAMESPACE': 'codeploy', 'MULTI_ENM_GUI_Hostname': 'ieatenmc5b13-8.athtem.eei.ericsson.se', 'SO_NAMESPACE': 'codeploy', 'ECDE_AAT_IP': '131.160.188.73', 'ECDE_AAT_USERNAME': 'admin', 'ECDE_AAT_PASSWORD': 'ecdeaat110', 'ECDE_SPINNAKER_USERNAME': 'swdp', 'ECDE_SPINNAKER_PASSWORD': 'ericsson', 'LOGGING_VERIFICATION_HOST_URL': 'http://elastic.p6-opstk-4a-de-cni-ecfe-8.athtem.eei.ericsson.se', 'CISM_CLUSTER_IP': '10.210.249.164', 'SYNC_CLOUD_TYPE': 'CEE', 'SYNC_CLOUD_HOSTNAME': 'dc518ceenbi-vpod1.sc.sero.gic.ericsson.se', 'SYNC_CLOUD_HOST_IP': '10.221.147.72', 'SYNC_ATLAS_HOSTNAME': 'dc518atlas-vpod1.sc.sero.gic.ericsson.se', 'SYNC_ATLAS_HOST_IP': '10.221.113.164', 'SYNC_VIM_URL': 'https://dc518ceenbi-vpod1.sc.sero.gic.ericsson.se:5000/v3', 'SYNC_VIM_NAME_FOR_CLOUD': 'ORCH_STAGING_N53', 'SYNC_OPENRC_FILENAME': 'ORCH_STAGING_N53_ieatdoxb006', 'SYNC_TENANT_NAME': 'Sync_test', 'SYNC_TENANT_USERNAME': 'test_user', 'SYNC_TENANT_PASSWORD': 'CloudAdmin123@', 'EPG_ETSI_NSD_PATH': '/var/tmp/deployEPGETSINSD', 'EPG_ETSI_NSD_VERSION': 'epg_3.7_ETN'}
+08-05-21 16:40:58  INFO     emaidns start_script.py   Finished fetching out data from DIT for document EO_STAGING_TE3_ECDE
+08-05-21 16:40:58  INFO     emaidns Json_file_handler   validating the file  , do_init.json
+08-05-21 16:40:58  INFO     emaidns Json_file_handler   validation done  , do_init.json
+08-05-21 16:40:58  INFO     emaidns start_script.py   operation : ECDE-ECM-DEPLOY input file path : do_init.json
+08-05-21 16:40:58  INFO     emaidns ECM_PI_intialization.py   Going to collect User_Inputs for ECM post installation tasks
+08-05-21 16:40:58  INFO     emaidns ECM_PI_intialization.py   Going to collect post ECM installation data 
+08-05-21 16:40:58  INFO     emaidns ECM_PI_intialization.py   Finished to collect post ECM installation data
+08-05-21 16:40:58  INFO     emaidns ECM_PI_intialization.py   Going to collect data 
+08-05-21 16:40:58  INFO     emaidns ECM_PI_intialization.py   Finished to collect  data
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   Going to collect ecm_core_data
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   LCM deployment type is HA
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   Finished to collect ecm_core_data
+08-05-21 16:40:58  INFO     emaidns ECM_PI_intialization.py   Finished to collect User_Inputs for ECM post installation tasks
+08-05-21 16:40:58  INFO     emaidns SIT_initialization.py   Start to collect User_Inputs
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   Going to collect ecm_core_data
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   LCM deployment type is HA
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   Finished to collect ecm_core_data
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   Going to collect vnfm_data
+08-05-21 16:40:58  INFO     emaidns Initialization_script.py   Finished to collect vnfm_data
+08-05-21 16:40:58  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   starting thread (client mode): 0xe2879490
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Local version/idstring: SSH-2.0-paramiko_2.7.2
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Remote version/idstring: SSH-2.0-OpenSSH_7.4
+08-05-21 16:40:58  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   kex algos:['curve25519-sha256', 'curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group16-sha512', 'diffie-hellman-group18-sha512', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha256', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'blowfish-cbc', 'cast128-cbc', '3des-cbc'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'aes128-cbc', 'aes192-cbc', 'aes256-cbc', 'blowfish-cbc', 'cast128-cbc', '3des-cbc'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Kex agreed: curve25519-sha256@libssh.org
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   HostKey agreed: ssh-ed25519
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Cipher agreed: aes128-ctr
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   MAC agreed: hmac-sha2-256
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Compression agreed: none
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Switch to new keys ...
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Adding ssh-ed25519 host key for 10.210.229.186: b'c293f9e2876181cbcf3d3b831580638a'
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   Trying discovered key b'fb0a8952374fe667e5b3490503676b97' in C:\Users\emaidns/.ssh/id_rsa
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   userauth is OK
+08-05-21 16:40:58  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:40:58  DEBUG    emaidns paramiko.transport   userauth is OK
+08-05-21 16:40:59  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:40:59  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:40:59  INFO     emaidns Server_connection.py   Fetching source :  /root/run_time_EO_Maintrack_C6AF051.json to destination : com_ericsson_do_auto_integration_files/run_time_EO_Maintrack_C6AF051.json
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   [chan 0] Max packet in: 32768 bytes
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   Received global request "hostkeys-00@openssh.com"
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   Rejecting "hostkeys-00@openssh.com" global request from server.
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   [chan 0] Max packet out: 32768 bytes
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   Secsh channel 0 opened.
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   [chan 0] Sesch channel 0 request ok
+08-05-21 16:40:59  INFO     emaidns paramiko.transport.sftp   [chan 0] Opened sftp connection (server version 3)
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport.sftp   [chan 0] stat(b'/root/run_time_EO_Maintrack_C6AF051.json')
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport.sftp   [chan 0] open(b'/root/run_time_EO_Maintrack_C6AF051.json', 'rb')
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport.sftp   [chan 0] open(b'/root/run_time_EO_Maintrack_C6AF051.json', 'rb') -> 00000000
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport.sftp   [chan 0] close(00000000)
+08-05-21 16:40:59  INFO     emaidns paramiko.transport.sftp   [chan 0] sftp session closed.
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   [chan 0] EOF sent (0)
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CEE_TENANT_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for PROJECT_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for IMAGE_AUTH_URL
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for VDC_NAME
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for VDC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for VIMZONE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for EXTERNAL_NET_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for SUBSYSTEM_NAME
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for VNF_MANAGER_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_EPG_PACKAGE
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_EPG_TOSCA_PACKAGE
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for EPG_PACKAGE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_MME_PACKAGE
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for MME_PACKAGE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CNF_VNFM_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_PACKAGE
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for SYNC_PROJ_VDC_NAME
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for SYNC_PROJ_VDC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for VNF_IDENTIFIER_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CCRC_RESOURCE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_RESOURCE_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_NETWORK_SERVICE_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_NETWORK_FUNCTION_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for ONBOARD_EPG_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CERTIFY_RESOURCE_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CERTIFY_NETWORK_SERVICE_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CERTIFY_NETWORK_FUNCTION_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CERTIFY_EPG_VFC_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CERTIFY_VF_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for CERTIFY_SERVICE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for VF_UNIQUE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for UNIQUE_ID_FROM_ADDING_NS_TO_COMPOSITION
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for UNIQUE_ID_FROM_ADDING_EPG_TO_COMPOSITION
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for UDS_CAPABILITIES_UNIQUE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for UDS_REQUIREMENTS_UNIQUE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for UDS_SERVICE_UNIQUE_ID
+08-05-21 16:40:59  INFO     emaidns Json_file_handler   start collecting value for UDS_VF_NAME
+08-05-21 16:40:59  DEBUG    emaidns paramiko.transport   EOF in transport thread
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   start to collect system integration test data 
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   Finished to collect system integration test data 
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   start to collect ecde data 
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   Finished to collect ecde data 
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   start to collect wano data
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   Finished to collect wano data
+08-05-21 16:40:59  INFO     emaidns SIT_initialization.py   Finished to collect User_Inputs
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create AAT tool in ECDE Test tools' -> 'I start the Scenario to Create AAT tool in ECDE Test tools'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a testcase under Test tool' -> 'I start the Scenario to Create a testcase under Test tool'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a testsuite with testcase added to Test tool' -> 'I start the Scenario to Create a testsuite with testcase added to Test tool'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Clean all the TEP from spinnaker' -> 'I start the Scenario to Clean all the TEP from spinnaker'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Generate cdd node pre-req stuff using curl command' -> 'I start the Scenario to Generate cdd node pre-req stuff using curl command'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a Vendor-Specific Validation Tracks for CDD' -> 'I start the Scenario to Create a Vendor-Specific Validation Tracks for CDD'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Assign Vendor-Specific Validation Tracks to CDD TEP' -> 'I start the Scenario to Assign Vendor-Specific Validation Tracks to CDD TEP'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Vendor_Product For CDD Node' -> 'I start the Scenario to Create Vendor_Product For CDD Node'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product CDD Node' -> 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product CDD Node'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Validate Vendor_Product CDD Node' -> 'I start the Scenario to Validate Vendor_Product CDD Node'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Verification of Validation order CDD Node' -> 'I start the Scenario to Verification of Validation order CDD Node'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create VNF-TYPE FOR EVNFM DUMMY NODE' -> 'I start the Scenario to Create VNF-TYPE FOR EVNFM DUMMY NODE'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create validation levels for EVNFM DUMMY NODE' -> 'I start the Scenario to Create validation levels for EVNFM DUMMY NODE'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create VNF-TYPE FOR ECM DUMMY NODE' -> 'I start the Scenario to Create VNF-TYPE FOR ECM DUMMY NODE'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create validation levels for ECM DUMMY NODE' -> 'I start the Scenario to Create validation levels for ECM DUMMY NODE'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create validation stream for ECM' -> 'I start the Scenario to Create validation stream for ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create validation stream for VNF-LCM' -> 'I start the Scenario to Create validation stream for VNF-LCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create validation stream for EVNFM' -> 'I start the Scenario to Create validation stream for EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Assign VNF-TYPE and Validation level for ECM validation stream' -> 'I start the Scenario to Assign VNF-TYPE and Validation level for ECM validation stream'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Assign VNF-TYPE and Validation level for VNF-LCM validation stream' -> 'I start the Scenario to Assign VNF-TYPE and Validation level for VNF-LCM validation stream'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Onboarding System for ECM' -> 'I start the Scenario to Create Onboarding System for ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Onboarding System for VNF-LCM' -> 'I start the Scenario to Create Onboarding System for VNF-LCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Onboarding System for EVNFM' -> 'I start the Scenario to Create Onboarding System for EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Test Environment profile for ECM' -> 'I start the Scenario to Create Test Environment profile for ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Test Environment profile for VNF-LCM' -> 'I start the Scenario to Create Test Environment profile for VNF-LCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Test Environment profile for EVNFM' -> 'I start the Scenario to Create Test Environment profile for EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a Vendor-Specific Validation Tracks for ECM' -> 'I start the Scenario to Create a Vendor-Specific Validation Tracks for ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a Vendor-Specific Validation Tracks for VNFLCM' -> 'I start the Scenario to Create a Vendor-Specific Validation Tracks for VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a Vendor-Specific Validation Tracks for EVNFM' -> 'I start the Scenario to Create a Vendor-Specific Validation Tracks for EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Assign Vendor-Specific Validation Tracks to EVNFM TEP' -> 'I start the Scenario to Assign Vendor-Specific Validation Tracks to EVNFM TEP'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Assign Vendor-Specific Validation Tracks to ECM TEP' -> 'I start the Scenario to Assign Vendor-Specific Validation Tracks to ECM TEP'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Transfer vnf package to VNFLCM' -> 'I start the Scenario to Transfer vnf package to VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Update admin password first login' -> 'I start the Scenario to Update admin password first login'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Increase Vendor server heap size for 3PP VNF' -> 'I start the Scenario to Increase Vendor server heap size for 3PP VNF'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a ECDE Vendor' -> 'I start the Scenario to Create a ECDE Vendor'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create a User for ECDE vendor' -> 'I start the Scenario to Create a User for ECDE vendor'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Update Vendor password first login' -> 'I start the Scenario to Update Vendor password first login'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Extract token for admin' -> 'I start the Scenario to Extract token for admin'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to fetch and delete the pipeline' -> 'I start the Scenario to fetch and delete the pipeline'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create flavor for 3pp Node ECDE-ECM' -> 'I start the Scenario to Create flavor for 3pp Node ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Vendor_Product For 3PP Node ECDE-ECM' -> 'I start the Scenario to Create Vendor_Product For 3PP Node ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Image Resource to Vendor_Product for 3PP ECDE-ECM' -> 'I start the Scenario to Upload Image Resource to Vendor_Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Template Resource to Vendor_Product for 3PP ECDE-ECM' -> 'I start the Scenario to Upload Template Resource to Vendor_Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload bootstrap Config Resource to Vendor_Product for 3PP ECDE-ECM' -> 'I start the Scenario to Upload bootstrap Config Resource to Vendor_Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload authcodes Config Resource to Vendor_Product for 3PP ECDE-ECM' -> 'I start the Scenario to Upload authcodes Config Resource to Vendor_Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload init-cfg Config Resource to Vendor_Product for 3PP ECDE-ECM' -> 'I start the Scenario to Upload init-cfg Config Resource to Vendor_Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product for 3PP ECDE-ECM' -> 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Validate Vendor_Product for 3PP ECDE-ECM' -> 'I start the Scenario to Validate Vendor_Product for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Verification of Validation order for 3PP ECDE-ECM' -> 'I start the Scenario to Verification of Validation order for 3PP ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Vendor_Product For Dummy Node ECDE-ECM' -> 'I start the Scenario to Create Vendor_Product For Dummy Node ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Image Resource to Vendor_Product ECDE-ECM' -> 'I start the Scenario to Upload Image Resource to Vendor_Product ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Template Resource to Vendor_Product ECDE-ECM' -> 'I start the Scenario to Upload Template Resource to Vendor_Product ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-ECM' -> 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Validate Vendor_Product ECDE-ECM' -> 'I start the Scenario to Validate Vendor_Product ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Verification of Validation order ECDE-ECM' -> 'I start the Scenario to Verification of Validation order ECDE-ECM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Remove NFVO if exists in VNF-LCM' -> 'I start the Scenario to Remove NFVO if exists in VNF-LCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Install Dummy VNF workflow in VNF-LCM' -> 'I start the Scenario to Install Dummy VNF workflow in VNF-LCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Vendor_Product For Dummy Node ECDE-VNFLCM' -> 'I start the Scenario to Create Vendor_Product For Dummy Node ECDE-VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Image Resource to Vendor_Product ECDE-VNFLCM' -> 'I start the Scenario to Upload Image Resource to Vendor_Product ECDE-VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Wrapper file Resource to Vendor_Product ECDE-VNFLCM' -> 'I start the Scenario to Upload Wrapper file Resource to Vendor_Product ECDE-VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-VNFLCM' -> 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Validate Vendor_Product ECDE-VNFLCM' -> 'I start the Scenario to Validate Vendor_Product ECDE-VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Verification of Validation order ECDE-VNFLCM' -> 'I start the Scenario to Verification of Validation order ECDE-VNFLCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Add NFVO if it exits before remove in VNF-LCM' -> 'I start the Scenario to Add NFVO if it exits before remove in VNF-LCM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Create Vendor_Product For Dummy Node ECDE-EVNFM' -> 'I start the Scenario to Create Vendor_Product For Dummy Node ECDE-EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Image Resource to Vendor_Product ECDE-EVNFM' -> 'I start the Scenario to Upload Image Resource to Vendor_Product ECDE-EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Upload Param Resource to Vendor_Product ECDE-EVNFM' -> 'I start the Scenario to Upload Param Resource to Vendor_Product ECDE-EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-EVNFM' -> 'I start the Scenario to Get Validation level and Validation stream Id to Validate Product ECDE-EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Validate Vendor_Product ECDE-EVNFM' -> 'I start the Scenario to Validate Vendor_Product ECDE-EVNFM'
+08-05-21 16:40:59  DEBUG    emaidns parse          format 'I start the Scenario to Verification of Validation order ECDE-EVNFM' -> 'I start the Scenario to Verification of Validation order ECDE-EVNFM'
+08-05-21 16:40:59  INFO     emaidns ECDE_DUMMY_ECM_DEPLOYMENT.py   Start Creating product for dummy ECDE-ECM deployment
+08-05-21 16:40:59  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:00  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:00  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:00  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:00  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:00  INFO     emaidns Common_utilities   YWRtaW46QWRtaW5AMTIz
+08-05-21 16:41:00  INFO     emaidns Common_utilities   QVVUT19VU0VSOlVzZXJAMTIz
+08-05-21 16:41:00  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start fetching out the id for vendorName with value AUTO_VENDOR
+08-05-21 16:41:00  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:01  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Id for vendorName with name AUTO_VENDOR is 2
+08-05-21 16:41:01  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start fetching out the id for vnfName with value AUTO_DUMMY
+08-05-21 16:41:01  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:02  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Id for vnfName with name AUTO_DUMMY is 11
+08-05-21 16:41:02  INFO     emaidns ECDE_files_update.py   Start to update create_ecde_product.json file 
+08-05-21 16:41:02  INFO     emaidns Json_file_handler   File updated successfully .. 
+08-05-21 16:41:02  INFO     emaidns ECDE_files_update.py   Finished to update create_ecde_product.json file 
+08-05-21 16:41:02  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start creating the vendor_product for ECM_DUMMY
+08-05-21 16:41:02  INFO     emaidns Server_connection.py   Putting source :  com_ericsson_do_auto_integration_files/ECDE_files/create_ecde_product.json to destination : /root/create_ecde_product.json
+08-05-21 16:41:02  INFO     emaidns paramiko.transport.sftp   [chan 2] Opened sftp connection (server version 3)
+08-05-21 16:41:02  INFO     emaidns paramiko.transport.sftp   [chan 2] sftp session closed.
+08-05-21 16:41:02  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   curl command : curl -i -X POST --insecure --header 'Authorization:Basic QVVUT19VU0VSOlVzZXJAMTIz' --header 'Content-Type: application/json' --header 'Accept: application/json'  'https://ecde.ccd-c13a022.athtem.eei.ericsson.se/core/api/vnf-products' -d @create_ecde_product.json
+08-05-21 16:41:02  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:03  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Finished creating the vendor_product for ECM_DUMMY
+08-05-21 16:41:03  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start fetching out the id for productName with value ECDE_ECM_DUMMY_2021-08-05_16-41-01
+08-05-21 16:41:03  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:03  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Id for productName with name ECDE_ECM_DUMMY_2021-08-05_16-41-01 is 181
+08-05-21 16:41:03  INFO     emaidns ECDE_DUMMY_ECM_DEPLOYMENT.py   Finished Creating product for dummy ECDE-ECM deployment
+08-05-21 16:41:03  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start uploading the resource DummyECMImage with type IMAGE for to vendor_product id 181
+08-05-21 16:41:03  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:04  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:04  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:04  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:04  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:04  INFO     emaidns Common_utilities   QVVUT19VU0VSOlVzZXJAMTIz
+08-05-21 16:41:04  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   start fetching the total size of resource DummyECMImage
+08-05-21 16:41:04  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:06  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Finished uploading the resource DummyECMImage with type IMAGE for to vendor_product id 181
+08-05-21 16:41:06  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Resource id is : 183
+08-05-21 16:41:06  INFO     emaidns ECDE_DUMMY_ECM_DEPLOYMENT.py   Fetching the template file from ECM host blade
+08-05-21 16:41:06  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:07  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:07  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:07  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:07  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:07  INFO     emaidns Server_connection.py   Fetching source :  /var/tmp/deployECDE_DUMMY/Dummy_ECM_RHEL_tmpl.yml to destination : com_ericsson_do_auto_integration_files/ECDE_files/Dummy_ECM_RHEL_tmpl.yml
+08-05-21 16:41:07  INFO     emaidns paramiko.transport.sftp   [chan 0] Opened sftp connection (server version 3)
+08-05-21 16:41:08  INFO     emaidns paramiko.transport.sftp   [chan 0] sftp session closed.
+08-05-21 16:41:08  INFO     emaidns ECDE_files_update.py   Start to update Dummy_ECM_RHEL_tmpl.yml file 
+08-05-21 16:41:08  INFO     emaidns ECDE_files_update.py   Finished to update Dummy_ECM_RHEL_tmpl.yml file 
+08-05-21 16:41:08  INFO     emaidns Server_connection.py   Putting source :  com_ericsson_do_auto_integration_files/ECDE_files/Dummy_ECM_RHEL_tmpl.yml to destination : /var/tmp/deployECDE_DUMMY/Dummy_ECM_RHEL_tmpl.yml
+08-05-21 16:41:08  INFO     emaidns paramiko.transport.sftp   [chan 1] Opened sftp connection (server version 3)
+08-05-21 16:41:08  INFO     emaidns paramiko.transport.sftp   [chan 1] sftp session closed.
+08-05-21 16:41:08  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start uploading the resource Dummy_ECM_RHEL_tmpl with type TMPL for to vendor_product id 181
+08-05-21 16:41:08  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:08  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:09  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:09  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:09  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:09  INFO     emaidns Common_utilities   QVVUT19VU0VSOlVzZXJAMTIz
+08-05-21 16:41:09  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   start fetching the total size of resource Dummy_ECM_RHEL_tmpl
+08-05-21 16:41:09  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:10  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Finished uploading the resource Dummy_ECM_RHEL_tmpl with type TMPL for to vendor_product id 181
+08-05-21 16:41:10  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Resource id is : 185
+08-05-21 16:41:10  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:10  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:11  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:11  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:11  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:11  INFO     emaidns Common_utilities   YWRtaW46QWRtaW5AMTIz
+08-05-21 16:41:11  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start fetching out the id for validationLevelName with value AUTO_INSTANTIATION
+08-05-21 16:41:11  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:11  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Id for validationLevelName with name AUTO_INSTANTIATION is 12
+08-05-21 16:41:11  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start fetching out the id for validationStreamName with value AUTO_ECDE_ECM_VALIDATION_PROFILE
+08-05-21 16:41:11  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:12  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Id for validationStreamName with name AUTO_ECDE_ECM_VALIDATION_PROFILE is 110
+08-05-21 16:41:12  INFO     emaidns ECDE_DUMMY_ECM_DEPLOYMENT.py   Start validating the product for dummy node ECM
+08-05-21 16:41:12  INFO     emaidns ECDE_files_update.py   Start to update ecde_validate_product.json file 
+08-05-21 16:41:12  INFO     emaidns Json_file_handler   File updated successfully .. 
+08-05-21 16:41:12  INFO     emaidns ECDE_files_update.py   Finished to update ecde_validate_product.json file 
+08-05-21 16:41:12  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start validating the vendor_product id 181 for node type ECM-DUMMY
+08-05-21 16:41:12  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:12  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:13  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:13  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:13  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:13  INFO     emaidns Common_utilities   QVVUT19VU0VSOlVzZXJAMTIz
+08-05-21 16:41:13  INFO     emaidns Server_connection.py   Putting source :  com_ericsson_do_auto_integration_files/ECDE_files/ecde_validate_product.json to destination : /root/ecde_validate_product.json
+08-05-21 16:41:13  INFO     emaidns paramiko.transport.sftp   [chan 0] Opened sftp connection (server version 3)
+08-05-21 16:41:14  INFO     emaidns paramiko.transport.sftp   [chan 0] sftp session closed.
+08-05-21 16:41:14  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:15  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Validation order id is : 186
+08-05-21 16:41:15  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Finished validating the vendor_product id 181 for node type ECM-DUMMY
+08-05-21 16:41:15  INFO     emaidns ECDE_DUMMY_ECM_DEPLOYMENT.py   Finished validating the product for dummy node ECM
+08-05-21 16:41:15  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Start fetching the validation order status for validation order id 186 and node type ECM-DUMMY
+08-05-21 16:41:15  INFO     emaidns Server_connection.py   Connecting with server :10.210.229.186
+08-05-21 16:41:15  INFO     emaidns paramiko.transport   Connected (version 2.0, client OpenSSH_7.4)
+08-05-21 16:41:16  INFO     emaidns paramiko.transport   Authentication (publickey) failed.
+08-05-21 16:41:16  INFO     emaidns paramiko.transport   Authentication (password) successful!
+08-05-21 16:41:16  INFO     emaidns Server_connection.py   Connected with server :10.210.229.186
+08-05-21 16:41:16  INFO     emaidns Common_utilities   QVVUT19VU0VSOlVzZXJAMTIz
+08-05-21 16:41:16  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Time out for this process is 3600 seconds 
+08-05-21 16:41:16  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:17  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Order status is INPROGRESS
+08-05-21 16:41:17  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   waiting 30 seconds to check the status again
+08-05-21 16:41:47  INFO     emaidns Common_execute_curl_command.py   Executing curl command
+08-05-21 16:41:47  INFO     emaidns ECDE_NODE_DEPLOYMENT.py   Order status is COMPLETED , checking Validation status 
+08-05-21 16:41:47  ERROR    emaidns ECDE_NODE_DEPLOYMENT.py   Validation status for order id 186 is FAILED
+08-05-21 16:41:47  ERROR    emaidns ECDE_NODE_DEPLOYMENT.py   Please check in ECDE for more details on failure , for comamnd output may check in Report file 
+08-05-21 16:41:47  ERROR    emaidns ECDE_NODE_DEPLOYMENT.py   Error fetching the validation order status for validation order id 186Error : 
+08-05-21 16:41:47  INFO     emaidns start_script.py   start updating duration from behave format to cucumber format 

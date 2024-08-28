@@ -1,0 +1,117 @@
+{
+    "componentUid": "38992d56-154f-4a4d-b0e8-353bada8110a",
+    "componentName": "subsystemRef",
+    "componentVersion": "1.0",
+    "description": "subsystemRef.",
+    "icon": "defaulticon",
+    "name": "nsSubsystem",
+    "normalizedName": "nssubsystem",
+    "originType": "VFC",
+    "deploymentArtifacts": {},
+    "artifacts": {},
+    "uniqueId": "e547376c-fe5d-49ca-960d-3e9b3ecea544.38992d56-154f-4a4d-b0e8-353bada8110a.nssubsystem",
+    "creationTime": 1664529828460,
+    "modificationTime": 1664529828460,
+    "propertyValueCounter": 1,
+    "customizationUUID": "84d778f2-7895-4dd6-9067-c5f0d55852c2",
+    "posX": "-21",
+    "posY": "-41",
+    "invariantName": "nssubsystem",
+    "sourceModelInvariant": null,
+    "sourceModelName": null,
+    "sourceModelUid": null,
+    "sourceModelUuid": null,
+    "originArchived": false,
+    "directives": [
+        "select",
+        "instantiate"
+    ],
+    "interfaces": {
+        "tosca.interfaces.node.lifecycle.Standard": {
+            "userCreated": false,
+            "definition": false,
+            "type": "tosca.interfaces.node.lifecycle.Standard",
+            "uniqueId": "tosca.interfaces.node.lifecycle.Standard",
+            "operations": {},
+            "empty": false
+        }
+    },
+    "minOccurrences": null,
+    "maxOccurrences": null,
+    "instanceCount": null,
+    "componentType": "RESOURCE",
+    "tags": [
+        "subsystemRef"
+    ],
+    "version": "1.0",
+    "allVersions": {
+        "1.0": "38992d56-154f-4a4d-b0e8-353bada8110a"
+    },
+    "highestVersion": true,
+    "categories": [
+        {
+            "name": "Generic",
+            "normalizedName": "generic",
+            "uniqueId": "resourceNewCategory.generic",
+            "useServiceSubstitutionForNestedServices": false,
+            "subcategories": [
+                {
+                    "name": "Network Elements",
+                    "normalizedName": "network elements",
+                    "uniqueId": "resourceNewCategory.generic.network elements",
+                    "icons": [
+                        "network",
+                        "connector"
+                    ],
+                    "metadataKeys": [],
+                    "empty": false
+                }
+            ],
+            "empty": false
+        }
+    ],
+    "creationDate": 1663614532689,
+    "creatorFullName": "Jimmy Hendrix",
+    "vendorName": "ONAP (Tosca)",
+    "vendorRelease": "1.0.0.wd03",
+    "contactId": "jh0003",
+    "systemName": "Subsystemref",
+    "uuid": "4e4d53d4-612c-46e2-886c-cb14a34a6fbc",
+    "lifecycleState": "CERTIFIED",
+    "attributes": [
+        {
+            "parentUniqueId": "710a290b-17f0-4da2-a018-565dbbadbf31",
+            "definition": false,
+            "name": "tosca_name",
+            "type": "string",
+            "uniqueId": "attribute.710a290b-17f0-4da2-a018-565dbbadbf31.tosca_name",
+            "ownerId": "710a290b-17f0-4da2-a018-565dbbadbf31",
+            "getOutputAttribute": false,
+            "empty": false
+        },
+        {
+            "parentUniqueId": "710a290b-17f0-4da2-a018-565dbbadbf31",
+            "definition": false,
+            "name": "state",
+            "type": "string",
+            "uniqueId": "attribute.710a290b-17f0-4da2-a018-565dbbadbf31.state",
+            "ownerId": "710a290b-17f0-4da2-a018-565dbbadbf31",
+            "getOutputAttribute": false,
+            "empty": false
+        },
+        {
+            "parentUniqueId": "710a290b-17f0-4da2-a018-565dbbadbf31",
+            "definition": false,
+            "name": "tosca_id",
+            "type": "string",
+            "uniqueId": "attribute.710a290b-17f0-4da2-a018-565dbbadbf31.tosca_id",
+            "ownerId": "710a290b-17f0-4da2-a018-565dbbadbf31",
+            "getOutputAttribute": false,
+            "empty": false
+        }
+    ],
+    "isResourceInstance": true,
+    "isCsarComponent": false,
+    "resourceType": "VFC",
+    "resourceVendorModelNumber": ""
+}

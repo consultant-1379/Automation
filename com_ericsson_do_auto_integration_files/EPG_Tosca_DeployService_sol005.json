@@ -1,0 +1,43 @@
+{
+    "name": "VNFM_EPG_2021-03-15_15-37-46",
+    "serviceModelId": "de8ddc96-a5bb-4a3c-8585-7687f78a26c1",
+    "description": "Scalable dummy node",
+    "inputs": [
+        {
+            "name": "vnfInstanceName",
+            "value": "VNFM_EPG_2021-03-15_15-37-46"
+        },
+        {
+            "name": "networkServiceDescription",
+            "value": "Instantiate_EPG_sol005"
+        },
+        {
+            "name": "targetVdc",
+            "value": "ffba7a50-bf11-4198-b01d-eedc662716be"
+        },
+        {
+            "name": "networkServiceName",
+            "value": "epg_sol005"
+        },
+        {
+            "name": "networkServiceDescriptorId",
+            "value": "cc8bed36-f3b1-5c61-0392-1bd2f0c8cc27"
+        },
+        {
+            "name": "subsystemName",
+            "value": "SOL005_EOCM_914"
+        },
+        {
+            "name": "vimZoneName",
+            "value": "cloud7a_ORCH_Staging_C7a_dynamic"
+        },
+        {
+            "name": "connectionName",
+            "value": "ECM_Sol005"
+        },
+        {
+            "name": "vnfmId",
+            "value": "9417dfbb-92bb-4e13-82ee-ae61ba2d8d6e"
+        }
+    ]
+}

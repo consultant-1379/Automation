@@ -1,0 +1,15 @@
+{ 
+   "name":"ECM",
+   "vendor":"Ericsson",
+   "url":"https://ieatdo9036-om-2-core.athtem.eei.ericsson.se:443",
+   "subsystemType":{ 
+      "type":"NFVO"
+   },
+   "connectionProperties":[ 
+      { 
+         "name":"ECM",
+         "username":"ecmadmin",
+         "password":"CloudAdmin123"
+      }
+   ]
+}

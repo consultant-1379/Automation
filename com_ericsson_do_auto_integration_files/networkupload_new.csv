@@ -1,0 +1,9 @@
+﻿Pool Name,Type,IsGlobal,Subnet List
+test_vim_zone_FSB_EXT,IPv4,TRUE,172.19.0.0/24
+test_vim_zone_FSB_INT,IPv4,FALSE,172.19.1.0/24
+test_vim_zone_RAN_EXT,IPv4,TRUE,172.19.2.0/24
+test_vim_zone_RAN_INT,IPv4,FALSE,172.19.3.0/24
+test_vim_zone_SIG_EXT,IPv4,TRUE,172.19.4.0/24
+test_vim_zone_SIG_INT,IPv4,FALSE,172.19.5.0/24
+test_vim_zone_MEDIA_EXT,IPv4,TRUE,172.19.6.0/24
+test_vim_zone_MEDIA_INT,IPv4,FALSE,172.19.7.0/24

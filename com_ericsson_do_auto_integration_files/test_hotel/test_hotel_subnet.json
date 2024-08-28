@@ -1,0 +1,15 @@
+{
+    "vimObjectId": "he749537-12fe-4277-9354-77a75a58b6ki",
+    "createReqNumber": "NA",
+    "name": "p0-opstk-test_ipv4",
+    "ipVersion": "IPv4",
+    "ipAddressRange": "10.150.57.0/26",
+    "dhcpEnabled": false,
+    "gatewayIpAddress": "10.150.57.1",
+    "vdc": {
+        "id": "a3bffc1d-7550-48ca-a51a-9ae9566ef2d4"
+    },
+    "vn": {
+        "id": "3842cf2f-7a80-48fe-ab9e-47af1730d664"
+    }
+}

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eric-eo-evnfm-nfvo-config
+data:
+  application.yaml: |-
+    onboarding.host: https://<NFVO_FQDN>
+    onboarding.path: /ecm_service/SOL003/vnfpkgm/v1/vnf_packages
+    onboarding.queryValue: vnfdId.eq=%s&softwareImages.containerFormat.eq=DOCKER
+    nfvo.enabled: true
+

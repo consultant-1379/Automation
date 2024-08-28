@@ -1,0 +1,87 @@
+{
+    "tenantName": "ECM",
+    "vimZoneName": "cloud7_ieatdoxb035",
+    "vdc": {
+        "id": "3df9b9b0-7ca3-45b1-a26e-0ef1fdfac0c8"
+    },
+    "hotPackage": {
+        "vapp": {
+            "name": "ECDE_HOT-MME-DUMMY-VNF_671",
+            "productInfo": {
+                "version": "",
+                "vendor": ""
+            },
+            "type": "",
+            "flavor": "",
+            "description": "",
+            "configData": [
+                {
+                    "name": "gpb_flavor",
+                    "value": "CM-EOST-valid9m_flavor"
+                },
+                {
+                    "name": "gpb_image_id",
+                    "value": "f24ad526-9343-4902-be00-2e377f2c1398"
+                },
+                {
+                    "name": "gpb_vm1_name",
+                    "value": "EOST_ECDE-GPB-VM1"
+                },
+                {
+                    "name": "gpb_vm2_name",
+                    "value": "EOST_ECDE-GPB-VM2"
+                },
+                {
+                    "name": "Media_CN_net_id",
+                    "value": "EOST_ECDE_Media_CN_vMME"
+                },
+                {
+                    "name": "OM_CN_net_id",
+                    "value": "EOST_ECDE_OM_CN_vMME"
+                },
+                {
+                    "name": "RAN_net_id",
+                    "value": "EOST_ECDE_RAN_vMME"
+                },
+                {
+                    "name": "Sig_CN_net_id",
+                    "value": "EOST_ECDE_Sig_CN_vMME"
+                },
+                {
+                    "name": "ip_Media_CN_gpb_vm1",
+                    "value": "10.10.11.69"
+                },
+                {
+                    "name": "ip_Media_CN_gpb_vm2",
+                    "value": "10.10.11.70"
+                },
+                {
+                    "name": "ip_OM_CN_gpb_vm1",
+                    "value": "10.10.11.5"
+                },
+                {
+                    "name": "ip_OM_CN_gpb_vm2",
+                    "value": "10.10.11.6"
+                },
+                {
+                    "name": "ip_RAN_gpb_vm1",
+                    "value": "10.10.11.37"
+                },
+                {
+                    "name": "ip_RAN_gpb_vm2",
+                    "value": "10.10.11.38"
+                },
+                {
+                    "name": "ip_Sig_CN_gpb_vm1",
+                    "value": "10.10.11.53"
+                },
+                {
+                    "name": "ip_Sig_CN_gpb_vm2",
+                    "value": "10.10.11.54"
+                }
+            ],
+            "configFiles": [],
+            "configDataEnvFile": []
+        }
+    }
+}

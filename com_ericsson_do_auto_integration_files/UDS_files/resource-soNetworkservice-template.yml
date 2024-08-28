@@ -1,0 +1,72 @@
+tosca_definitions_version: tosca_simple_yaml_1_1
+metadata:
+  invariantUUID: 1acc3299-2c81-4393-8a47-61a6c93a4b0a
+  UUID: ee2be462-ac86-4635-8009-eb8f8d1d4a80
+  name: soNetworkService
+  description: soNetworkService
+  type: VFC
+  category: Generic
+  subcategory: Network Elements
+  resourceVendor: Ericsson
+  resourceVendorRelease: '1.0'
+  resourceVendorModelNumber: ''
+imports:
+- nodes:
+    file: nodes.yml
+- datatypes:
+    file: data.yml
+- capabilities:
+    file: capabilities.yml
+- relationships:
+    file: relationships.yml
+- groups:
+    file: groups.yml
+- policies:
+    file: policies.yml
+node_types:
+  com.ericsson.so.NetworkService:
+    derived_from: com.ericsson.so.resource
+    description: soNetworkService
+    properties:
+      customOperations:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.nameValuePair
+      customTemplates:
+        type: list
+        required: false
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+      nsdId:
+        type: string
+        required: false
+      connectionName:
+        type: string
+        required: false
+      subsystemName:
+        type: string
+        required: false
+      resourceSubtype:
+        type: string
+        required: false
+      tenant:
+        type: string
+        required: false
+      nsDescription:
+        type: string
+        required: false
+      nsName:
+        type: string
+        required: false
+      resourceType:
+        default: NetworkService
+        type: string
+        required: false
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard
+        create:
+          implementation: camunda/nsCreate
+        delete:
+          implementation: camunda/nsDelete

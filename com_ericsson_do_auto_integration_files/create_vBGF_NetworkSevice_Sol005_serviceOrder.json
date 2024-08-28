@@ -1,0 +1,86 @@
+{
+  "description": "",
+  "category": "",
+  "@type": "ServiceOrder",
+  "serviceOrderItem": [
+    {
+      "action": "add",
+      "id": "1",
+      "@type": "ServiceOrderItem",
+      "service": {
+        "name": "<< SERVICE_NAME >>",
+        "description": "",
+        "type": "RFS",
+        "serviceSpecification": {
+          "name": "create",
+          "description": "vBGF creation",
+          "serviceModelId": "<< SERVICE_MODEL_ID >>",
+          "id": "<< INVARIANTUUID >>",
+          "version": "1.0"
+        },
+        "serviceCharacteristic": [
+          {
+            "name": "vnfInstanceName",
+            "value": ""
+          },
+          {
+            "name": "networkServiceDescription",
+            "value": "Instantiate_vBGF_sol005"
+          },
+          {
+            "name": "targetVdc",
+            "value": ""
+          },
+          {
+            "name": "networkServiceName",
+            "value": ""
+          },
+          {
+            "name": "external_subnet_v4_resource_ref_id",
+            "value": ""
+          },
+          {
+            "name": "mip_port_public_ip_addr",
+            "value": ""
+          },
+          {
+            "name": "connected_virtual_network_ext",
+            "value": ""
+          },
+          {
+            "name": "subsystemName",
+            "value": ""
+          },
+          {
+            "name": "external_subnet_v4_id",
+            "value": ""
+          },
+          {
+            "name": "networkServiceDescriptorId",
+            "value": ""
+          },
+          {
+            "name": "vimZoneName",
+            "value": ""
+          },
+          {
+            "name": "mip_port_ip_addr",
+            "value": ""
+          },
+          {
+            "name": "connectionName",
+            "value": ""
+          },
+          {
+            "name": "pl_active_flavor",
+            "value": "CM-TOSCA_SOL_BGF_FLAVOR"
+          },
+          {
+            "name": "vnfmId",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

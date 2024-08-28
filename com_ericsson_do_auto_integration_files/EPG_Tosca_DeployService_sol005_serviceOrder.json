@@ -1,0 +1,62 @@
+{
+  "description": "",
+  "category": "",
+  "@type": "ServiceOrder",
+  "serviceOrderItem": [
+    {
+      "action": "add",
+      "id": "1",
+      "@type": "ServiceOrderItem",
+      "service": {
+        "name": "<< SERVICE_NAME >>",
+        "description": "",
+        "type": "RFS",
+        "serviceSpecification": {
+          "name": "create",
+          "description": "Unclassified EPG package deploy over sol005",
+          "serviceModelId": "<< SERVICE_MODEL_ID >>",
+          "id": "<< INVARIANTUUID >>",
+          "version": "1.0"
+        },
+        "serviceCharacteristic": [
+          {
+            "name": "vnfInstanceName",
+            "value": ""
+          },
+          {
+            "name": "networkServiceDescription",
+            "value": "Instantiate_EPG_sol005"
+          },
+          {
+            "name": "targetVdc",
+            "value": ""
+          },
+          {
+            "name": "networkServiceName",
+            "value": "epg_sol005"
+          },
+          {
+            "name": "networkServiceDescriptorId",
+            "value": ""
+          },
+          {
+            "name": "subsystemName",
+            "value": ""
+          },
+          {
+            "name": "vimZoneName",
+            "value": ""
+          },
+          {
+            "name": "connectionName",
+            "value": ""
+          },
+          {
+            "name": "vnfmId",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

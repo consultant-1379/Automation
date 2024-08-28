@@ -1,0 +1,115 @@
+{
+    "name": "ORCH_STAGING_N53",
+    "version": "",
+    "type": "CEE",
+    "description": "Cloud6a HA Project",
+    "siteName": "Athlone Data Center",
+    "defaultSecurityConfig": {
+        "securityType": "HTTPS"
+    },
+    "endPoints": [
+        {
+            "name": "keystone",
+            "up": true,
+            "vimApiVersion": "3.0",
+            "ipAddress": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "port": 5000,
+            "testUri": "/v3.0"
+        },
+        {
+            "name": "nova",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "port": 8774,
+            "testUri": "/v2.0"
+        },
+        {
+            "name": "ceilometer",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "port": 8777,
+            "testUri": "/v2.0"
+        },
+        {
+            "name": "cinder",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "port": 8776,
+            "testUri": "/v2.0"
+        },
+        {
+            "name": "glance",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "port": 9292,
+            "testUri": "/v2.0"
+        },
+        {
+            "name": "heatstack",
+            "up": true,
+            "vimApiVersion": "1.0",
+            "ipAddress": "dc518atlas-vpod1.sc.sero.gic.ericsson.se",
+            "port": 8004,
+            "testUri": "/v1.0"
+        },
+        {
+            "name": "neutron",
+            "up": true,
+            "vimApiVersion": "2.0",
+            "ipAddress": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "port": 9696,
+            "testUri": "/v2.0"
+        }
+    ],
+    "keystoneDefaultDomain": "Default",
+    "credentials": {
+        "name": "ORCH_STAGING_N53_test",
+        "adminUserName": "ORCH_STAGING_N53_test_admin",
+        "adminPassword": "CloudAdmin123@"
+    },
+    "externalNetworkVimObjectId": "",
+    "vendor": "Ericsson",
+    "locale": "en-gb",
+    "timeZone": "0",
+    "networkType": "vlan",
+    "adminPrivilege": true,
+    "totalResources": [
+        {
+            "name": "vCpu",
+            "value": -1
+        },
+        {
+            "name": "virtualMemory",
+            "value": -1
+        },
+        {
+            "name": "diskSize",
+            "value": -1
+        }
+    ],
+    "capacityCalculationMode": "DYNAMIC",
+    "availabilityZones": [
+        {
+            "name": "nova",
+            "description": "Cloud 6a HA nova",
+            "totalResources": [
+                {
+                    "name": "vCpu",
+                    "value": -1
+                },
+                {
+                    "name": "virtualMemory",
+                    "value": -1
+                },
+                {
+                    "name": "diskSize",
+                    "value": -1
+                }
+            ]
+        }
+    ]
+}

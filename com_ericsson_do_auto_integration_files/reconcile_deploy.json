@@ -1,0 +1,44 @@
+{
+    "tenantName": "ECM",
+    "vdc": {
+        "id": "67b1674a-9bf3-4d0e-bfca-0353fea9ff44"
+    },
+    "vimZoneName": "cloud6a_ieatdoxb006_HA",
+    "characteristics": [
+        {
+            "id": "id"
+        }
+    ],
+    "vnfm": {
+        "id": "0c0c0137-db4b-4518-b06d-a4b5d1a9a17c"
+    },
+    "vapp": {
+        "name": "TEST_RECONCILE_DUMMY_2020-02-14_17-47-20",
+        "type": "vapp",
+        "flavor": "cee",
+        "description": "demonstrate VNF deployment",
+        "productInfo": {
+            "vendor": "Ericsson",
+            "version": 1
+        },
+        "deploymentParameters": {
+            "servicesImage": "ERICrhelvnflafimage_CXP9032490-4.8.13_ORCH_STAGING_C6a",
+            "services_flavor": "CM-Auto_test_flavour",
+            "ip_version": 4,
+            "services_vm_count": 1,
+            "external_net_id": "5273a14e-81d0-44b3-9785-d5b79121db66",
+            "external_subnet_cidr": "131.160.190.48/28",
+            "external_subnet_gateway": "131.160.190.49",
+            "external_ip_for_services_vm": "131.160.190.59",
+            "cloudManagerType": "OPENSTACK",
+            "ossType": "vENM",
+            "ossMasterHostName": "ieatenmc5b13-scp-0",
+            "ossMasterHostIP": "131.160.156.29",
+            "ossNotificationServiceHost": "ieatenmc5b13-visinamingnb-0",
+            "ossNotificationServiceIP": "131.160.156.30",
+            "retry": true,
+            "retryTimes": 5,
+            "ossUserName": "administrator"
+        }
+    }
+}

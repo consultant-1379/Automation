@@ -1,0 +1,86 @@
+{
+    "categorySpecificMetadata": {
+        "resourceSharingLevel": "",
+        "orderable": ""
+    },
+    "artifacts": {},
+    "toscaArtifacts": {},
+    "contactId": "cs0008",
+    "categories": [
+        {
+            "name": "Ericsson Orchestrator Service Template",
+            "displayName": null,
+            "normalizedName": "ericsson orchestrator service template",
+            "models": [
+                "EO-SO",
+                "EO-CTM",
+                "SDC AID"
+            ],
+            "uniqueId": "serviceNewCategory.ericsson orchestrator service template",
+            "icons": [
+                "network_l_1-3"
+            ],
+            "useServiceSubstitutionForNestedServices": true,
+            "metadataKeys": [
+                {
+                    "name": "resourceSharingLevel",
+                    "displayName": null,
+                    "validValues": [
+                        "Shared",
+                        "NonShared"
+                    ],
+                    "mandatory": false,
+                    "defaultValue": null,
+                    "type": null,
+                    "version": null,
+                    "ownerId": null,
+                    "empty": false
+                },
+                {
+                    "name": "orderable",
+                    "displayName": null,
+                    "validValues": [
+                        "true",
+                        "false"
+                    ],
+                    "mandatory": false,
+                    "defaultValue": null,
+                    "type": null,
+                    "version": null,
+                    "ownerId": null,
+                    "empty": false
+                }
+            ],
+            "subcategories": null,
+            "type": null,
+            "version": null,
+            "ownerId": null,
+            "empty": false
+        }
+    ],
+    "description": "EPG_Service95920220920",
+    "icon": "defaulticon",
+    "componentInstancesProperties": {},
+    "componentInstancesAttributes": {},
+    "name": "EPG_Service95920220920",
+    "tags": [
+        "EPG_Service95920220920"
+    ],
+    "capabilities": {},
+    "requirements": {},
+    "deploymentArtifacts": {},
+    "componentType": "SERVICE",
+    "componentInstances": [],
+    "properties": [],
+    "attributes": [],
+    "derivedFromGenericType": "topology.nodes.sdk.managedObject",
+    "derivedFromGenericVersion": "1.0",
+    "model": "EO-CTM",
+    "forwardingPaths": {},
+    "ecompGeneratedNaming": true,
+    "serviceApiArtifacts": {},
+    "serviceType": "NSSI",
+    "serviceFunction": "CORE",
+    "instantiationType": "A-la-carte",
+    "environmentContext": "General_Revenue-Bearing"
+}

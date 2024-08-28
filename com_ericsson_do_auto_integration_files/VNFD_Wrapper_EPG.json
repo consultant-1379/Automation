@@ -1,0 +1,118 @@
+{
+  "dataVNFDSpecific": {
+    "flavourId": [
+      "default"
+    ],
+    "scalingAspect": [
+      {
+        "description": "Scale level 0-26 maps to 2-28 vSFO PP VNFC instances (1 instance per scale step)",
+        "maxScaleLevel": 8,
+        "id": "vsfo_pp",
+        "name": "vsfo_pp"
+      },
+      {
+        "description": "Scale level 0-26 maps to 2-28 vSFO CP VNFC instances (1 instance per scale step)",
+        "maxScaleLevel": 8,
+        "id": "vsfo_cp",
+        "name": "vsfo_cp"
+      }
+    ],
+    "vnfLcmOperationsConfiguration": {
+      "scale": {
+        "scalingByMoreThanOneStepSupported": false
+      }
+    },
+    "vnfProductName": "EPG",
+    "vnfProvider": "Ericsson",
+    "vnfSoftwareVersion": "2.6 (CXS 201 0032 27r7b42)",
+    "vnfdId": "EPG2.6",
+    "vnfdVersion": "cxp9026845_27r7b42_epg_virtio_resourcegroups"
+  },
+  "healVnfOpConfig": {
+    "resourceId": "",
+    "resourceName": ""
+  },
+  "instantiateVnfOpConfig": {
+    "Prefix": "",
+    "VFAB_cidr": "127.6.0.0/16",
+    "VSFO_CP_EXT_cidr": [
+      "172.31.1.0/24",
+      "172.32.1.0/24",
+      "172.33.1.0/24",
+      "172.34.1.0/24"
+    ],
+    "VSFO_PP_EXT_cidr": [
+      "172.21.1.0/24",
+      "172.22.1.0/24",
+      "172.23.1.0/24",
+      "172.24.1.0/24"
+    ],
+    "associatedSite": "",
+    "communityString": "public",
+    "deltaVnfConfigFilesFolder": "default",
+    "enableRollback": false,
+    "networkElementVersion": "2.1",
+    "rp_evr_info": [
+      "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"
+    ],
+    "snmpAuthPassword": "",
+    "snmpAuthProtocol": "",
+    "snmpPrivProtocol": "",
+    "snmpPrivacyPassword": "",
+    "snmpSecurityLevel": "NO_AUTH_NO_PRIV",
+    "snmpSecurityName": "admin",
+    "snmpVersion": "SNMP_V3",
+    "subNetworks": "SubNetwork=vEPG",
+    "updateOss": true,
+    "vEPG2_BP_cidr": "127.3.0.0/16",
+    "vEPG2_MATE_cidr": "127.4.0.0/16",
+    "vEPG2_vRPs_availability_zones": [
+      "nova",
+      "nova"
+    ],
+    "vEPG2_vRPs_flavor": "CM-EO_epg_doecm05_2vcpu_6144MBmem_40GBdisk",
+    "vEPG2_vRPs_image": "c0942d7a-82c1-4f78-bbce-713581795b42",
+    "vEPG2_vsfo_cp_availability_zones": [
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova"
+    ],
+    "vEPG2_vsfo_cp_flavor": "CM-EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk",
+    "vEPG2_vsfo_cp_image": "8c97c302-1400-439b-8340-ed09088ca6ba",
+    "vEPG2_vsfo_pp_availability_zones": [
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova",
+      "nova"
+    ],
+    "vEPG2_vsfo_pp_flavor": "CM-EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk",
+    "vEPG2_vsfo_pp_image": "8c97c302-1400-439b-8340-ed09088ca6ba",
+    "vnfConfigContent": "",
+    "vnfConfigUri": "ericsson_templ.xml",
+    "vnfGatewayAddress": "131.160.190.49",
+    "vnfIpAddress": "131.160.190.56",
+    "vnfIpAddressPrefixLength": "24",
+    "vnfLicenseKeyFileContent": "",
+    "vnfLicenseKeyFileUri": "",
+    "vnfPassword": "ZXJpY3Nzb24=",
+    "vnfUsername": "admin",
+    "vsfo_cp_count": 2,
+    "vsfo_pp_count": 2
+  },
+  "scaleVnfOpConfig": {},
+  "terminateVnfOpConfig": {}
+}

@@ -1,0 +1,35 @@
+{
+    "tenantName": "ECM",
+    "vimZoneName": "cloud7a_ORCH_Staging_C7a_dynamic",
+    "vdc": {
+        "id": "505c725f-ea28-4581-8608-4f375ff01262"
+    },
+    "vnfm": {
+        "id": "923ed54b-4a62-417d-8171-1be164b2c883"
+    },
+    "vapp": {
+        "name": "Test_csar_new_package_vnflaf_wed",
+        "flavor": "cee",
+        "instantiationLevelId": "instantiation_level_1",
+        "description": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1",
+        "deploymentParameters": {
+            "ossNotificationServiceHost": "ieatenmc5b13-visinamingnb-0",
+            "ossType": "vENM",
+            "isToscaVnfd": true,
+            "external_subnet_gateway": "131.160.190.33",
+            "external_ip_for_services_vm": "131.160.190.40",
+            "ossNotificationServiceIP": "1.1.1.1",
+            "services_flavor": "CM-Vnflaf_Etsi_Tosca_Dummy_Flavor",
+            "servicesImage": "4cfd5673-0074-4773-a6c9-8c573e2a7988",
+            "cloudManagerType": "Openstack",
+            "ossMasterHostIP": "131.160.156.29",
+            "external_subnet_cidr": "131.160.190.32/28",
+            "services_vm_count": 1,
+            "ossUserName": "administrator",
+            "ossMasterHostName": "ieatenmc5b13-scp-0",
+            "ip_version": "4",
+            "external_net_id": "1f3c69d9-d9bc-4e98-a695-4e1710fbb3f5"
+        }
+    }
+  
+}

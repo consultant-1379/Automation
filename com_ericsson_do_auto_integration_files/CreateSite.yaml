@@ -1,0 +1,13 @@
+create:
+  sites:
+  - city: Athlone
+    country: Ireland
+    county: Westmeath
+    description: Athlone Data Center
+    floor: 1
+    id: AthloneDataCenterTest
+    name: Athlone Data Center Test
+    postalCode: 666
+    provisioningStatus: ACTIVE
+    state: state
+    street: Street

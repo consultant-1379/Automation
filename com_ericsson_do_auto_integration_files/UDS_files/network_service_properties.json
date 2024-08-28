@@ -1,0 +1,33 @@
+[
+	{
+		"constraints": null,
+		"defaultValue": null,
+		"description": null,
+		"name": "customTemplates",
+		"parentUniqueId": "<RESOURCE_VFC_CERTIFIED>",
+		"password": false,
+		"required": false,
+		"schema": {
+			"property": {
+				"type": "com.ericsson.so.datatypes.CustomTemplate",
+				"required": false,
+				"definition": false,
+				"description": null,
+				"password": false
+			}
+		},
+		"schemaType": "com.ericsson.so.datatypes.CustomTemplate",
+		"type": "list",
+		"uniqueId": "<NETWORK_SERVICE_VFC>.customTemplates",
+		"value": "[{\"nodeRefs\":[],\"catalogRef\":\"EcmTemplateEPG.txt\",\"name\":\"ecmRequestTemplate\"}]",
+		"definition": false,
+		"getInputValues": null,
+		"parentPropertyType": null,
+		"subPropertyInputPath": null,
+		"toscaPresentation": {
+			"ownerId": "<RESOURCE_VFC_CERTIFIED>"
+		},
+		"getPolicyValues": null,
+		"inputPath": null
+	}
+]

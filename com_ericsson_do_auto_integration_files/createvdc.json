@@ -1,0 +1,15 @@
+{
+    "tenantName": "ECM",
+    "customOrderParams": [
+        {
+            "tag": "sampleTag"
+        }
+    ],
+    "vdc": {
+        "name": "vdc_592",
+        "vimZones": [
+            "cloud1_ieatdoxb040"
+        ],
+        "description": "Datacenter for demo"
+    }
+}

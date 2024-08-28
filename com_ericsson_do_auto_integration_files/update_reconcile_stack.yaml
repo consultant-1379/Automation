@@ -1,0 +1,41 @@
+heat_template_version: 2015-10-15
+description: version 2017-09-01 created by HOT Generator at Mon, 18 Nov 2019 09:31:19 GMT.
+resources:       
+  Net_1: 
+    type: OS::Neutron::Net
+    properties: 
+      admin_state_up: true
+      name: EO_STAGING_stack_internal
+      
+  Subnet_1: 
+    type: OS::Neutron::Subnet
+    properties: 
+      network: { get_resource: Net_1 }
+      ip_version: 4
+      cidr: 192.168.70.0/24
+      enable_dhcp: true
+  
+  Port_1:
+    type: OS::Neutron::Port
+    properties: 
+      admin_state_up: true
+      fixed_ips: 
+        - subnet: { get_resource: Subnet_1 }
+          ip_address: 192.168.70.210
+      network: { get_resource: Net_1 }
+
+  Server_1: 
+    type: OS::Nova::Server
+    properties: 
+      networks: 
+        - port: {  get_resource: Port_1 }
+      flavor: CM-m1.monday
+      image: df06a5c8-cf54-4306-81f4-3796336042ca
+      availability_zone: nova
+
+  volume_attachment_1:
+    type: OS::Cinder::VolumeAttachment
+    properties:
+      volume_id: cce0f176-603f-4f60-9f9d-000290e930c3
+      instance_uuid: { get_resource: Server_1}
+      mountpoint: /dev/vdc

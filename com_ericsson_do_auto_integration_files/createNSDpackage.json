@@ -1,0 +1,8 @@
+{
+    "ericssonNfvoData": {
+        "tenantName": "ECM",
+        "isPublic": true,
+        "description": "",
+        "packageName": "ns-spider-app-ab-1.0.28.1.ab"
+    }
+}

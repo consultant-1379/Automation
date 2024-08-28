@@ -1,0 +1,33 @@
+{
+   "privileges":[
+      {
+         "role":"ADMINISTRATOR",
+         "targetGroup":"ALL"
+      },
+      {
+         "role":"Amos_Administrator",
+         "targetGroup":"ALL"
+      },
+      {
+         "role":"Amos_Operator",
+         "targetGroup":"ALL"
+      },
+      {
+         "role":"Scripting_Decoding_Operator",
+         "targetGroup":"ALL"
+      },
+      {
+         "role":"Scripting_Operator",
+         "targetGroup":"ALL"
+      },
+      {
+         "role":"SECURITY_ADMIN",
+         "targetGroup":"ALL"
+      }
+   ],
+   "status":"enabled",
+   "username":"administrator",
+   "surname":"admin",
+   "email":"security@administrator.com",
+   "authMode":"local"
+}

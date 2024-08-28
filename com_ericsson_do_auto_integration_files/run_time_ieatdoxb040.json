@@ -1,0 +1,12 @@
+{
+    "CEE_TENANT_ID": "8c5a953265ef4394b7fef1b1df60d617",
+    "VDC_ID": "898b6f0a-8f41-4196-bf41-4ac2fd086b6f",
+    "EXTERNAL_NET_ID": "8dbee087-e00b-4775-ad22-08a184733be7",
+    "VNF_MANAGER_ID": "3ed1f2f5-c87a-47bf-9462-fe89b1278e01",
+    "VNF_MANAGER_NAME": "VNFM_LCM_Info_Authentication_761",
+    "DYNAMIC_VNF_MANAGER_ID": "a0b7cb30-9e28-41ea-adc4-f2972cec7769",
+    "DYNAMIC_VNF_MANAGER_NAME": "VNFM_LCM_Info_Authentication_553",
+    "ONBOARD_PACKAGE": "Test_VNF_Package_Upload_381",
+    "ONBOARD_EPG_PACKAGE": "TEST_EPG_PACKAGE_UPLOAD_788",
+    "VIMZONE_ID": "9787e836-da01-4964-a6c9-bbf3479ea07d"
+}

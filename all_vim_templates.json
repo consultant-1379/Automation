@@ -1,0 +1,89 @@
+{
+    "vims": [
+        {
+            "name": "cloud7a_ORCH_Staging_C7a_dynamic",
+            "type": "OPENSTACK",
+            "defaultVim": "True",
+            "hostIpAddress": "131.160.194.215",
+            "hostName": "cloud7a.athtem.eei.ericsson.se",
+            "authUrl": "https://cloud7a.athtem.eei.ericsson.se:13000/v2.0",
+            "tenants": [
+                {
+                    "name": "ORCH_Staging_C7a_dynamic",
+                    "id": "461b122d9a274e819ce013a9c6ecc35f",
+                    "username": "ORCH_Staging_C7a_dynamic_admin",
+                    "password": "Orch_staging_c7a_dynamic.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        },
+        {
+            "name": "OPENSTACK377_900",
+            "type": "OPENSTACK",
+            "defaultVim": "False",
+            "hostIpAddress": "131.160.194.215",
+            "hostName": "cloud7a.athtem.eei.ericsson.se",
+            "authUrl": "https://cloud7a.athtem.eei.ericsson.se:443",
+            "tenants": [
+                {
+                    "name": "ORCH_Staging_C7a_dynamic",
+                    "id": "461b122d9a274e819ce013a9c6ecc35f",
+                    "username": "ORCH_Staging_C7a_dynamic_admin",
+                    "password": "Orch_staging_c7a_dynamic.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        },
+        {
+            "name": "ecm_vim_563",
+            "type": "ECM",
+            "defaultVim": "False",
+            "hostIpAddress": "10.210.237.225",
+            "hostName": "ieatdo9036-om-2-core.athtem.eei.ericsson.se",
+            "authUrl": "https://ieatdo9036-om-2-core.athtem.eei.ericsson.se/ecm_service/",
+            "tenants": [
+                {
+                    "name": "ECM",
+                    "id": "ECM_id",
+                    "username": "ecmadmin",
+                    "password": "CloudAdmin123",
+                    "defaultTenant": "True"
+                }
+            ]
+        },
+        {
+            "name": "ORCH_STAGING_N53",
+            "type": "CEE",
+            "defaultVim": "False",
+            "hostIpAddress": "10.221.147.72",
+            "hostName": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+            "authUrl": "https://dc518ceenbi-vpod1.sc.sero.gic.ericsson.se:5000/v2.0",
+            "tenants": [
+                {
+                    "name": "ORCH_STAGING_N53",
+                    "id": "495487e5ebc24073888dd3bf2127459e",
+                    "username": "ORCH_STAGING_N53_admin",
+                    "password": "Orch_staging_n53.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        },
+        {
+            "name": "sync_project_atlas",
+            "type": "CEE",
+            "defaultVim": "False",
+            "hostIpAddress": "10.221.113.164",
+            "hostName": "dc518atlas-vpod1.sc.sero.gic.ericsson.se",
+            "authUrl": "https://dc518atlas-vpod1.sc.sero.gic.ericsson.se:443",
+            "tenants": [
+                {
+                    "name": "ORCH_STAGING_N53",
+                    "id": "495487e5ebc24073888dd3bf2127459e",
+                    "username": "ORCH_STAGING_N53_admin",
+                    "password": "Orch_staging_n53.laf",
+                    "defaultTenant": "True"
+                }
+            ]
+        }
+    ]
+}

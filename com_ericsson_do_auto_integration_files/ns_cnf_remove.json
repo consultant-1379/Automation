@@ -1,0 +1,13 @@
+{
+    "updateType": "REMOVE_VNF",
+    "removeVnfInstanceId": [
+        "fc60188a-d361-4ca5-9337-14f46b9062be"
+    ],
+    "terminateVnfData": [
+        {
+            "vnfInstanceId": "fc60188a-d361-4ca5-9337-14f46b9062be",
+            "terminationType": "FORCEFUL",
+            "additionalParams": {}
+        }
+    ]
+}

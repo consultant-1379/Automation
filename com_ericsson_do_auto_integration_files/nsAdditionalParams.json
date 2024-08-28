@@ -1,0 +1,333 @@
+{
+  "vlinkParams": [
+    {
+      "vlinkId": "signaling_net",
+      "name": "SOL005_test_3-signaling_net",
+      "description": "",
+      "vlinkSegmentParams": [
+        {
+          "virtualisedResources": {
+            "vn": {
+              "name": "SOL005_test_3-signaling_net-Virtual Link Segment 0-signalling_network_vbgf",
+              "category": "L3",
+              "enabled": true,
+              "resourceId": "ECM29",
+              "segments": [
+                {
+                  "name": "SOL005_test_3-signaling_net-Virtual Link Segment 0-signalling_network_vbgf-Primary Segment",
+                  "isPrimary": true,
+                  "networkType": "VxLAN"
+                }
+              ]
+            },
+            "subnets": [
+              {
+                "name": "signalling_network_vbgf_ipv4",
+                "ipVersion": "IPv4",
+                "gatewayIpAddress": "192.168.101.1",
+                "ipAddressRange": "192.168.101.0/29",
+                "resourceId": "signaling_net-Virtual Link Segment 0-0"
+              }
+            ]
+          },
+          "extCpParams": [
+            {
+              "vnfNodeTemplateName": "vbgf_vnf",
+              "vnfInstanceName": "{{ vBGF.alias }}",
+              "cpdId": "pl_active_sig",
+              "cpConfig": [
+                {
+                  "cpProtocolData": [
+                    {
+                      "ipOverEthernet": {
+                        "ipAddresses": [
+                          {
+                            "type": "IPv4",
+                            "numDynamicAddresses": 1,
+                            "subnetResourceIdRef": "signaling_net-Virtual Link Segment 0-0",
+                            "subnetId": "signaling_net-Virtual Link Segment 0-0"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vlinkId": "trusted_net",
+      "name": "SOL005_test_3-trusted_net",
+      "description": "",
+      "vlinkSegmentParams": [
+        {
+          "virtualisedResources": {
+            "vn": {
+              "name": "SOL005_test_3-trusted_net-Virtual Link Segment 0-trusted_network_vbgf",
+              "category": "L3",
+              "enabled": true,
+              "resourceId": "ECM31",
+              "segments": [
+                {
+                  "name": "SOL005_test_3-trusted_net-Virtual Link Segment 0-trusted_network_vbgf-Primary Segment",
+                  "isPrimary": true,
+                  "networkType": "VxLAN"
+                }
+              ]
+            },
+            "subnets": [
+              {
+                "name": "trusted_network_vbgf_ipv4",
+                "ipVersion": "IPv4",
+                "ipAddressRange": "192.168.101.8/29",
+                "gatewayIpAddress": "192.168.101.9",
+                "resourceId": "trusted_net-Virtual Link Segment 0-0"
+              }
+            ]
+          },
+          "extCpParams": [
+            {
+              "vnfNodeTemplateName": "vbgf_vnf",
+              "vnfInstanceName": "{{ vBGF.alias }}",
+              "cpdId": "pl_active_trusted",
+              "cpConfig": [
+                {
+                  "cpProtocolData": [
+                    {
+                      "ipOverEthernet": {
+                        "ipAddresses": [
+                          {
+                            "type": "IPv4",
+                            "numDynamicAddresses": 1,
+                            "subnetResourceIdRef": "trusted_net-Virtual Link Segment 0-0",
+                            "subnetId": "trusted_net-Virtual Link Segment 0-0"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vlinkId": "li_net",
+      "name": "SOL005_test_3-li_net",
+      "description": "",
+      "vlinkSegmentParams": [
+        {
+          "virtualisedResources": {
+            "vn": {
+              "name": "SOL005_test_3-li_net-Virtual Link Segment 0-li_network_vbgf",
+              "category": "L3",
+              "enabled": true,
+              "resourceId": "ECM32",
+              "segments": [
+                {
+                  "name": "SOL005_test_3-li_net-Virtual Link Segment 0-li_network_vbgf-Primary Segment",
+                  "isPrimary": true,
+                  "networkType": "VxLAN"
+                }
+              ]
+            },
+            "subnets": [
+              {
+                "name": "li_network_vbgf_ipv4",
+                "ipVersion": "IPv4",
+                "ipAddressRange": "192.168.101.16/29",
+                "gatewayIpAddress": "192.168.101.17",
+                "resourceId": "li_net-Virtual Link Segment 0-0"
+              }
+            ]
+          },
+          "extCpParams": [
+            {
+              "vnfNodeTemplateName": "vbgf_vnf",
+              "vnfInstanceName": "{{ vBGF.alias }}",
+              "cpdId": "pl_active_li",
+              "cpConfig": [
+                {
+                  "cpProtocolData": [
+                    {
+                      "ipOverEthernet": {
+                        "ipAddresses": [
+                          {
+                            "type": "IPv4",
+                            "numDynamicAddresses": 1,
+                            "subnetResourceIdRef": "li_net-Virtual Link Segment 0-0",
+                            "subnetId": "li_net-Virtual Link Segment 0-0"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vlinkId": "untrusted_net_1",
+      "name": "SOL005_test_3-untrusted_net_1",
+      "vlinkSegmentParams": [
+        {
+          "virtualisedResources": {
+            "vn": {
+              "name": "SOL005_test_3-untrusted_net_1-Virtual Link Segment 0-untrusted_1_network_vbgf",
+              "category": "L3",
+              "enabled": true,
+              "resourceId": "ECM34",
+              "segments": [
+                {
+                  "name": "SOL005_test_3-untrusted_net_1-Virtual Link Segment 0-untrusted_1_network_vbgf-Primary Segment",
+                  "isPrimary": true,
+                  "networkType": "VxLAN"
+                }
+              ]
+            },
+            "subnets": [
+              {
+                "name": "untrusted_1_network_vbgf_ipv4",
+                "ipVersion": "IPv4",
+                "ipAddressRange": "192.168.101.24/29",
+                "gatewayIpAddress": "192.168.101.25",
+                "resourceId": "untrusted_net_1-Virtual Link Segment 0-0"
+              }
+            ]
+          },
+          "extCpParams": [
+            {
+              "vnfNodeTemplateName": "vbgf_vnf",
+              "vnfInstanceName": "{{ vBGF.alias }}",
+              "cpdId": "pl_active_untrusted1",
+              "cpConfig": [
+                {
+                  "cpProtocolData": [
+                    {
+                      "ipOverEthernet": {
+                        "ipAddresses": [
+                          {
+                            "type": "IPv4",
+                            "numDynamicAddresses": 1,
+                            "subnetResourceIdRef": "untrusted_net_1-Virtual Link Segment 0-0",
+                            "subnetId": "untrusted_net_1-Virtual Link Segment 0-0"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "vlinkId": "untrusted_net_2",
+      "name": "SOL005_test_3-untrusted_net_2",
+      "description": "",
+      "vlinkSegmentParams": [
+        {
+          "virtualisedResources": {
+            "vn": {
+              "name": "SOL005_test_3-untrusted_net_2-Virtual Link Segment 0-untrusted_2_network_vbgf",
+              "category": "L3",
+              "enabled": true,
+              "resourceId": "ECM35",
+              "segments": [
+                {
+                  "name": "SOL005_test_3-untrusted_net_2-Virtual Link Segment 0-untrusted_2_network_vbgf-Primary Segment",
+                  "isPrimary": true,
+                  "networkType": "VxLAN"
+                }
+              ]
+            },
+            "subnets": [
+              {
+                "name": "untrusted_2_network_vbgf_ipv4",
+                "ipVersion": "IPv4",
+                "ipAddressRange": "192.168.101.32/29",
+                "gatewayIpAddress": "192.168.101.33",
+                "resourceId": "untrusted_net_2-Virtual Link Segment 0-0"
+              }
+            ]
+          },
+          "extCpParams": [
+            {
+              "vnfNodeTemplateName": "vbgf_vnf",
+              "vnfInstanceName": "{{ vBGF.alias }}",
+              "cpdId": "pl_active_untrusted2",
+              "cpConfig": [
+                {
+                  "cpProtocolData": [
+                    {
+                      "ipOverEthernet": {
+                        "ipAddresses": [
+                          {
+                            "type": "IPv4",
+                            "numDynamicAddresses": 1,
+                            "subnetResourceIdRef": "untrusted_net_2-Virtual Link Segment 0-0",
+                            "subnetId": "untrusted_net_2-Virtual Link Segment 0-0"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "accessPointParams": {
+    "exposedVnfCpParams": [
+      {
+        "vnfNodeTemplateName": "vbgf_vnf",
+        "vnfInstanceName": "{{ vBGF.alias }}",
+        "cpdId": "pl_active_om",
+        "connectedVn": "{{ NS.connected_virtual_network_ext }}",
+        "cpConfig": [
+          {
+            "cpProtocolData": [
+              {
+                "ipOverEthernet": {
+                  "ipAddresses": [
+                    {
+                      "type": "IPv4",
+                      "numDynamicAddresses": 1,
+                      "subnetResourceIdRef": "{{ NS.external_subnet_v4_resource_ref_id }}",
+                      "subnetId": "{{ NS.external_subnet_v4_id }}"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nsParams": {
+    "targetVdc": "{{ NS.targetVdc }}"
+  },
+  "vnfParams": [
+    {
+      "vnfNodeTemplateName": "vbgf_vnf",
+      "vnfInstanceName": "{{ vBGF.alias }}",
+      "vnfmId": "{{ NS.vnfmId }}",
+      "vnfInstanceDescription": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1",
+      "vimZoneName": "{{ vBGF.vimZoneName }}"
+    }
+  ]
+}

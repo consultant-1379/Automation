@@ -1,0 +1,65 @@
+{
+    "application": "ecde-app",
+    "limitConcurrent": true,
+    "keepWaitingPipelines": false,
+    "parameterConfig": [],
+    "lastModifiedBy": "anonymous",
+    "name": "AUTO_ECM_TEST_ENV_PROFILE",
+    "stages": [
+        {
+            "alias": "preconfiguredWebhook",
+            "name": "ECDE Instantiation",
+            "parameterValues": {
+                "dependentOnStage": "0",
+                "method": "INSTANTIATION",
+                "onboardingInstance": "AUTO_ECM_ONBOARD_SYSTEM",
+                "onboardingType": "ECM"
+            },
+            "refId": "1",
+            "requisiteStageRefIds": [],
+            "stageTimeoutMs": 86400000,
+            "statusUrlResolution": "getMethod",
+            "type": "ecdeOnboarding"
+        },
+        {
+            "alias": "preconfiguredWebhook",
+            "name": "ECDE Test",
+            "parameterValues": {
+                "dependentOnStage": "0",
+                "testSuite": "self_ping_suite"
+            },
+            "refId": "2",
+            "requisiteStageRefIds": [
+                "1"
+            ],
+            "stageTimeoutMs": 86400000,
+            "statusUrlResolution": "getMethod",
+            "type": "ecdeTestSuite"
+        },
+        {
+            "alias": "preconfiguredWebhook",
+            "name": "Termination",
+            "parameterValues": {
+                "dependentOnStage": "1",
+                "method": "TERMINATE",
+                "onboardingInstance": "AUTO_ECM_ONBOARD_SYSTEM",
+                "onboardingType": "ECM"
+            },
+            "refId": "3",
+            "requisiteStageRefIds": [
+                "2"
+            ],
+            "stageTimeoutMs": 86400000,
+            "statusUrlResolution": "getMethod",
+            "type": "ecdeOnboarding"
+        }
+    ],
+    "triggers": [
+        {
+            "enabled": true,
+            "source": "AUTO_ECM_TEST_ENV_PROFILE",
+            "type": "webhook"
+        }
+    ],
+    "updateTs": "1594044980000"
+}

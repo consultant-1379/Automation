@@ -1,0 +1,1293 @@
+{
+  "required": [
+    "SERVICES_IMAGE_ID"
+  ],
+  "properties": {
+    "LCM_AVAILABILITY_ZONE_NAME": {
+      "default": "nova",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Availability Zone defined as a string , used in vnf-lcm team's jobs only"
+    },
+    "CN_ENV_NAME": {
+      "default": "C16B025",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CN_CMDB_PASSWORD": {
+      "default": "Edb_12St",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "IS_CLOUDNATIVE": {
+      "default": "True",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be string true or false"
+    },
+    "ECM_CERTIFICATE_PATH": {
+      "default": "/home/eccd/ECM_CERTS",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ECM_CERTIFICATE_BKP_PATH": {
+      "default": "/home/eccd/ECM_CERTS_BKP",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ECM_NAMESPACE": {
+      "default": "eric-eo-cm-ci459",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Namespace"
+    },
+    "SOL_VERSION": {
+      "default": "SOL241",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "VNF LCM SOL Version"
+    },
+    "CISM_REGISTER_URL": {
+      "default": "https://k8s-api.ccd2.athtem.eei.ericsson.se:443",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string,URL of CISM REGISTER File."
+    },
+    "CISM_CLUSTER_IP": {
+      "default": "10.210.249.164",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "EVNFM_HOSTNAME": {
+      "default": "ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ENVIRONMENT_USER_PLATFORM": {
+      "default": "kvm",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be either kvm or eoo platform for E-VNFM DEPLOYMENT TYPE"
+    },
+    "EVNFM_AUTH_USERNAME": {
+      "default": "vnfm",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EVNFM_AUTH_PASSWORD": {
+      "default": "vnfm",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "IS_VM_VNFM": {
+      "default": "False",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "In case of VM-VNFM , value will be True else False"
+    },
+    "VM_VNFM_DIRECTOR_USERNAME": {
+      "default": "eccd",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VM_VNFM_DIRECTOR_IP": {
+      "default": "1.1.1.1",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "CCD1_VM_VNFM_DIRECTOR_IP": {
+      "default": "10.210.220.168",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "CCD1_VM_VNFM_DIRECTOR_USERNAME": {
+      "default": "eccd",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "SO_DEPLOYMENT_TYPE": {
+      "default": "IPV4",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "SO DEPLOYMENT TYPE"
+    },
+    "LOGGING_VERIFICATION_HOST_URL": {
+      "default": "http://elastic.p6-opstk-4a-de-cni-ecfe-8.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be valid URL starting with http ,URL where EO Chart is installed "
+    },
+    "TOSCA_BGF_IP": {
+      "default": "131.160.190.51",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address , BGF VNF ETSI TOSCA IP"
+    },
+    "ENM_DEPLOYMENT_TYPE": {
+      "default": "Extra_Small_vENM",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "OSS_NOTIFICATION_SERVICE_IP": {
+      "default": "131.160.205.16",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "Service_External_VRRP_ID": {
+      "default": "115",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any between 1 and 255"
+    },
+    "Service_Internal_VRRP_ID": {
+      "default": "4",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any between 1 and 255"
+    },
+    "DB_Internal_VRRP_ID": {
+      "default": "1",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any between 1 and 255"
+    },
+    "DYNAMIC_VNF_LCM_Service_VIP": {
+      "default": "131.160.156.28",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "DYNAMIC_VNF_LCM_Service_IP_1": {
+      "default": "131.160.156.28",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "STATIC_VNF_LCM_Service_VIP": {
+      "default": "131.160.163.141",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "STATIC_VNF_LCM_Service_IP_1": {
+      "default": "131.160.163.142",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "ENM_IP_ADDRESS": {
+      "default": "131.160.156.28",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "vEPG_WRAPPER_DIT_DOC_NAME": {
+      "default": "EO_STAGING_vEPG",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "IT document name for the wrapper file update"
+    },
+    "vMME_WRAPPER_DIT_DOC_NAME": {
+      "default": "EO_STAGING_vMME",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "IT document name for the wrapper file update"
+    },
+    "DCGW_NE_NAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "DCGW_SOFTWARE_PATH": {
+      "default": "/var/tmp/deployMME1.10/DC-GW_Automation",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ENM_SOFTWARE_PATH": {
+      "default": "/var/tmp/enm_post_install/",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "DEPLOYMENT_NAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ASR_DEVICE_NAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ACTIVATION_GUI_PASSWORD": {
+      "default": "Activation!234",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ACTIVATION_GUI_USERNAME": {
+      "default": "eoadmin",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "RDB_VM_PASSWORD": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "RDB_VM_USERNAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "RDB_VM_IP": {
+      "default": "131.160.162.250",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, required for CEE cleanup activities"
+    },
+    "ABCD_VM_PASSWORD": {
+      "default": "ecm123",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ABCD_VM_USERNAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ABCD_VM_IP": {
+      "default": "10.210.236.228",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, required for cmdb password file"
+    },
+    "ACTIVATION_VM_PASSWORD": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ACTIVATION_VM_USERNAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ACTIVATION_VM_IP": {
+      "default": "131.160.162.250",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, required for CEE cleanup activities"
+    },
+    "OSS_USER_NAME": {
+      "default": "administrator",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Authorized scripting VM user login name (vnfluf)"
+    },
+    "OSS_GATEWAY_HOST2": {
+      "default": "131.160.156.0/24",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "External subnet of ENM physical setup "
+    },
+    "OSS_GATEWAY_HOST1": {
+      "default": "131.160.156.0/24",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "External subnet of ENM physical setup "
+    },
+    "VIM_URL": {
+      "default": "https://ieatcee01cic.athtem.eei.ericsson.se:5000/v2.0",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string,URL of VIM identity service."
+    },
+    "TIME_ZONE": {
+      "default": "Europe/Dublin",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string,Time zone to be set on VNFLCM VMs."
+    },
+    "NTP_SERVER_IPs": {
+      "default": "159.107.173.12,159.107.173.223",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address,NTP server IPs  to synchronize the time on VNFLCM hosts,it can be comma separated ips"
+    },
+    "DNS_SERVER_IPs": {
+      "default": "159.107.173.3",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address, it can be comma saperated ips"
+    },
+    "OS_AVAILABILITY_ZONE": {
+      "default": "nova",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Availability Zone defined as a string."
+    },
+    "OM_PROVIDER_NET_NAME_ID": {
+      "default": "P9-OpStk-13-Public-Tenant4",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "OAM provider net name or id defined as a string. The key names vary from node to node"
+    },
+    "OM_PROVIDER_NET_GATEWAY": {
+      "default": "10.210.221.65",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "OAM provider net gateway address IPv4 defined as a string. Not needed for all nodes"
+    },
+    "OM_PROVIDER_NET_CIDR": {
+      "default": "10.210.221.64/26",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "OAM provider net subnet IPv4 defined as a string. Not needed for all nodes"
+    },
+    "OSS_NOTIFICATION_SERVICE_HOST": {
+      "default": "ieatenmc4a10-visinamingnb-0",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "OSS_MASTER_HOST_IP": {
+      "default": "131.160.205.16",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "KEY_STONE": {
+      "default": "https://cloud7a.athtem.eei.ericsson.se:13000/v3",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be a valid hostname "
+    },
+    "OSS_MASTER_HOSTNAME": {
+      "default": "ieatenmc4a10-scp-0",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "UDS_USERNAME": {
+      "default": "uds-user",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "UDS_HOSTNAME": {
+      "default": "uds-eo-staging.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string,This must be without http"
+    },
+    "SO_HOSTNAME": {
+      "default": "so-1807.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string,This must be without http"
+    },
+    "VCISCO_GATEWAY_IP": {
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "VALID9m_IMAGE_ID": {
+      "default": "e9cecf2d-ed88-4a34-877b-083916497169",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be an alpha_numeric id "
+    },
+    "VCISCO_IMAGE_ID": {
+      "default": "c964119a-36a1-4398-8264-fdb54e2b6b4e",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be an alpha_numeric id "
+    },
+    "VALID9m_IMAGE_NAME": {
+      "default": "valid-9m",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VCISCO_IMAGE_NAME": {
+      "default": "V-cisco",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VALID9m_FLAVOUR_NAME": {
+      "default": "CM-valid9m_flavor",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VCISCO_FLAVOUR_NAME": {
+      "default": "CM-vCisco_flavor",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "JBOSS_PUBLIC_KEY": {
+      "default": "<paste public key here>",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Public SSH key of the jboss-user"
+    },
+    "MME_FLAVORS": {
+      "default": "CM-fsb_flavor_ieatdoxb040,CM-ncb_flavor_ieatdoxb040,CM-gpb_flavor_ieatdoxb040",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated names, must have a prefix CM-"
+    },
+    "MME_IMAGE_IDS": {
+      "default": "31d13795-29d3-4133-b1b8-a52564f06fb1,680ce8a5-7b10-44c2-a69c-7d9cb91ea520,c1a1e84c-8eee-42ee-ba08-06a1247d0cfc",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated ids "
+    },
+    "MME_IMAGE_NAMES": {
+      "default": "fsb1_image,fsb2_image,pxeboot_image",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated names "
+    },
+    "MME_VERSION": {
+      "default": "mme1.20_asr_so",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "MME_SOFTWARE_PATH": {
+      "default": "/var/tmp/deployMME1.10",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "DUMMY_MME_SOFTWARE_PATH": {
+      "default": "/var/tmp/deployDummyMME",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EPG_VERSION": {
+      "default": "EPG2.4",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EPG_SOFTWARE_PATH": {
+      "default": "/var/tmp/deployEPG2.4",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EPG_TOSCA_SOFTWARE_PATH": {
+      "default": "/var/tmp/deployTOSCAEPG3.14",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EPG_FLAVORS": {
+      "default": "CM-EO_epg_doecm05_2vcpu_6144MBmem_40GBdisk,CM-EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated names, must have a prefix CM-"
+    },
+    "EPG_IMAGE_IDS": {
+      "default": "ff0ceed6-7021-4d18-b1d3-34e837a2148b,b6d4a6c2-ff8e-45b7-8c1a-0da0edd1580d",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated ids "
+    },
+    "EPG_IMAGE_NAMES": {
+      "default": "epg_vrp_cxp9026845_27r5b56,epg_vsfo_cxp9026845_27r5b56",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated names "
+    },
+    "EPG_TOSCA_FLAVORS": {
+      "default": "CM-EO_epg_doecm05_2vcpu_6144MBmem_40GBdisk,CM-EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated names, must have a prefix CM-"
+    },
+    "EPG_TOSCA_IMAGE_IDS": {
+      "default": "ff0ceed6-7021-4d18-b1d3-34e837a2148b,b6d4a6c2-ff8e-45b7-8c1a-0da0edd1580d",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated ids "
+    },
+    "EPG_TOSCA_IMAGE_NAMES": {
+      "default": "epg_vrp_cxp9026845_27r5b56,epg_vsfo_cxp9026845_27r5b56",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated names "
+    },
+    "OSS_TYPE": {
+      "default": "ENM",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CLOUD_TYPE": {
+      "default": "CEE",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXTERNAL_IP_FOR_SERVICES_VM_SCALE_OUT": {
+      "default": "10.36.255.212",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "EXTERNAL_IP_FOR_SERVICES_VM_DYNAMIC": {
+      "default": "10.36.255.213",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "EXTERNAL_IP_FOR_SERVICES_VM": {
+      "default": "10.36.255.211",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "RECONCILE_IP_FOR_DUMMY_VM": {
+      "default": "10.36.255.211",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "EXTERNAL_NETWORK_NAME": {
+      "default": "Network name",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXTERNAL_SUBNET_GATEWAY": {
+      "default": "10.36.255.193",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "EXTERNAL_SUBNET_CIDR": {
+      "default": "10.36.255.192/27",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be an valid IPv4 address with port "
+    },
+    "STATIC_EXTERNAL_NETWORK_NAME": {
+      "default": "Network name",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXTERNAL_NETWORK_VIM_ID": {
+      "default": "2c43e689-54e8-4e5b-993d-61eb61272af1",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Test Hotel Vim Network Id "
+    },
+    "NETWORK_SUBNET_VIM_ID": {
+      "default": "ef598537-12fe-4266-9364-00a75a58b2eb",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Test Hotel Vim Subnet Id "
+    },
+    "SERVICES_FLAVOR": {
+      "default": "CM-M1.medium07-New",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be an alpha_numeric id or name "
+    },
+    "SERVICES_IMAGE_ID": {
+      "default": "ad4320fa-f5e2-43a0-8ecb-fdf6756cb9d9",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be an alpha_numeric id "
+    },
+    "SERVICES_IMAGE_NAME": {
+      "default": "ERICrhelvnflafimage_CXP9032490-3.3.6",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be an alpha_numeric id "
+    },
+    "VNF_SOFTWARE_VESRION": {
+      "default": "18.08",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string e.g 18.11, 18.08"
+    },
+    "IS_PUBLIC": {
+      "default": "false",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string e.g true or false"
+    },
+    "SOFTWARE_VERSION": {
+      "default": "18.0",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "TENANT_NAME": {
+      "default": "ECM",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "First attribute for integration testcases , This must be any string"
+    },
+    "NETWORK_IPV6_RANGE": {
+      "default": "2001:1b70:6207:79::/64",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "NETWORK_IPV4_RANGE": {
+      "default": "131.160.162.224/27",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "NETWORK_SEGMENTATION_ID": {
+      "default": "2108",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string , this is used to create external network"
+    },
+    "RPM_BUNDLE_LINK": {
+      "default": "https://arm101-eiffel004.lmera.ericsson.se:8443/nexus/content/groups/public/com/ericsson/vnflcm/examples/workflows/ERICvnflaf_CXP123456/2.3.28/ERICvnflaf_CXP123456-2.3.28.rpm",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string , This is used for deployment of VNF-LCM workflow"
+    },
+    "DISCOVERY_BUNDLE_LINK": {
+      "default": "https://arm101-eiffel004.lmera.ericsson.se:8443/nexus/content/groups/public/com/ericsson/vnflcm/examples/workflows/ERICvnflaf_CXP123456/2.3.28/ERICvnflaf_CXP123456-2.3.28.rpm",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string , This is used for deployment of VNF-LCM workflow"
+    },
+    "VNF_LCM_Service_Password": {
+      "default": "12shroot",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VNF_LCM_Service_Username": {
+      "default": "cloud-user",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "WANO_HOSTNAME": {
+      "default": "wano.p6-opstk-4a-de-cni-ecfe-8.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be valid hostname"
+    },
+    "WANO_USERNAME": {
+      "default": "wano-user",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "WANO_PASSWORD": {
+      "default": "Ericsson123!",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "METRICS_HOST_URL": {
+      "default": "http://prometheus.p6-opstk-4a-de-cni-ecfe-8.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be valid URL starting with http ,URL where EO Chart is installed "
+    },
+    "METRICS_VALUE_PACK": {
+      "default": "eo",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string ,pick which product we want to test, eg vnfm, eo"
+    },
+    "DYNAMIC_VNF_LCM_Service_IP": {
+      "default": "131.160.162.232",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "STATIC_VNF_LCM_Service_IP": {
+      "default": "10.42.32.132",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "ATLAS_Hostname": {
+      "default": "ieatatlas01.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*$",
+      "description": "This must be a valid hostname"
+    },
+    "ATLAS_IP": {
+      "default": "131.160.163.20",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "CLOUD_Hostname": {
+      "default": "ieatcee01cic.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*$",
+      "description": "This must be a valid hostname"
+    },
+    "CLOUD_Host_IP_Address": {
+      "default": "131.160.163.12",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "SITE_NAME": {
+      "default": "Athlone Data Center",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CLOUD_STATIC_PROJECT_PASSWORD": {
+      "default": "admin123",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CLOUD_STATIC_PROJECT_USERNAME": {
+      "default": "EO_Static_admin",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CLOUD_STATIC_PROJECT_NAME": {
+      "default": "EO_Maintrack_Static",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "PROJECT_NAME": {
+      "default": "ieatdoxb040",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VIM_NAME_FOR_CLOUD": {
+      "default": "cee_cloud1_ecm07",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CORE_VM_Password": {
+      "default": "ecm123",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CORE_VM_Username": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "CORE_VM_Hostname": {
+      "default": "ieatecm07core.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*$",
+      "description": "This must be a valid hostname"
+    },
+    "DEPLOYMENT_TYPE": {
+      "default": "HA",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Deployment Env 'HA or NON-HA'"
+    },
+    "LCM_DEPLOYMENT_TYPE": {
+      "default": "HA",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Deployment Env 'HA or NON-HA'"
+    },
+    "CORE_VM_APPLICATION_SERVICE_IP": {
+      "default": "10.210.229.181",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "ECM Service IP"
+    },
+    "CORE_VM_IP": {
+      "default": "131.160.159.236",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "CORE_VM_2_IP": {
+      "default": "1.1.1.1",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, This is the second IP of Core VM in HA env "
+    },
+    "ENM_GUI_Password": {
+      "default": "TestPassw0rd",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ENM_GUI_Username": {
+      "default": "administrator",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ENM_GUI_Hostname": {
+      "default": "ieatenmc4a10-39.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*$",
+      "description": "This must be a valid hostname "
+    },
+    "MULTI_ENM_GUI_Hostname": {
+      "default": "ieatenmc5b13-8.athtem.eei.ericsson.se",
+      "type": "string",
+      "pattern": "^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\\.[a-z0-9](?:[-0-9a-z]{0,61}[0-9a-z])?)*$",
+      "description": "This must be a valid hostname, used to create second ENM subsystem in SO "
+    },
+    "ECM_GUI_Password": {
+      "default": "CloudAdmin123",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ECM_GUI_Username": {
+      "default": "ecmadmin",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ECM_Host_Blade_Password": {
+      "default": "ECM123.laf",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ECM_Host_Blade_username": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ECM_Host_Blade_IP": {
+      "default": "131.160.159.235",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    },
+    "LCM_PASSWORD": {
+      "default": "ECM123.laf",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "LCM_USERNAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "LCM_SERVICE_IP": {
+      "default": "131.160.159.235",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, required for VNF_LCM to ENM Integration"
+    },
+    "VCISCO_MANAGEMENT_PASSWORD": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VCISCO_MANAGEMENT_USERNAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "VCISCO_MANAGEMENT_IP": {
+      "default": "131.160.162.250",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, required for CEE cleanup activities"
+    },
+    "OPENRC_FILENAME": {
+      "default": "openrc06",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string and used for CEE cleanup activities"
+    },
+    "OPENRC_AUTH_URL": {
+      "default": "https://cloud13a.athtem.eei.ericsson.se:13000/v3",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC URL to authenticate towards the RHOSP via CLI"
+    },
+    "OPENRC_PROJECT_NAME": {
+      "default": "ORCH_VNF_C13A17",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC project name used to login to the RHOSP"
+    },
+    "OPENRC_PROJECT_ID": {
+      "default": "bbac64c42eca40758a6e9928199e4bfb",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC project id used to login to the RHOSP"
+    },
+    "OPENRC_USERNAME": {
+      "default": "ORCH_VNF_C13A17_admin",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC username to login to the RHOSP"
+    },
+    "OPENRC_PASSWORD": {
+      "default": "putpasswordhere",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC password to login to the RHOSP"
+    },
+    "OPENRC_REGION_NAME": {
+      "default": "regionOne",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC region name to login to the RHOSP"
+    },
+    "OPENRC_DOMAIN_NAME": {
+      "default": "Default",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the OPENRC domain name to login to the RHOSP"
+    },
+    "ARM_CSCF_API_KEY": {
+      "default": "putapikeyhere",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the CSCF ARM API Key used for authentication"
+    },
+    "ARM_CSCF_API_USERNAME": {
+      "default": "eacvnfci",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the CSCF ARM API username used for authentication"
+    },
+    "ARM_SBG_API_KEY": {
+      "default": "putapikeyhere",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the SBG ARM API Key used for authentication"
+    },
+    "ARM_SBG_API_USERNAME": {
+      "default": "eacvnfci",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the SBG ARM API username used for authentication"
+    },
+    "ARM_BGF_API_KEY": {
+      "default": "putapikeyhere",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the BGF ARM API Key used for authentication"
+    },
+    "ARM_BGF_API_USERNAME": {
+      "default": "eacvnfci",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the BGF ARM API username used for authentication"
+    },
+    "ARM_MTAS_API_KEY": {
+      "default": "putapikeyhere",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the MTAS ARM API Key used for authentication"
+    },
+    "ARM_MTAS_API_USERNAME": {
+      "default": "eacvnfci",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the MTAS ARM API username used for authentication"
+    },
+    "ARM_IMS_API_KEY": {
+      "default": "putapikeyhere",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the MTAS ARM API Key used for authentication"
+    },
+    "ARM_IMS_API_USERNAME": {
+      "default": "eacvnfci",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This is the MTAS ARM API username used for authentication"
+    },
+    "OPENSTACK_PASSWORD": {
+      "default": "shroot",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "OPENSTACK_USERNAME": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "OPENSTACK_IP": {
+      "default": "141.137.173.173",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address, required for CEE cleanup activities"
+    },
+    "ALLOCATION_POOLS_IP": {
+      "default": "191.168.10.12-191.168.10.25,191.168.10.2-191.168.10.10",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This field is provider network pool with comma separated"
+    },
+    "SYNC_CLOUD_HOSTNAME": {
+      "default": "dc518ceenbi-vpod1.sc.sero.gic.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "SYNC_CLOUD_HOST_IP": {
+      "default": "10.221.147.72",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "SYNC_ATLAS_HOSTNAME": {
+      "default": "dc518atlas-vpod1.sc.sero.gic.ericsson.se",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "SYNC_ATLAS_HOST_IP": {
+      "default": "10.221.113.164",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be an valid IPv4 address "
+    },
+    "EXISTING_PROJECT_ADMIN_USERNAME": {
+      "default": "shroot",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXISTING_PROJECT_ADMIN_PASSWORD": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXISTING_PROJECT_USER_USERNAME": {
+      "default": "shroot",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXISTING_PROJECT_USER_PASSWORD": {
+      "default": "root",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "SYNC_VIM_URL": {
+      "default": "https://ieatcee01cic.athtem.eei.ericsson.se:5000/v2.0",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string,URL of VIM identity service."
+    },
+    "SYNC_VIM_NAME_FOR_CLOUD": {
+      "default": "cee_cloud1_ecm07",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "EXISTING_PROJECT_NAME": {
+      "default": "cee_cloud1_ecm07",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "SYNC_OPENRC_FILENAME": {
+      "default": "openrc06",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string and used for CEE cleanup activities"
+    },
+    "SYNC_TENANT_NAME": {
+      "default": "ECM",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "First attribute for integration testcases , This must be any string"
+    },
+    "SYNC_TENANT_TYPE": {
+      "default": "SHARED",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Type of Tenant"
+    },
+    "SYNC_TENANT_USERNAME": {
+      "default": "ECM",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "First attribute for integration testcases , This must be any string"
+    },
+    "SYNC_TENANT_PASSWORD": {
+      "default": "ECM",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "First attribute for integration testcases , This must be any string"
+    },
+    "SYNC_CLOUD_TYPE": {
+      "default": "CEE",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string"
+    },
+    "ENVIRONMENT": {
+      "default": "ECM07",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This field is default and fixed , Please do not modify"
+    },
+    "VM_VNFM_NAMESPACE": {
+      "default": "evnfm-staging",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Namespace"
+    },
+    "SO_NAMESPACE": {
+      "default": "codeploy",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Namespace for SO application deployement"
+    },
+    "vBGF_WRAPPER_DIT_DOC_NAME": {
+      "default": "EO_STAGING_vBGF",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "IT document name for the wrapper file update"
+    },
+    "vSBG_WRAPPER_DIT_DOC_NAME": {
+      "default": "EO_STAGING_vSBG",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "IT document name for the wrapper file update"
+    },
+    "vMTAS_WRAPPER_DIT_DOC_NAME": {
+      "default": "EO_STAGING_vMTAS",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "IT document name for the wrapper file update"
+    },
+    "SO_ENTITY_CHECK_USER": {
+      "default": "so_logviewer",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "SO User for Role Creation and Entity Check"
+    },
+    "SYNC_VIM_AVAILABILITY_ZONE": {
+      "default": "DO_SRIOV_AZ_CP",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "These must be an alpha_numeric and comma separated ids "
+    },
+    "vCSCF_WRAPPER_DIT_DOC_NAME": {
+      "default": "EO_STAGING_vCSCF",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "IT document name for the wrapper file update"
+    },
+    "HELM_DEPLOYMENT_NAME": {
+      "default": "eric-eo-codeploy",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "TE3 deployment name"
+    },
+    "CLUSTER_CONFIG_NAME": {
+      "default": "admin-ccd1.config",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "config file name"
+    },
+    "EPG_ETSI_NSD_PATH": {
+      "default": "/var/tmp/deployEPGETSINSD",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "Blade path"
+    },
+    "EPG_ETSI_NSD_VERSION": {
+      "default": "epg_3.7_ETN",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "EPG Version"
+    },
+    "CNF_CONFIGMAP_SOFTWARE_PATH": {
+      "default": "/var/tmp/deployCNFwithConfigmap/",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be path of the folder"
+    },
+    "EGAD_CERT_REGISTERY_NAME": {
+      "default": "REGISTERY_NAME",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be the register name for the EGAD certificate"
+    },
+    "IS_CCD": {
+      "default": "false",
+      "type": "string",
+      "pattern": "^.+$",
+      "description": "This must be any string e.g true or false"
+    },
+    "RAM_CPU_STORAGE": {
+      "default": "358400,200,760",
+      "type": "string",
+      "pattern": "^\\d+,\\d+,\\d+$",
+      "description": "This must be string of ram, cpu and storage with camas separated in same sequence"
+    },
+    "CCRC_IP_ADDRESS": {
+      "default": "10.210.209.9",
+      "type": "string",
+      "pattern": "^(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)(,\\s*(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d\\d?))*$",
+      "description": "This must be a valid IPv4 address"
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-06/schema#"
+}

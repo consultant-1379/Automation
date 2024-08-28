@@ -1,0 +1,18 @@
+parameters:
+  cloudManagerType: OPENSTACK
+  external_ip_for_services_vm: 131.160.190.59
+  external_net_id: 5273a14e-81d0-44b3-9785-d5b79121db66
+  external_subnet_cidr: 131.160.190.48/28
+  external_subnet_gateway: 131.160.190.49
+  ip_version: 4
+  ossMasterHostIP: 131.160.156.29
+  ossMasterHostName: ieatenmc5b13-scp-0
+  ossNotificationServiceHost: ieatenmc5b13-visinamingnb-0
+  ossNotificationServiceIP: 131.160.156.30
+  ossType: vENM
+  ossUserName: administrator
+  retry: true
+  retryTimes: 5
+  servicesImage: ERICrhelvnflafimage_CXP9032490-4.8.13_ORCH_STAGING_C6a
+  services_flavor: CM-Auto_test_flavour
+  services_vm_count: 1

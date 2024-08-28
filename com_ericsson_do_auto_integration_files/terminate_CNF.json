@@ -1,0 +1,8 @@
+{
+  "terminationType": "FORCEFUL",
+  "additionalParams": {
+    "skipJobVerification": "true",
+    "cleanUpResources": "true",
+    "commandTimeout": "1200"
+  }
+}

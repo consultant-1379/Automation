@@ -1,0 +1,30 @@
+{
+    "name": "ORCH_STAGING_N53_test",
+    "description": "",
+    "isEnabled": "true",
+    "type": "SHARED",
+    "domainName": "Default",
+    "adminUserCredentials": {
+        "adminUserName": "ORCH_STAGING_N53_test_admin",
+        "adminPassword": "CloudAdmin123@",
+        "grantedRoles": [
+            {
+                "roleName": "admin"
+            }
+        ]
+    },
+    "userCredentials": {
+        "userName": "ORCH_STAGING_N53_test_user",
+        "userPassword": "CloudAdmin123@",
+        "grantedRoles": [
+            {
+                "roleName": "_member_"
+            }
+        ]
+    },
+    "tenants": [
+        {
+            "tenantName": "Sync_test"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+   "vimProjects":[
+      {
+         "isRestricted":true, 
+         "vimObjectId":"8477bc46409a4f1cb3ba5bce8bd78b5f",   
+         "vimZoneId":"e96a7cdf-1358-4c1c-b637-ce07601cd3bc",   
+         "userCredentials":{
+            "userPassword":"CloudAdmin123",
+            "vimObjectId":"fd2046b5cf71432d9d20a24bb8e4854d" 
+         },
+         "adminUserCredentials":{
+            "adminPassword":"CloudAdmin123",
+            "vimObjectId":"7f156b2941bc405c9b8da5e4ef19a5c4"
+         }
+      }
+   ]
+}
+ 

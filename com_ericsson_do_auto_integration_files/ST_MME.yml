@@ -1,0 +1,120 @@
+data_types:
+  com.ericsson.so.datatypes.CustomTemplate:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name:
+        type: string
+      relativePath:
+        type: string
+  com.ericsson.so.datatypes.nameValuePair:
+    derived_from: tosca.datatypes.Root
+    properties:
+      name:
+        type: string
+      value:
+        type: string
+description: ESO service template that uses the ECM vMME NSD
+imports:
+- aria-1.0
+node_types:
+  com.ericsson.eso.NetworkFunction:
+    derived_from: com.ericsson.eso.resource
+    interfaces:
+      Standard:
+        configure:
+          implementation: camunda/vnfConfigure
+        type: tosca.interfaces.node.lifecycle.Standard
+    properties:
+      resourceType:
+        default: NetworkFunction
+        type: string
+      vimZoneName:
+        type: string
+      vnfUniqueId:
+        type: string
+  com.ericsson.eso.NetworkFunction.MME:
+    derived_from: com.ericsson.eso.NetworkFunction
+    properties:
+      resourceSubtype:
+        default: MME
+        type: string
+      vnfName:
+        type: string
+  com.ericsson.eso.NetworkService:
+    derived_from: com.ericsson.eso.resource
+    interfaces:
+      Standard:
+        create:
+          implementation: camunda/nsCreate
+        delete:
+          implementation: camunda/nsDelete
+        type: tosca.interfaces.node.lifecycle.Standard
+    properties:
+      nsDescription:
+        type: string
+      nsName:
+        type: string
+      nsdId:
+        type: string
+      resourceType:
+        default: NetworkService
+        type: string
+      tenant:
+        type: string
+  com.ericsson.eso.resource:
+    derived_from: tosca.nodes.Root
+    properties:
+      customOperations:
+        entry_schema:
+          type: com.ericsson.so.datatypes.nameValuePair
+        required: false
+        type: list
+      customTemplates:
+        entry_schema:
+          type: com.ericsson.so.datatypes.CustomTemplate
+        required: false
+        type: list
+      resourceSubtype:
+        required: false
+        type: string
+      resourceType:
+        type: string
+topology_template:
+  inputs:
+    serviceName:
+      default: demo_so
+      type: string
+    tenant:
+      default: ECM
+      type: string
+    vimZoneName:
+      default: cloud1_ieatdoxb040
+      type: string
+  node_templates:
+    mme:
+      properties:
+        customOperations: []
+        customTemplates:
+        - name: day1ConfigTemplate
+          relativePath: templates/st_29_11b/day1ConfigMME.xml
+        vimZoneName:
+          get_input: vimZoneName
+        vnfName:
+          concat:
+          - get_input: serviceName
+          - _mme
+        vnfUniqueId: mme
+      requirements:
+      - dependency: mmeTargetVnfNS
+      type: com.ericsson.eso.NetworkFunction.MME
+    mmeTargetVnfNS:
+      properties:
+        customOperations: []
+        customTemplates: []
+        nsDescription: ECM network service that creates an MME via SO
+        nsName: so_mme
+        nsdId: fb5aa642-a7fb-48a8-8d49-e5d0b0c0b89e
+        resourceSubtype: mmeTargetNs
+        tenant: ECM
+      type: com.ericsson.eso.NetworkService
+tosca_definitions_version: tosca_simple_yaml_1_0

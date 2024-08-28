@@ -1,0 +1,70 @@
+{
+    "description": "",
+    "category": "",
+    "@type": "ServiceOrder",
+    "serviceOrderItem": [
+        {
+            "action": "add",
+            "id": "1",
+            "@type": "ServiceOrderItem",
+            "service": {
+                "name": "Test_Sol005_CNF_CONFIGMAP_2022-07-13_11-36-44",
+                "description": "",
+                "type": "RFS",
+                "serviceSpecification": {
+                    "name": "create",
+                    "description": "CNF with configmap feature deployment from SO",
+                    "serviceModelId": "6c81162b-13d9-4f01-8b1e-f8d732a1e209",
+                    "id": "87857cd4-0e90-48b6-825e-fc3fdad3b72e",
+                    "version": "1.0"
+                },
+                "serviceCharacteristic": [
+                    {
+                        "name": "vnf01_vnfInstanceName",
+                        "value": "cnf-configmap-vnf01"
+                    },
+                    {
+                        "name": "vimZoneName",
+                        "value": "kubernetes"
+                    },
+                    {
+                        "name": "vnf01_vnfInstanceDescription",
+                        "value": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+                    },
+                    {
+                        "name": "vnf02_vnfInstanceName",
+                        "value": "cnf-configmap-vnf-02"
+                    },
+                    {
+                        "name": "subsystemName",
+                        "value": "SOL005_EOCM_669"
+                    },
+                    {
+                        "name": "nsdId",
+                        "value": "ae4dbb9f-dc74-44a4-add6-ce1b839f2fa0"
+                    },
+                    {
+                        "name": "networkServiceName",
+                        "value": "CNF_ConfigMap_fromSO"
+                    },
+                    {
+                        "name": "cismName",
+                        "value": "kubernetes"
+                    },
+                    {
+                        "name": "connectionName",
+                        "value": "ECM_Sol005"
+                    },
+                    {
+                        "name": "vnf02_vnfInstanceDescription",
+                        "value": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1"
+                    },
+                    {
+                        "name": "vnfmId",
+                        "value": "a6a34e91-f7d0-4de2-85b2-5996b6803f93"
+                    }
+                ]
+            }
+        }
+    ]
+}

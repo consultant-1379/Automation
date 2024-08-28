@@ -1,0 +1,38 @@
+[
+    {
+        "constraints": null,
+        "defaultValue": null,
+        "definition": false,
+        "description": null,
+        "getInputValues": null,
+        "getPolicyValues": null,
+        "inputPath": null,
+        "metadata": null,
+        "name": "SO_NS::vdcName",
+        "origName": "SO_NS::vdcName",
+        "parentPropertyType": null,
+        "parentUniqueId": "e547376c-fe5d-49ca-960d-3e9b3ecea544.18d833ee-9a4d-4127-8e5c-16b96688067c.ns",
+        "password": false,
+        "required": false,
+        "schema": {
+            "property": {}
+        },
+        "schemaType": null,
+        "subPropertyInputPath": null,
+        "toscaFunction": {
+            "functionType": "GET_INPUT",
+            "propertyName": "vdcName",
+            "propertyPathFromSource": [
+                "vdcName"
+            ],
+            "propertySource": "SELF",
+            "propertyUniqueId": "e547376c-fe5d-49ca-960d-3e9b3ecea544.vdcName",
+            "sourceName": "EPG_Service42020221003",
+            "sourceUniqueId": "e547376c-fe5d-49ca-960d-3e9b3ecea544",
+            "type": "GET_INPUT"
+        },
+        "type": "string",
+        "uniqueId": "e0f2225d-ccc9-4eed-a4e3-346fa744ff78.SO_NS::vdcName",
+        "value": null
+    }
+]

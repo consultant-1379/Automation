@@ -1,0 +1,17 @@
+{
+    "id": null,
+    "productName": "ECDE_ECM_DUMMY_2021-08-06_16-33-28",
+    "productVersion": "1.0",
+    "templateName": "Create",
+    "vendor": {
+        "id": 2,
+        "vendorName": "AUTO_VENDOR"
+    },
+    "vnftype": {
+        "id": 11,
+        "vnfName": "AUTO_DUMMY",
+        "vnfDescription": "Eo-staging automation used for dummy and 3pp both vnf",
+        "documnetId": null,
+        "vnfTypeStatus": "ACTIVE"
+    }
+}

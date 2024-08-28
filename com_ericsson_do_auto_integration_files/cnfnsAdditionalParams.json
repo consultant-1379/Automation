@@ -1,0 +1,19 @@
+{
+  "nsFlavourId": "default",
+  "vnfParams": [
+    {
+      "vnfNodeTemplateName" : "{{ vnf02.vnfProfileId }}",
+      "vnfInstanceName": "{{ vnf02.name }}",
+      "vnfmId" : "{{ NS.vnfmId }}",
+      "vnfInstanceDescription" : "{{ vnf02.description }}",
+	  "cismName" : "{{ vnf02.cismName }}"
+    },
+    {
+      "vnfNodeTemplateName" : "{{ vnf01.vnfProfileId }}",
+      "vnfInstanceName": "{{ vnf01.name }}",
+      "vnfmId" : "{{ NS.vnfmId }}",
+      "vnfInstanceDescription" : "{{ vnf01.description }}",
+	  "cismName" : "{{ vnf01.cismName }}"
+    }
+  ]
+ }

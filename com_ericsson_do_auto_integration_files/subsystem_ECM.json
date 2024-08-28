@@ -1,0 +1,13 @@
+{
+    "name": "ECM_724",
+    "managementDomain": "NFVI",
+    "mgtype": "NFVO",
+    "connectionProperties": [
+        {
+            "name": "ECM",
+            "username": "ecmadmin",
+            "password": "CloudAdmin123",
+            "location": "https://ieatdo9036-om-2-core.athtem.eei.ericsson.se:443"
+        }
+    ]
+}

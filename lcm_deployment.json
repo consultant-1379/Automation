@@ -1,0 +1,9 @@
+{
+    "internal_net_id": "85ae96c0-51e8-4641-9724-a899f874bcbe",
+    "external_net_id": "e28818f3-cc98-4ae5-b033-00eda0bd371b",
+    "cinder_volume_id": "b0ee4d52-0fba-4a7d-843d-097855f72a0c",
+    "keypair": "key_ieatdoxb040",
+    "vim_tenant_id": "18161f62-6d4c-4911-8a8d-45da06728ee8",
+    "services_flavor": "EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk",
+    "db_flavor": "EO_epg_doecm05_8vcpu_16384MBmem_40GBdisk"
+}

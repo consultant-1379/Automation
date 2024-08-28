@@ -1,0 +1,8 @@
+{
+   "type": "SCALE_OUT",
+   "aspectId": "<ASPECT_ID_FROM_PREVIOUS_COMMAND>",
+   "numberOfSteps": "1",
+   "additionalParams": {
+        "skipJobVerification": "true"
+    }
+}

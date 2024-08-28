@@ -1,0 +1,35 @@
+{
+    "businessAdminContact": "",
+    "technicalAdminContact": "",
+    "tenantName": "Sync_test",
+    "tenantAdmin": {
+        "userName": "test_user",
+        "password": "CloudAdmin123@",
+        "firstName": "Test",
+        "lastName": "test",
+        "contact": "",
+        "emailAddress": "",
+        "mobilePhone": "",
+        "roles": [
+            {
+                "roleName": "TenantAdmin"
+            }
+        ]
+    },
+    "totalQuotas": [
+        {
+            "name": "vCpu",
+            "value": -1
+        },
+        {
+            "name": "virtualMemory",
+            "value": -1
+        },
+        {
+            "name": "diskSize",
+            "value": -1
+        }
+    ],
+    "restrictedCharacteristics": [],
+    "intendedProjectType": "SHARED"
+}

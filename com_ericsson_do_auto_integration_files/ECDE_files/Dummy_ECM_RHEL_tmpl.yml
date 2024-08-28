@@ -1,0 +1,42 @@
+description: HOT template for CEE
+heat_template_version: 2014-10-16
+parameters:
+  bootable_image:
+    default: DummyECMImage
+    description: Image Dummy_Image uploaded
+    label: DummyECMImage
+    type: string
+  flavor1:
+    default: CM-Auto_test_flavour
+    label: CM-Test_ECDE_Flavour
+    type: string
+  public_net:
+    default: 403a0987-64ee-4fb2-aba0-078af0218c44
+    description: this is the management network
+    label: Shared_L3_Network1
+    type: string
+  public_net_IP:
+    default: 10.210.221.44
+    label: IP for public network
+    type: string
+resources:
+  VM-1:
+    properties:
+      flavor:
+        get_param: flavor1
+      image:
+        get_param: bootable_image
+      name: Dummy_Image_ecm_test
+      networks:
+      - port:
+          get_resource: VM-1_port1
+    type: OS::Nova::Server
+  VM-1_port1:
+    properties:
+      fixed_ips:
+      - ip_address:
+          get_param: public_net_IP
+      name: Port1
+      network:
+        get_param: public_net
+    type: OS::Neutron::Port

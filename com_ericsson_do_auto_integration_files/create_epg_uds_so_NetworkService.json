@@ -1,0 +1,51 @@
+{
+   "name":"Ellen_UDSTest_1",
+   "serviceModelId":"<ID_FROM_PREVIOUS_COMMAND>",
+   "description":"VNF creation using UDS template",
+   "inputs":[
+      {
+         "name":"so_networkservice_nsName",
+         "value":"Ellen_UDSTest_1"
+      },
+      {
+         "name":"so_networkservice_nsDescription",
+         "value":"EPG Deployment using template created by UDS"
+      },
+      {
+         "name":"so_epg_vimZoneName",
+         "value":"<VIM_ZONE_NAME>"
+      },
+      {
+         "name":"so_epg_vnfm_Id",
+         "value":"<VNFM_ID>"
+      },
+      {
+         "name":"so_networkservice_nsdId",
+         "value":"<NSD_ID>"
+      },
+      {
+         "name":"so_networkservice_tenant",
+         "value":"<ECM_TENANT_NAME>"
+      },
+      {
+         "name": "so_epg_vnfdId_epg",
+         "value": "<VNFD_ID>"
+      },
+      {
+         "name":"so_epg_alias",
+         "value":"Ellen_UDSTest_1"
+      },
+      {
+         "name":"so_networkservice_connectionName",
+         "value":"ECM"
+      },
+      {
+         "name":"so_networkservice_subsystemName",
+         "value":"<ECM_SUBSYSTEM name from run time file>"
+      },
+      {
+         "name":"so_epg_vEPG_service_ip",
+         "value":"131.160.190.56"
+      }
+   ]
+}

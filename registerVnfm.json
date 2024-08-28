@@ -1,0 +1,28 @@
+{
+    "name": "VNFM_LCM_Info_Authentication_339",
+    "description": "VNFM LCM endpoint info Authentication",
+    "type": "EXTERNAL_V2",
+    "vendor": "Ericsson",
+    "siteName": "Athlone Data Center",
+    "vnfmType": "EXTERNAL_V2",
+    "endpoints": [
+        {
+            "name": "vnfmEndpoint",
+            "ipAddress": "ieatenmc5b13-8.athtem.eei.ericsson.se",
+            "port": "443",
+            "testUri": "/vnflcm"
+        }
+    ],
+    "defaultSecurityConfig": {
+        "securityType": "HTTPS"
+    },
+    "authIpAddress": "ieatenmc5b13-8.athtem.eei.ericsson.se",
+    "authPort": "443",
+    "authPath": "/login",
+    "authUserName": "administrator",
+    "authPassword": "TestPassw0rd",
+    "authType": "ENM",
+    "sol003Version":"v2.4.1",
+   	"vnfmPlacementSupport":"backwardCompatibility",
+   	"discoverySupported":"true"
+}

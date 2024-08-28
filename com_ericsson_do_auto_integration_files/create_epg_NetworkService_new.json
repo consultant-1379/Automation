@@ -1,0 +1,39 @@
+{
+    "name": "VNFM_EPG_2021-03-12_13-11-21",
+    "serviceModelId": "12069f46-a4ef-408e-b660-458894a0834e",
+    "description": "VNF creation",
+    "inputs": [
+        {
+            "name": "vEPG_service_ip",
+            "value": "10.210.221.56"
+        },
+        {
+            "name": "VimZone",
+            "value": "cloud7a_ORCH_Staging_C7a_dynamic"
+        },
+        {
+            "name": "serviceName",
+            "value": "EPG_service"
+        },
+        {
+            "name": "subsystemName",
+            "value": "ECM_947"
+        },
+        {
+            "name": "connectionName",
+            "value": "ECM"
+        },
+        {
+            "name": "vnfName_epg",
+            "value": "VNFM_EPG_2021-03-12_13-11-21"
+        },
+        {
+            "name": "vnfdId_epg",
+            "value": "8264251c-b95b-49ae-988e-7c33bd9802a2"
+        },
+        {
+            "name": "vnfm_Id",
+            "value": "d0da83b1-9289-498d-a241-79c719ad3a3e"
+        }
+    ]
+}

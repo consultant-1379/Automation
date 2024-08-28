@@ -1,0 +1,289 @@
+{
+  "nsFlavourId": "default-ns-flavour",
+  "additionalParamsForNs": {
+    "vlinkParams": [
+      {
+        "vlinkId": "bpNsVlink",
+        "name": "TestDeploy-bpNsVlink",
+        "description": "",
+        "vlinkSegmentParams": [
+          {
+            "virtualisedResources": {
+              "vn": {
+                "name": "TestDeploy-bpNsVlink-Virtual Link Segment 0-Network_001",
+                "category": "L3",
+                "enabled": true,
+                "resourceId": "ECM31",
+                "segments": [
+                  {
+                    "name": "Primary Segment",
+                    "isPrimary": true,
+                    "networkType": "VXLAN"
+                  }
+                ]
+              },
+              "subnets": [
+                {
+                  "name": "bpSubnet",
+                  "ipVersion": "IPv4",
+                  "gatewayIpAddress": "127.3.0.1",
+                  "ipAddressRange": "127.3.0.0/16",
+                  "resourceId": "bpNsVlink-Virtual Link Segment 0-0"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "vlinkId": "mateNsVlink",
+        "name": "TestDeploy-mateNsVlink",
+        "description": "",
+        "vlinkSegmentParams": [
+          {
+            "virtualisedResources": {
+              "vn": {
+                "name": "TestDeploy-mateNsVlink-Virtual Link Segment 0-Network_001",
+                "category": "L3",
+                "enabled": true,
+                "resourceId": "ECM39",
+                "segments": [
+                  {
+                    "name": "Primary Segment",
+                    "isPrimary": true,
+                    "networkType": "VXLAN"
+                  }
+                ]
+              },
+              "subnets": [
+                {
+                  "name": "mateSubnet",
+                  "ipVersion": "IPv4",
+                  "gatewayIpAddress": "127.4.0.1",
+                  "ipAddressRange": "127.4.0.0/16",
+                  "resourceId": "mateNsVlink-Virtual Link Segment 0-0"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "vlinkId": "vfabNsVlink",
+        "name": "TestDeploy-vfabNsVlink",
+        "description": "",
+        "vlinkSegmentParams": [
+          {
+            "virtualisedResources": {
+              "vn": {
+                "name": "TestDeploy-vfabNsVlink-Virtual Link Segment 0-Network_001",
+                "category": "L3",
+                "enabled": true,
+                "resourceId": "ECM43",
+                "segments": [
+                  {
+                    "name": "Primary Segment",
+                    "isPrimary": true,
+                    "networkType": "VXLAN"
+                  }
+                ]
+              },
+              "subnets": [
+                {
+                  "name": "vfabSubnet",
+                  "ipVersion": "IPv4",
+                  "gatewayIpAddress": "127.6.0.1",
+                  "ipAddressRange": "127.6.0.0/16",
+                  "resourceId": "vfabNsVlink-Virtual Link Segment 0-0"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "nsParams": {
+      "targetVdc": "5bf3b132-695c-4253-89c3-d0efc2c5f633"
+    },
+    "vnfParams": [
+      {
+        "vnfNodeTemplateName": "epg-vnf",
+        "vnfInstanceName": "vapp1",
+        "vnfmId": "76ae10c6-c5e4-4902-bebb-71b47d0b0f4a",
+        "vnfInstanceDescription": "Automation EPG package onboard",
+        "vimZoneName": "cloud14a_ORCH_Staging_C14A2_Dynamic",
+        "vappType": "vapp"
+      }
+    ]
+  },
+  "additionalParamsForVnf": [
+    {
+      "vnfProfileId": "epg-vnf",
+      "vnfInstanceName": "vapp1",
+      "additionalParams": {
+        "P3_OPENSTACK01_ORCH_Staging_C14A2_Dynamic_PROV_net_id": "P3_OPENSTACK01_ORCH_Staging_C14A2_Dynamic_PROV",
+        "Prefix": "",
+        "VSFO_CP_EXT_cidr": [
+          "172.31.0.0/24",
+          "172.31.1.0/24",
+          "172.31.2.0/24",
+          "172.31.3.0/24",
+          "172.31.4.0/24",
+          "172.31.5.0/24",
+          "172.31.6.0/24",
+          "172.31.7.0/24",
+          "172.31.8.0/24",
+          "172.31.9.0/24",
+          "172.31.10.0/24",
+          "172.31.11.0/24",
+          "172.31.12.0/24",
+          "172.31.13.0/24",
+          "172.31.14.0/24",
+          "172.31.15.0/24",
+          "172.31.16.0/24",
+          "172.31.17.0/24",
+          "172.31.18.0/24",
+          "172.31.19.0/24",
+          "172.31.20.0/24",
+          "172.31.21.0/24",
+          "172.31.22.0/24",
+          "172.31.23.0/24",
+          "172.31.24.0/24",
+          "172.31.25.0/24",
+          "172.31.26.0/24",
+          "172.31.27.0/24",
+          "172.31.28.0/24"
+        ],
+        "VSFO_PP_EXT_cidr": [
+          "173.21.0.0/24",
+          "173.21.1.0/24",
+          "173.21.2.0/24",
+          "173.21.3.0/24",
+          "173.21.4.0/24",
+          "173.21.5.0/24",
+          "173.21.6.0/24",
+          "173.21.7.0/24",
+          "173.21.8.0/24",
+          "173.21.9.0/24",
+          "173.21.10.0/24",
+          "173.21.11.0/24",
+          "173.21.12.0/24",
+          "173.21.13.0/24",
+          "173.21.14.0/24",
+          "173.21.15.0/24",
+          "173.21.16.0/24",
+          "173.21.17.0/24",
+          "173.21.18.0/24",
+          "173.21.19.0/24",
+          "173.21.20.0/24",
+          "173.21.21.0/24",
+          "173.21.22.0/24",
+          "173.21.23.0/24",
+          "173.21.24.0/24",
+          "173.21.25.0/24",
+          "173.21.26.0/24",
+          "173.21.27.0/24",
+          "173.21.28.0/24"
+        ],
+        "associatedSite": "",
+        "communityString": "public",
+        "deltaVnfConfigFilesFolder": "default",
+        "enableRollback": false,
+        "epg_vRPs_availability_zones": [
+          "nova",
+          "nova"
+        ],
+        "epg_vRPs_flavor": "CM-epg_2vcpu_6144MBmem_40GBdisk_C14A2",
+        "epg_vRPs_image": "epg_vrp_cxp9026845_28r66gj01_ORCH_STAGING_C14A2",
+        "epg_vsfo_cp_availability_zones": [
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova"
+        ],
+        "epg_vsfo_cp_count": 2,
+        "epg_vsfo_cp_flavor": "CM-epg_8vcpu_16384MBmem_40GBdisk_C14A2",
+        "epg_vsfo_cp_image": "epg_vsfo_cxp9026845_28r66gj01_ORCH_STAGING_C14A2",
+        "epg_vsfo_pp_availability_zones": [
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova",
+          "nova"
+        ],
+        "epg_vsfo_pp_count": 2,
+        "epg_vsfo_pp_flavor": "CM-epg_8vcpu_16384MBmem_40GBdisk_C14A2",
+        "epg_vsfo_pp_image": "epg_vsfo_cxp9026845_28r66gj01_ORCH_STAGING_C14A2",
+        "networkElementVersion": "2.1",
+        "snmpAuthPassword": "",
+        "snmpAuthProtocol": "",
+        "snmpPrivProtocol": "",
+        "snmpPrivacyPassword": "",
+        "snmpSecurityLevel": "NO_AUTH_NO_PRIV",
+        "snmpSecurityName": "admin",
+        "snmpVersion": "V3",
+        "subNetworks": "SubNetwork=vEPG",
+        "updateOss": false,
+        "user_data_content": "<?xml version=\"1.0\" ?>\n<config xmlns=\"http://tail-f.com/ns/config/1.0\">\n  <contexts xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-contexts-ipos\">\n    <service>\n      <multiple-contexts>true</multiple-contexts>\n    </service>\n  </contexts>\n  <asp xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-asp-ipr\">\n    <default_asp_attr>\n      <default_asp_attr>management/1</default_asp_attr>\n      <shutdown>false</shutdown>\n    </default_asp_attr>\n  </asp>\n  <contexts xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-contexts-ipos\">\n    <context xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-context-ipos\">\n      <context-name>local</context-name>\n      <logging xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-logger-ipos\">\n        <console>false</console>\n      </logging>\n      <ip>\n        <domain-name xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-dns-ipos\">\n          <name>URL for DNS here</name>\n        </domain-name>\n        <static-route xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-static-route-ipos\">\n          <ip-prefix>0.0.0.0/24</ip-prefix>\n          <next-hop-type>next-hop-address</next-hop-type>\n          <next-hop>10.150.126.65</next-hop>\n          <description>SERVICE NET</description>\n        </static-route>\n      </ip>\n      <service xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-service-ipos\">\n        <sftp>\n          <server/>\n        </sftp>\n        <ftp-client/>\n        <ssh>\n          <server/>\n          <client/>\n        </ssh>\n        <telnet>\n          <server/>\n          <client/>\n        </telnet>\n        <scp>\n          <server/>\n          <client/>\n        </scp>\n      </service>\n    </context>\n  </contexts>\n  <interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\">\n    <interface>\n      <name>mgmt@local</name>\n      <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ipForward</type>\n      <l3-interface xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-interfaces-ext-ipos\">\n        <context>local</context>\n        <ip>\n          <address>\n            <addr-primary>\n              <addr>10.150.126.90/27</addr>\n            </addr-primary>\n          </address>\n          <source-address>\n            <options>\n              <snmp/>\n              <ssh/>\n              <ftp/>\n            </options>\n          </source-address>\n        </ip>\n      </l3-interface>\n    </interface>\n    <interface>\n      <name>management</name>\n      <type xmlns:ianaift=\"urn:ietf:params:xml:ns:yang:iana-if-type\">ianaift:ethernetCsmacd</type>\n      <enabled>true</enabled>\n      <ethernet xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-ethernet-ext-ipos\">\n        <bind-interface>\n          <intf-name>mgmt@local</intf-name>\n          <intf-ctx>local</intf-ctx>\n        </bind-interface>\n      </ethernet>\n    </interface>\n  </interfaces>\n  <system xmlns=\"urn:ietf:params:xml:ns:yang:ietf-system\">\n    <timeout xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-aaa-ipos\">\n      <session>\n        <idle>43200</idle>\n      </session>\n    </timeout>\n    <authentication>\n      <user>\n        <name>ericsson</name>\n        <password>$1$wQimBL27$UZSvaEqpy6RPBo1wyN44Wnu5l80sbU75c5OTZOfgVgsb19qs3Sdeskw/NJhixUwcanp4BoZTf14c4QakdAUla0</password>\n      </user>\n    </authentication>\n    <hostname>vepg-01</hostname>\n  </system>\n  <nacm xmlns=\"urn:ietf:params:xml:ns:yang:ietf-netconf-acm\">\n    <groups>\n      <group>\n        <name>ericsson-support</name>\n        <user-name>ericsson</user-name>\n      </group>\n      <group>\n        <name>system-admin</name>\n        <user-name>ericsson</user-name>\n      </group>\n      <group>\n        <name>system-security-admin</name>\n        <user-name>ericsson</user-name>\n      </group>\n      <group>\n        <name>epg-charging-admin</name>\n        <user-name>ericsson</user-name>\n      </group>\n      <group>\n        <name>epg-lawful-intercept-admin</name>\n        <user-name>ericsson</user-name>\n      </group>\n    </groups>\n  </nacm>\n  <asp xmlns=\"urn:rdns:com:ericsson:oammodel:ericsson-asp-ipr\">\n    <default_asp_attr>\n      <default_asp_attr>management/1</default_asp_attr>\n      <shutdown>false</shutdown>\n    </default_asp_attr>\n    <pool>\n      <pool-name>epgpool</pool-name>\n      <service>epg</service>\n      <asp>management/1</asp>\n    </pool>\n  </asp>\n</config>\n",
+        "vnfConfigContent": "",
+        "vnfConfigUri": "ericsson_templ.xml",
+        "vnfGatewayAddress": "10.150.126.65",
+        "vnfInstanceNameInVim": "",
+        "vnfIpAddress": "10.150.126.90",
+        "vnfIpAddressPrefixLength": "27",
+        "vnfLicenseKeyFileContent": "",
+        "vnfLicenseKeyFileUri": "",
+        "vnfMgmtContextName": "local",
+        "vnfPassword": "ZXJpY3Nzb24=",
+        "vnfUsername": "admin"
+      }
+    }
+  ]
+}

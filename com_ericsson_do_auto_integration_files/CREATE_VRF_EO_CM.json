@@ -1,0 +1,8 @@
+{
+    "name": "VRF_16",
+    "vrfIdOnDevice": "SCM-VRF-OM_CN_DEMO",
+    "dcgw": {
+        "id": "f2c59618-ca36-40e1-afa1-7f70bbabe3db",
+        "name": "DC_GW_623"
+    }
+}

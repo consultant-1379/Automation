@@ -1,0 +1,9 @@
+{
+    "objectType": "vapp",
+    "objectNames": [
+        "vdc_342",
+        "tosca-epg-2023-02-01-16-21-04"
+    ],
+    "tenant": "ECM",
+    "mode": "commit"
+}

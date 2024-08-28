@@ -1,0 +1,195 @@
+heat_template_version: 2013-05-23
+
+description: 
+  This is a HEAT Template for a HOT based vMME dummy VNF for 5G Core network slicing testing.
+
+  
+parameters:
+############################################################################################
+##### This section allows for specifying input parameters that have to be provided     #####
+##### when instantiating the template. When the template is deployed, the user changes #####
+##### the parameters or accepts the default values.                                    #####
+############################################################################################
+
+  gpb_flavor:
+    type: string
+    description: Flavor of the GPB dummy VM instances to be created.
+    default: CM-EOST-valid9m_flavor
+        
+  gpb_image_id:
+    type: string
+    description: valid-9m
+    default: e9cecf2d-ed88-4a34-877b-083916497169
+
+  gpb_vm1_name:
+    type: string
+    description: Name of the GPB cummy VM1.
+    default: EOST_ECDE-GPB-VM1
+
+  gpb_vm2_name:
+    type: string
+    description: Name of the GPB dummy VM2.
+    default: EOST_ECDE-GPB-VM2
+
+  OM_CN_net_id:
+    type: string
+    description: Name of the OM_CN Network - Referencing a previously created network.
+    default: EOST_ECDE_OM_CN_vMME
+
+  RAN_net_id:
+    type: string
+    description: Name of the RAN Network - Referencing a previously created network.
+    default: EOST_ECDE_RAN_vMME
+    
+  Sig_CN_net_id:
+    type: string
+    description: Name of the Sig_CN Network - Referencing a previously created network.
+    default: EOST_ECDE_Sig_CN_vMME
+    
+  Media_CN_net_id:
+    type: string
+    description: Name of the Media_CN Network - Referencing a previously created network.
+    default: EOST_ECDE_Media_CN_vMME
+    
+  ip_OM_CN_gpb_vm1:
+    type: string
+    description: OM_CN IP Address VM1
+    default: 10.10.11.5
+
+  ip_OM_CN_gpb_vm2:
+    type: string
+    description: OM_CN IP Address VM2
+    default: 10.10.11.6
+
+  ip_RAN_gpb_vm1:
+    type: string
+    description: RAN IP Address VM1
+    default: 10.10.11.37
+
+  ip_RAN_gpb_vm2:
+    type: string
+    description: RAN IP Address VM2
+    default: 10.10.11.38
+    
+  ip_Sig_CN_gpb_vm1:
+    type: string
+    description: Sig_CN IP Address VM1
+    default: 10.10.11.53
+
+  ip_Sig_CN_gpb_vm2:
+    type: string
+    description: Sig_CN IP Address VM2
+    default: 10.10.11.54
+    
+  ip_Media_CN_gpb_vm1:
+    type: string
+    description: Media_CN IP Address VM1
+    default: 10.10.11.69
+
+  ip_Media_CN_gpb_vm2:
+    type: string
+    description: Media_CN IP Address VM2
+    default: 10.10.11.70
+    
+resources:
+###########################################################################################
+##### This section contains the declaration of the resources defined in the template. ##### 
+##### This section with at least one resource should be defined in any HOT template,  ##### 
+##### or the template would not really do anything when it is deployed.               #####
+##### Ericsson Cloud Manager requires that at least one VM resource is defined in the #####
+##### HOT descriptor.                                                                 #####
+###########################################################################################
+
+#Virtual Machines Creation 
+  nova_instance_gpb_vm1:
+    type: OS::Nova::Server
+    properties:
+      name: {get_param: gpb_vm1_name}
+      image: { get_param: gpb_image_id }
+      flavor: { get_param: gpb_flavor }
+      networks:
+        - port: {get_resource: port_instance_gpb_vm1_OM_CN}
+        - port: {get_resource: port_instance_gpb_vm1_RAN}
+        - port: {get_resource: port_instance_gpb_vm1_Sig_CN}
+        - port: {get_resource: port_instance_gpb_vm1_Media_CN}
+      config_drive: true
+      user_data_format: RAW             
+
+  port_instance_gpb_vm1_OM_CN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: OM_CN_net_id }
+      name: gpbvm1vnic-OM_CN
+      fixed_ips:
+        - ip_address: { get_param: ip_OM_CN_gpb_vm1 }
+
+  port_instance_gpb_vm1_RAN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: RAN_net_id }
+      name: gpbvm1vnic-RAN
+      fixed_ips:
+        - ip_address: { get_param: ip_RAN_gpb_vm1 }
+
+  port_instance_gpb_vm1_Sig_CN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: Sig_CN_net_id }
+      name: gpbvm1vnic-Sig_CN
+      fixed_ips:
+        - ip_address: { get_param: ip_Sig_CN_gpb_vm1 }        
+
+  port_instance_gpb_vm1_Media_CN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: Media_CN_net_id }
+      name: gpbvm1vnic-Media_CN
+      fixed_ips:
+        - ip_address: { get_param: ip_Media_CN_gpb_vm1 } 
+        
+  nova_instance_gpb_vm2:
+    type: OS::Nova::Server
+    properties:
+      name: { get_param: gpb_vm2_name }
+      image: { get_param: gpb_image_id }
+      flavor: { get_param: gpb_flavor }
+      networks:
+        - port: {get_resource: port_instance_gpb_vm2_OM_CN}
+        - port: {get_resource: port_instance_gpb_vm2_RAN}
+        - port: {get_resource: port_instance_gpb_vm2_Sig_CN}
+        - port: {get_resource: port_instance_gpb_vm2_Media_CN}
+      config_drive: true
+      user_data_format: RAW             
+
+  port_instance_gpb_vm2_OM_CN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: OM_CN_net_id }
+      name: gpbvm2vnic-OM_CN
+      fixed_ips:
+        - ip_address: { get_param: ip_OM_CN_gpb_vm2 }
+
+  port_instance_gpb_vm2_RAN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: RAN_net_id }
+      name: gpbvm2vnic-RAN
+      fixed_ips:
+        - ip_address: { get_param: ip_RAN_gpb_vm2 }
+
+  port_instance_gpb_vm2_Sig_CN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: Sig_CN_net_id }
+      name: gpbvm2vnic-Sig_CN
+      fixed_ips:
+        - ip_address: { get_param: ip_Sig_CN_gpb_vm2 }        
+
+  port_instance_gpb_vm2_Media_CN:
+    type: OS::Neutron::Port
+    properties:
+      network: { get_param: Media_CN_net_id }
+      name: gpbvm2vnic-Media_CN
+      fixed_ips:
+        - ip_address: { get_param: ip_Media_CN_gpb_vm2 }
+

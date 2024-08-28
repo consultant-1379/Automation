@@ -1,0 +1,70 @@
+{
+  "description": "",
+  "category": "",
+  "@type": "ServiceOrder",
+  "serviceOrderItem": [
+    {
+      "action": "add",
+      "id": "1",
+      "@type": "ServiceOrderItem",
+      "service": {
+        "name": "<< SERVICE_NAME >>",
+        "description": "",
+        "type": "RFS",
+        "serviceSpecification": {
+          "name": "create",
+          "description": "VNF creation using UDS template",
+          "serviceModelId": "<< SERVICE_MODEL_ID >>",
+          "id": "<< INVARIANTUUID >>",
+          "version": "1.0"
+        },
+        "serviceCharacteristic": [
+          {
+            "name": "so_networkservice_nsName",
+            "value": ""
+          },
+          {
+            "name": "so_networkservice_nsDescription",
+            "value": "EPG Deployment using template created by UDS"
+          },
+          {
+            "name": "so_epg_vimZoneName",
+            "value": ""
+          },
+          {
+            "name": "so_epg_vnfm_Id",
+            "value": ""
+          },
+          {
+            "name": "so_networkservice_nsdId",
+            "value": ""
+          },
+          {
+            "name": "so_networkservice_tenant",
+            "value": "ECM"
+          },
+          {
+            "name": "so_epg_vnfdId_epg",
+            "value": ""
+          },
+          {
+            "name": "so_epg_alias",
+            "value": ""
+          },
+          {
+            "name": "so_networkservice_connectionName",
+            "value": ""
+          },
+          {
+            "name": "so_networkservice_subsystemName",
+            "value": ""
+          },
+          {
+            "name": "so_epg_vEPG_service_ip",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

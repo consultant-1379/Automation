@@ -1,0 +1,59 @@
+{
+	"nsFlavourId": "default",
+	"accessPointParams": {
+	    "exposedVnfCpParams": [
+		  {			
+			"vnfNodeTemplateName": "vEPG3_14",
+			"vnfInstanceName": "{{ EPG.alias }}",
+			"cpdId": "vrp_MGMT",
+			"connectedVn": "{{ NS.connectedVn }}",				
+			"cpConfig": [
+			  {							
+				"cpProtocolData": [
+				 {
+					"ipOverEthernet": {
+					"ipAddresses": [
+					  {
+						"fixedAddresses": ["10.232.122.110"],
+						"subnetId": "{{ NS.subnetId }}",
+						"subnetResourceIdRef": "{{ NS.subnetId }}",
+						"type": "IPv4"
+					  }
+					 ]
+					}
+				  }
+				]
+			  },
+			  {							
+				"cpProtocolData": [
+				  {							
+					"ipOverEthernet": {
+					"ipAddresses": [
+					  {						
+						"fixedAddresses": ["10.232.122.111"],									
+						"subnetId": "{{ NS.subnetId }}",
+						"subnetResourceIdRef": "{{ NS.subnetId }}",
+						"type": "IPv4"
+					  }
+					]
+				   }
+				  }
+				]								
+			  }
+			]					
+		 }
+		]
+	},
+	"nsParams": {
+				"targetVdc": "{{ NS.targetVdc }}"
+				},
+	"vnfParams": [
+	   {
+		  "vimZoneName": "{{ EPG.vimZoneName }}",
+		  "vnfInstanceDescription": "ETSI NFV SOL 001 vnfd types definitions version 2.5.1",
+		  "vnfInstanceName": "{{ EPG.alias }}",
+		  "vnfNodeTemplateName": "vEPG3_14",
+	      "vnfmId": "{{ NS.vnfmId }}"
+	   }
+	 ]
+}

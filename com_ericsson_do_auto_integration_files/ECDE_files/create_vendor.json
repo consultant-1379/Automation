@@ -1,0 +1,9 @@
+{
+   "vendorName":"AUTO_VENDOR",
+   "address":"address",
+   "email":"vendortest@ericsson.com",
+   "phonenumber":"1234567",
+   "templateName":"Create",
+   "id":null,
+   "vendorStatus":"ACTIVE"
+}

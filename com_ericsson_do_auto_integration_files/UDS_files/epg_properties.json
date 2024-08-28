@@ -1,0 +1,58 @@
+[
+	{
+		"constraints": null,
+		"defaultValue": null,
+		"description": null,
+		"name": "vnfUniqueId",
+		"parentUniqueId": null,
+		"password": false,
+		"required": false,
+		"schema": {
+			"property": {}
+		},
+		"schemaType": null,
+		"type": "string",
+		"uniqueId": "<EPG_VFC_UNIQUE_ID>.vnfUniqueId",
+		"value": "epg1",
+		"definition": false,
+		"getInputValues": null,
+		"parentPropertyType": null,
+		"subPropertyInputPath": null,
+		"toscaPresentation": {
+			"ownerId": null
+		},
+		"getPolicyValues": null,
+		"inputPath": null
+	},
+	{
+		"constraints": null,
+		"defaultValue": null,
+		"description": null,
+		"name": "customTemplates",
+		"parentUniqueId": "<NETWORK_FUNCTION_VFC_UNIQUE_ID>",
+		"password": false,
+		"required": false,
+		"schema": {
+			"property": {
+				"type": "com.ericsson.so.datatypes.CustomTemplate",
+				"required": false,
+				"definition": false,
+				"description": null,
+				"password": false
+			}
+		},
+		"schemaType": "com.ericsson.so.datatypes.CustomTemplate",
+		"type": "list",
+		"uniqueId": "<EPG_VFC_UNIQUE_ID>.customTemplates",
+		"value": "[{\"nodeRefs\":[],\"catalogRef\":\"day1ConfigEPG.xml\",\"name\":\"day1ConfigTemplate\"}]",
+		"definition": false,
+		"getInputValues": null,
+		"parentPropertyType": null,
+		"subPropertyInputPath": null,
+		"toscaPresentation": {
+			"ownerId": "<NETWORK_FUNCTION_VFC_UNIQUE_ID>"
+		},
+		"getPolicyValues": null,
+		"inputPath": null
+	}
+]

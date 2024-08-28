@@ -1,0 +1,103 @@
+{
+    "tenantName": "EOS-C13A17",
+    "fileName": "vMTAS-1.12.zip",
+    "name": "TEST_BGF_PACKAGE_UPLOAD_134",
+    "description": "Automation EPG package onboard",
+    "category": "vapp",
+    "vendor": "Ericsson",
+    "version": "1.0.0",
+    "softwareVersion": "18.2.0.0",
+    "isPublic": "false",
+    "deploymentManager": "EXTERNAL_VNFM",
+    "packageFormat": "EXTERNAL_FORMAT",
+    "vnfManagers": [
+        {
+            "id": "eb1a161d-1ad8-409b-a548-4ac906577f04"
+        }
+    ],
+    "userDefinedData": {
+        "dataVNFDSpecific": {
+            "vnfdId": "vBGF-1.20.0-52fbce1c-openstack_red",
+            "vnfProvider": "Ericsson",
+            "vnfProductName": "vBGF",
+            "vnfSoftwareVersion": "1.20.0-52fbce1c",
+            "vnfdVersion": "1.20.0-52fbce1c-openstack_red",
+            "flavourId": "openstack_red",
+            "scalingAspect": [
+                {
+                    "id": "default",
+                    "name": "default",
+                    "description": "Default scaling domain",
+                    "maxScaleLevel": 30
+                }
+            ],
+            "vnfLcmOperationsConfiguration": {
+                "scale": {
+                    "scalingByMoreThanOneStepSupported": true
+                }
+            }
+        },
+        "instantiateVnfOpConfig": {
+            "payload_instance_count": 2,
+            "standby_payload_instance_count": 1,
+            "bgf_config": "",
+            "vnf_name": "",
+            "int_net_name": "internal",
+            "bgf_image": "a2faa081-e94f-4a7f-a0f1-c38476fc872a",
+            "bgf_flavor": "CM-8vcpu_6144ram_6disk_20190814-160754",
+            "security_group": "77577877-89ce-4222-9ab2-2ca3140a4100",
+            "affinity_policy": "anti-affinity",
+            "availability_zone": "nova",
+            "HA_policy": "managed-on-host",
+            "admin_username": "mrsv-admin",
+            "admin_groups": "com-emergency,tracing,system-ts,bgf-op,bgf-ts,bgf-msr,systemd-journal,cmw-imm-users,docker",
+            "admin_password_hash": "$6$asYHS3nJ8$r.y95XxVdPGrApo7fIZPO0Umle0sC2iujXhDpXkb1ikI1AldUkSjdmW0jNNz6o17Mn6IILsRz8CWsoAKXDP/c.",
+            "admin_authorized_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMdeGRJqAGh9iLdnDn4HLwS85crF6f956NY/TBPHTY15AkTTp5B6ua587iEbAMHI/4wpJpGosFh1lwV2QQUO6xHjUvOqPm3ODw/9tkAPOH9gjFx/tRreklW54DDCCGUtDs0hDSWWLt3fJDL/RHvr3ZdjcbiEiD6CCs1HGlmliHe/6ZhAuJ9EJgXOc4PuyNhNMNzOsutxWt4K2wIqfmyAdBxChGYRTXnsOqSAZWY3ptsMjyrnEIC36ACVbMt/tGwZ8gwAhIU/OVC+CyL+K9vWXrViSfAcA9x+XDozRbY9oVjva1B4fwG7Vu3Dhlcjl0QU55ILxU8QbXUjqVJ8OnIl0L jboss_user@ieatdoxb035-vnflaf-services-0",
+            "untrusted_net_name_1": "vbgf_DO_sig_sp1",
+            "untrusted_net_name_2": "vbgf_DO_sig_sp2",
+            "untrusted_net_cidr_1": "",
+            "untrusted_net_cidr_ipv6_1": "",
+            "untrusted_net_cidr_2": "",
+            "untrusted_net_cidr_ipv6_2": "",
+            "trusted_net_name": "vbgf_DO_sig_sp3",
+            "li_net_name": "vbgf_DO_Net_li_sp1",
+            "trusted_net_cidr": "",
+            "trusted_net_cidr_ipv6": "",
+            "li_net_cidr": "",
+            "signaling_net_cidr": "",
+            "management_net_name": "P9-OpStk-13-Public-Tenant4",
+            "signaling_net_name": "vbgf_DO_sig_sp0",
+            "ntp_server_1": "159.107.173.12",
+            "ntp_server_2": "159.107.173.12",
+            "external_net_name": "",
+            "timeout": 600,
+            "OM_ip_address": "10.210.221.101",
+            "shared_storage_server_username": "",
+            "shared_storage_ssh_private_key": "",
+            "shared_storage_server_path": "",
+            "shared_storage_server_ip": "",
+            "shared_storage_server_port": "",
+            "shared_storage_server_fingerprint": "",
+            "pm_data_monitoring_hosts_ip_address": "",
+            "pm_data_monitoring_hosts_port": "",
+            "watchdog_interval": 1,
+            "watchdog_enable": 0,
+            "workflow_lcmScriptTimeout": "1800",
+            "workflow_addVNFToOSS": "true",
+            "workflow_networkElementUsername": "mrsv-admin",
+            "workflow_networkElementPassword": "YWRtaW4=",
+            "workflow_networkElementType": "vBGF",
+            "workflow_networkElementVersion": "1.13",
+            "workflow_nodeIpAddress": "10.210.221.101",
+            "workflow_snmpPort": "161",
+            "workflow_netConfPort": "830",
+            "workflow_managedElementSrcType": "CBA",
+            "workflow_subNetworks": "",
+            "workflow_associatedSite": "Ireland"
+        },
+        "terminateVnfOpConfig": {}
+    },
+    "userDefinedDataSchema": {
+        "key": "value"
+    }
+}

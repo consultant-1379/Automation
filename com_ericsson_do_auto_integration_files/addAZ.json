@@ -1,0 +1,17 @@
+{
+    "vimZoneId": "624c3505-7ecf-4e92-84a1-508c1d58b648",
+    "name": "DO_SRIOV_AZ_CP",
+    "description": "",
+    "characteristics": [],
+    "totalResources": [{
+            "value": -1,
+            "name": "vCpu"
+        }, {
+            "value": -1,
+            "name": "virtualMemory"
+        }, {
+            "value": -1,
+            "name": "diskSize"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Tosca_EPG_VNFD_2021-06-11_19-28-06",
+    "serviceModelId": "0112879b-b7e8-43db-9ee8-84fb20f3fb8e",
+    "description": "Scalable dummy node",
+    "inputs": [
+        {
+            "name": "vnfInstanceName",
+            "value": "Tosca_EPG_VNFD_2021-06-11_19-28-06"
+        },
+        {
+            "name": "targetVdc",
+            "value": "3f5e88ad-9699-43e4-af85-47507cf56bbe"
+        },
+        {
+            "name": "connectedVn",
+            "value": "182df953-f03c-4274-ace8-8cb57295d74a"
+        },
+        {
+            "name": "subsystemName",
+            "value": "SOL005_EOCM_435"
+        },
+        {
+            "name": "connectionName",
+            "value": "ECM_Sol005"
+        },
+        {
+            "name": "vnfmId",
+            "value": "2c0fb90c-42a2-4830-b438-d2fdecb237f3"
+        }
+    ]
+}

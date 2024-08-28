@@ -1,0 +1,14 @@
+{
+    "scaleType": "SCALE_VNF",
+    "scaleVnfData": [
+        {
+            "vnfInstanceid": "7872e183-835e-4988-b10a-25f7bb62e5be",
+            "scaleVnfType": "SCALE_IN",
+            "scaleByStepData": {
+                "aspectId": "Aspect1",
+                "numberOfSteps": 2,
+                "additionalParams": null
+            }
+        }
+    ]
+}

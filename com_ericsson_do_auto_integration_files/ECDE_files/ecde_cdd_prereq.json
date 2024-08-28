@@ -1,0 +1,8 @@
+{
+   "EUFT":"",
+   "EUFTGroupName":"",
+   "Ticket":"T-123456",
+   "TicketHeader":"dummy_test_product",
+   "relative_storage_path":"CXP1234567-1/dummy_test_product_T-123456",
+   "spinnaker_polling_enabled":"false"
+}

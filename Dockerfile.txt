@@ -1,0 +1,6 @@
+FROM python:3.6
+COPY . /app
+WORKDIR /app
+RUN pip install paramiko
+RUN pip install jsonschema
+ENTRYPOINT ["python","./start_script.py"]

@@ -1,0 +1,24 @@
+{
+    "service": {
+        "name": "Test_VNF_Package_Upload_12",
+        "serviceModelId": "22796081-38e7-4be1-9c9c-8e876a1f0dce",
+        "description": "VNF creation"
+    },
+    "action": {
+        "name": "deploy",
+        "inputs": [
+            {
+                "name": "vimZoneName",
+                "value": "cloud1_ieatdoxb040"
+            },
+            {
+                "name": "serviceName",
+                "value": "enterprise_service"
+            },
+            {
+                "name": "tenant",
+                "value": "ECM"
+            }
+        ]
+    }
+}

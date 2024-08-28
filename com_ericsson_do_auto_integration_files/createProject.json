@@ -1,0 +1,35 @@
+{
+    "name": "ieatdoxb040",
+    "description": "",
+    "isEnabled": "true",
+    "type": "DEDICATED",
+    "domainName": "Default",
+    "adminUserCredentials": {
+        "adminUserName": "ieatdoxb040_admin",
+        "adminPassword": "Ieatdoxb040.laf",
+        "grantedRoles": [
+            {
+                "roleName": "admin"
+            }
+        ]
+    },
+    "userCredentials": {
+        "userName": "ieatdoxb040_user",
+        "userPassword": "Ieatdoxb040.laf",
+        "grantedRoles": [
+            {
+                "roleName": "_member_"
+            }
+        ]
+    },
+    "tenants": [
+        {
+            "tenantName": "ECM"
+        }
+    ],
+    "vimZoneConnections": [
+        {
+            "vimZoneId": "fc21f86c-945d-45a4-a0a2-0fe5ffd8e2bd"
+        }
+    ]
+}

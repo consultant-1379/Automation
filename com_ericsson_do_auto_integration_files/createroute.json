@@ -1,0 +1,14 @@
+{
+    "routings": [
+        {
+            "name": "ECM_DCGW",
+            "routingElements": [
+                {
+                    "attributeName": "managerId",
+                    "networkElement": "DCGW_NE",
+                    "regexp": "DCGW-ASR9000-AM1"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "categorySpecificMetadata": {},
+    "artifacts": {},
+    "toscaArtifacts": {},
+    "contactId": "cs0008",
+    "categories": [
+        {
+            "name": "Ericsson Orchestrator VNF Distribution",
+            "normalizedName": "ericsson orchestrator vnf distribution",
+            "uniqueId": "serviceNewCategory.ericsson orchestrator vnf distribution",
+            "icons": [
+                "network_l_1-3"
+            ],
+            "useServiceSubstitutionForNestedServices": false,
+            "metadataKeys": [],
+            "subcategories": null,
+            "version": null,
+            "type": null,
+            "ownerId": null,
+            "empty": false
+        }
+    ],
+    "description": "VNF Service",
+    "icon": "defaulticon",
+    "componentInstancesProperties": {},
+    "componentInstancesAttributes": {},
+    "name": "ETSITOSCAVSP2021-10-0616-50-00",
+    "tags": "ETSITOSCAVSP2021-10-0616-50-00",
+    "capabilities": {},
+    "requirements": {},
+    "deploymentArtifacts": {},
+    "componentType": "SERVICE",
+    "componentInstances": [],
+    "properties": [],
+    "attributes": [],
+    "derivedFromGenericType": "org.openecomp.resource.abstract.nodes.service",
+    "derivedFromGenericVersion": "1.0",
+    "forwardingPaths": {},
+    "ecompGeneratedNaming": true,
+    "serviceApiArtifacts": {},
+    "instantiationType": "A-la-carte",
+    "environmentContext": "General_Revenue-Bearing"
+}

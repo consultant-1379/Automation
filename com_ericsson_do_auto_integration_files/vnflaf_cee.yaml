@@ -1,0 +1,238 @@
+description: 'HOT template to deploy VNFLAF Stack in Atlas CEE Environment. i.e. with
+    2 VMs one hosting the services and another hosting the database.
+
+    '
+heat_template_version: 2013-05-23
+outputs:
+    vnflaf_services_external_ip:
+        description: IP address of VNFLAF-Services in external network
+        value: {get_param: external_ip_for_services_vm}
+parameter_groups:
+-   description: VM Images and Flavors
+    label: Compute
+    parameters: [servicesImage, services_flavor]
+-   description: Network details
+    label: Network
+    parameters: [ip_version, external_net_id, external_subnet_gateway, external_subnet_cidr,
+        external_ip_for_services_vm]
+-   description: NFVO/VIM details
+    label: CloudManager
+    parameters: [cloudManagerType]
+-   description: ENM/OSS-RC details
+    label: OSS
+    parameters: [ossType, ossMasterHostName, ossMasterHostIP, ossNotificationServiceHost,
+        ossNotificationServiceIP, ossUserName]
+parameters:
+    cloudManagerType: {default: CEE, description: Cloud Manager type. ECM/CEE/Openstack
+            -  This input will be used by VNF-LAF to prepare the environment to execute
+            workflows. Example - CEE, type: string}
+    external_ip_for_services_vm: {default: null, description: 'IPv4/IPv6 address for
+            the vnflcm VM. Example - 131.160.162.10 or  2001:1b70:6207:2b:0:309:0:999b',
+        type: string}
+    external_net_id: {default: null, description: Id of Pre created IPv4/Ipv6 external
+            network. ID can be obtained from Atlas CEE/Openstack dashborad. Example
+            - 68559cad-f3bb-4dbe-8483-d15757763f80, type: string}
+    external_subnet_cidr: {default: null, description: 'IP address range of IPv4/Ipv6
+            subnet of external network. Example - 10.148.14.0/25 or 2001:1b70:6207:2b::/64',
+        type: string}
+    external_subnet_gateway: {default: null, description: 'External network gateway
+            address of IPv4/Ipv6 subnet. Example - 10.148.14.1 or 2001:1b70:6207:2b:0:3522:0:1',
+        type: string}
+    ip_version:
+        constraints:
+        -   allowed_values: [4, 6]
+        default: 4
+        description: IP version to be configured. IPv4 or IPv6
+        type: string
+    ossMasterHostIP: {default: null, description: OSSRC Live Admin server host IP
+            for VNF(s) to be connected. Example - 131.160.162.195, type: string}
+    ossMasterHostName: {default: null, description: OSSRC Live Admin server hostname
+            for VNF(s) to be connected. Example - osshostname.athtem.eei.ericsson.se,
+        type: string}
+    ossNotificationServiceHost: {default: notificationservice, description: Host name
+            of the Host where notification service of OSS is running. Refer parameter
+            table in Installation Guide to find the description. Example - notificationservice,
+        type: string}
+    ossNotificationServiceIP: {description: IP address of the Host where notification
+            service of OSS is running. Refer parameter table in Installation Guide
+            to find the description. Example - 10.140.23.40, type: string}
+    ossType: {default: OSSRC, description: 'Type of OSS. Example - OSSRC,ENM etc.',
+        type: string}
+    ossUserName: {default: nmsadm, description: Authorized user of OSSRC Server for
+            VNF handling. Example - nmsadm, type: string}
+    servicesImage: {default: ERICvnflafdevimage_CXP9032638-3.6.17.qcow2, description: Name
+            of vnflafdevimage VM image ERICvnflafdevimage_CXP9032638-3.4.19.qcow2
+            uploaded to CEE Atlas., type: string}
+    services_flavor:
+        constraints:
+        -   allowed_values: [m1.medium, CM-M1.medium07-New, CM-services_flavor, CM-Auto_test_flavour]
+        default: m1.medium
+        description: Flavor to use for vnflaf-services VM. 2vcpu_6144MBmem_20GBdisk
+        type: string
+resources:
+    server_init:
+        properties:
+            parts:
+            -   config: {get_resource: services-cloud-init}
+        type: OS::Heat::MultipartMime
+    services-cloud-init:
+        properties:
+            cloud_config:
+                bootcmd: [echo "Boot Completed"]
+                chpasswd: {list: 'cloud-user:cloudUser
+
+                        expire: false
+
+                        '}
+                disable_root: false
+                hostname: enm-lvs
+                runcmd: [/opt/ericsson/ERICvnflafinst_CXP9032542/bin/configure_host.sh]
+                ssh_pwauth: true
+                write_files:
+                -   content:
+                        str_replace:
+                            params:
+                                __CLOUD_MGR_TYPE__: {get_param: cloudManagerType}
+                                __EXTERNAL_SUBNET_CIDR__: {get_param: external_subnet_cidr}
+                                __EXTERNAL_SUBNET_GATEWAY__: {get_param: external_subnet_gateway}
+                                __IP_VERSION__: {get_param: ip_version}
+                                __OSSRC_MASTER_HOST_IP__: {get_param: ossMasterHostIP}
+                                __OSS_HOST_NAME__: {get_param: ossMasterHostName}
+                                __OSS_NOTIFICATION_SERVICE_HOST_NAME__: {get_param: ossNotificationServiceHost}
+                                __OSS_NOTIFICATION_SERVICE_IP__: {get_param: ossNotificationServiceIP}
+                                __OSS_TYPE__: {get_param: ossType}
+                                __OSS_USER_NAME__: {get_param: ossUserName}
+                                __VNFLAF_SERVICES_EXTERNAL_IP__: {get_param: external_ip_for_services_vm}
+                            template: '
+
+                                #Plan to be executed for configuring the host
+
+                                configuration_plan=runtime,network,db,services,storage,security,params
+
+
+                                # Ethernet interface configuration
+
+                                ip_version=__IP_VERSION__
+
+                                vlans=external
+
+                                external_eth_interface=eth0
+
+                                external_subnet_cidr=__EXTERNAL_SUBNET_CIDR__
+
+                                external_ip_address=__VNFLAF_SERVICES_EXTERNAL_IP__
+
+                                external_gateway=__EXTERNAL_SUBNET_GATEWAY__
+
+
+                                #Storage
+
+                                storageType=local
+
+                                # Only for NFS
+
+                                #nfsServerIp=__NFS_SERVER_IP__
+
+                                #sharedFilesystemPath=__SHARED_FS_PATH__
+
+
+                                # /etc/hosts entries
+
+                                host_entries=loopback_ipv__IP_VERSION__,this_host,oss_host,oss_notification_service_host
+
+                                loopback_ipv4="127.0.0.1   localhost httpd-1-instance"
+
+                                loopback_ipv6="::1   localhost httpd-1-instance"
+
+                                this_host="__VNFLAF_SERVICES_EXTERNAL_IP__  vnflaf-services  vnflaf-db  postgresql01"
+
+                                oss_host="__OSSRC_MASTER_HOST_IP__  __OSS_HOST_NAME__  masterservice  mashost"
+
+                                oss_notification_service_host="__OSS_NOTIFICATION_SERVICE_IP__   __OSS_NOTIFICATION_SERVICE_HOST_NAME__"
+
+
+                                # Hostname
+
+                                this_hostname=vnflaf-services
+
+
+                                #Users
+
+                                users=cloud-user
+
+
+                                #Service Groups
+
+                                service_groups_on_host=vnflcm-services,vnflcm-ui,vnflcm-db
+
+
+                                #Services
+
+                                services=sshd,httpd,modeldeployservice,jboss,network,ntpd,nfs
+
+                                ntpServer=__OSSRC_MASTER_HOST_IP__
+
+
+                                #security plan
+
+                                security_plan=certificates
+
+
+                                #Versions
+
+                                vnflcm_media_version=1.1.61
+
+                                vnflcm_services_image_version=3.0.69
+
+                                #vnflcm_db_image_version=2.0.22
+
+
+                                wfs_db_schema_version=1.0.0
+
+                                sfwk_db_schema_version=1.0.0
+
+                                vnflcm_db_schema_version=1.0.0
+
+
+                                # Configuration parameters for VNFLCM-SDK
+
+                                #Cloud Manager
+
+                                cloudManagerType=__CLOUD_MGR_TYPE__
+
+
+                                # Configuration parameters for Element manager
+
+                                ossType=__OSS_TYPE__
+
+                                ossMasterHostName=__OSS_HOST_NAME__
+
+                                ossNotificationServiceHost=__OSS_NOTIFICATION_SERVICE_HOST_NAME__
+
+                                ossMasterHostIP=__OSSRC_MASTER_HOST_IP__
+
+                                ossUserName=__OSS_USER_NAME__
+
+                                '
+                    owner: root:root
+                    path: /ericsson/vnflcm/data/host.properties
+                    permissions: '0777'
+        type: OS::Heat::CloudConfig
+    vnflaf-services:
+        properties:
+            config_drive: true
+            flavor: {get_param: services_flavor}
+            image: {get_param: servicesImage}
+            metadata: {ha-policy: ha-offline}
+            name: VNFLAF-Services
+            networks:
+            -   port: {get_resource: vnflaf_services_external_port}
+            user_data: {get_resource: server_init}
+            user_data_format: RAW
+        type: OS::Nova::Server
+    vnflaf_services_external_port:
+        properties:
+            fixed_ips:
+            -   ip_address: {get_param: external_ip_for_services_vm}
+            network_id: {get_param: external_net_id}
+        type: OS::Neutron::Port

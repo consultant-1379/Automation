@@ -1,0 +1,16 @@
+{
+    "authURL": "https://cloud6a.athtem.eei.ericsson.se:13000/v2.0",
+    "enableHttps": false,
+    "imageUploadUrl": "https://cloud6a.athtem.eei.ericsson.se:13292/v2.0",
+    "ip4Address": "131.160.198.242",
+    "onBoardingSysUsername": "Administrator",
+    "onBoardingSysPassword": "TestPassw0rd",
+    "onBoardingSystemName": "AUTO_VNFLCM_ONBOARD_SYSTEM",
+    "onBoardingSystemType": "VNFM",
+    "projectId": "83434641e46f434c849aa0764aef731b",
+    "vimName": "cloud6a_ieatdoxb006_HA",
+    "vimPassword": "Eo_maintrack_c6af051.laf",
+    "vimTenantName": "EO_Maintrack_C6AF051",
+    "vimType": "OPENSTACK",
+    "vimUsername": "EO_Maintrack_C6AF051_admin"
+}

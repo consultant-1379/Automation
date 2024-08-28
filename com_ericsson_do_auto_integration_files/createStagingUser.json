@@ -1,0 +1,11 @@
+{ 
+   "user":{ 
+      "username":"staging-user",
+      "privileges":[ 
+         "SODesigner"
+      ]
+   },
+   "password":"Testing12345!!",
+   "passwordResetFlag":false,
+   "tenant":"staging-tenant"
+}

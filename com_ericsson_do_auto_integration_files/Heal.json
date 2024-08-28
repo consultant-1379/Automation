@@ -1,0 +1,6 @@
+{
+    "cause": "vm down",
+    "additionalParams": {
+        "resourceName": "VNFM_EPG_2020-12-01_11-07-22_epg_vsfo_cp-29"
+    }
+}
